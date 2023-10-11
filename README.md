@@ -1,24 +1,41 @@
 # Introduction
 
 
-
-
 ### Project Goals
+
 
 # User Stories
 
+
 ### Developer
-As a developer
-
-### First Time Visitor Goals
-
-
-
-### Authenticated User Goals
+1. As a developer I can use local IDE to develop the project.
+2. As a developer I can deploy the project to Heroku early in the development process.
+3. As a developer I can create wireframes for the project so that I have a clear idea of what I want to achieve.
+4. As a developer I can create a database schema for the project so that I have a clear idea of what models I need to create.
 
 
+### User/shopper
+1. As a user I want to be able to view the site on any device I choose.
+2. As a user I want to be able to create an account.
+3. As a user I want to be able to log in and out of my account.
+4. As a user I want to be able to reset my password if I forget it.
+5. As a user I want to be able to find the products I am looking for easily.
+6. As a user I want to be able to view the details of a product.
+7. As a user I want to be able to add a product to my shopping bag.
+8. As a user I want to be able to edit the quantity of a product in my shopping bag.
+9. As a user I want to be able to delete a product from my shopping bag.
+10. As a user I want to be able to view my shopping bag.
+11. As a user I want to be able to checkout securely.
+12. As a user I want to be able to view my order history.
+13. As a user I want to be able to leave a review for a product.
+14. As a user I want to be able to view other users reviews.
+15. As a user I want to be able to edit my reviews.
+16. As a user I want to be able to delete my reviews.
+17. As a user I want to be able to search for a product by name or description.
+18. As a user I want to be able to add a product to the favorites list.
+19. As a user I want to be able to view my favorites list.
+20. As a user I want to be able to remove a product from my favorites list.
 
-### Site owner objectives
 
 # Design
 
