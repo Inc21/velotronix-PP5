@@ -33,10 +33,13 @@ As a developer
 
 ### Wireframes
 
-#### Desktop Wireframe
+#### Home Page desktop Wireframe
 
+![Home Page Wireframe](/static/images/readme_images/wireframes/home_desktop.png)
 
-#### Mobile Wireframe
+#### Home Page mobile Wireframe
+
+![Home Page Wireframe](/static/images/readme_images/wireframes/home_mobile.png)
 
 # Database Schemas
 
