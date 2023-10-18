@@ -114,6 +114,7 @@
 10. As a user, I want to be able to view my shopping bag so that I can see the total cost of my purchase.
 11. As a user, I want to be able to checkout securely so that I can safely purchase my items.
 12. As a user, I want to be able to view my order history so that I can see what I have purchased in the past.
+12. As a user, I want to be able to add or edit my billing and shipping information so that I can easily checkout.
 13. As a user, I want to be able to leave a review for a product so that I can share my experience with other users.
 14. As a user, I want to be able to view other users reviews so that I can decide if I want to purchase the product.
 15. As a user, I want to be able to edit my reviews so that I can update them if I change my mind.
