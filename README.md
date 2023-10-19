@@ -179,6 +179,7 @@
 
 # Database Schemas
 
+![Database Schema](/static/images/readme_images/wireframes/erds.png)
 
 ### User model
 
