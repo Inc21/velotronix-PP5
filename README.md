@@ -142,9 +142,40 @@
 
 ![Home Page Wireframe](/static/images/readme_images/wireframes/home_desktop.png)
 
-#### Home Page mobile Wireframe
+<details>
+<summary>Home Page mobile Wireframe</summary>
 
 ![Home Page Wireframe](/static/images/readme_images/wireframes/home_mobile.png)
+</details>
+
+<details>
+  <summary>Products Page Desktop Wireframe</summary>
+
+![Products Page Wireframe](/static/images/readme_images/wireframes/producs_desktop.png)
+
+</details>
+<details>
+  <summary>Products Page Mobile Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/producs_mobile.png)
+
+</details>
+
+</details>
+<details>
+  <summary>Product Details Page Desktop Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/product_details_desktop.png)
+
+</details>
+
+</details>
+<details>
+  <summary>Product Details Page Mobile Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/product_details_mobile.png)
+
+</details>
 
 # Database Schemas
 
