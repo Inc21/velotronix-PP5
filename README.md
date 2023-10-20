@@ -102,26 +102,27 @@
 
 
 ### User/shopper
-1. As a user I want to be able to view the site on any device I choose.
-2. As a user I want to be able to create an account.
-3. As a user I want to be able to log in and out of my account.
-4. As a user I want to be able to reset my password if I forget it.
-5. As a user I want to be able to find the products I am looking for easily.
-6. As a user I want to be able to view the details of a product.
-7. As a user I want to be able to add a product to my shopping bag.
-8. As a user I want to be able to edit the quantity of a product in my shopping bag.
-9. As a user I want to be able to delete a product from my shopping bag.
-10. As a user I want to be able to view my shopping bag.
-11. As a user I want to be able to checkout securely.
-12. As a user I want to be able to view my order history.
-13. As a user I want to be able to leave a review for a product.
-14. As a user I want to be able to view other users reviews.
-15. As a user I want to be able to edit my reviews.
-16. As a user I want to be able to delete my reviews.
-17. As a user I want to be able to search for a product by name or description.
-18. As a user I want to be able to add a product to the favorites list.
-19. As a user I want to be able to view my favorites list.
-20. As a user I want to be able to remove a product from my favorites list.
+2. As a user, I want to be able to create an account so that I can have my address saved for future purchases.
+1. As a user, I want to be able to view the site on any device I choose so that I can shop on the go.
+3. As a user, I want to be able to log in and out of my account so that I can access my profile.
+4. As a user, I want to be able to reset my password if I forget it so that I can access my account.
+5. As a user, I want to be able to find the products I am looking for easily so that I can find what I want quickly.
+6. As a user, I want to be able to view the details of a product so that I can decide if I want to purchase it.
+7. As a user, I want to be able to add a product to my shopping bag so that I can purchase it.
+8. As a user, I want to be able to edit the quantity of a product in my shopping bag so that I can purchase the quantity I want.
+9. As a user, I want to be able to delete a product from my shopping bag so that I can remove it if I change my mind.
+10. As a user, I want to be able to view my shopping bag so that I can see the total cost of my purchase.
+11. As a user, I want to be able to checkout securely so that I can safely purchase my items.
+12. As a user, I want to be able to view my order history so that I can see what I have purchased in the past.
+12. As a user, I want to be able to add or edit my billing and shipping information so that I can easily checkout.
+13. As a user, I want to be able to leave a review for a product so that I can share my experience with other users.
+14. As a user, I want to be able to view other users reviews so that I can decide if I want to purchase the product.
+15. As a user, I want to be able to edit my reviews so that I can update them if I change my mind.
+16. As a user, I want to be able to delete my reviews so that I can remove them if I change my mind.
+17. As a user, I want to be able to search for a product by name or description so that I can find what I want quickly.
+18. As a user, I want to be able to add a product to the favorites list so that I can purchase it later.
+19. As a user, I want to be able to view my favorites list so that I can see what I have saved.
+20. As a user, I want to be able to remove a product from my favorites list so that I can remove it if I change my mind.
 
 
 # Design
@@ -141,12 +142,44 @@
 
 ![Home Page Wireframe](/static/images/readme_images/wireframes/home_desktop.png)
 
-#### Home Page mobile Wireframe
+<details>
+<summary>Home Page mobile Wireframe</summary>
 
 ![Home Page Wireframe](/static/images/readme_images/wireframes/home_mobile.png)
+</details>
+
+<details>
+  <summary>Products Page Desktop Wireframe</summary>
+
+![Products Page Wireframe](/static/images/readme_images/wireframes/producs_desktop.png)
+
+</details>
+<details>
+  <summary>Products Page Mobile Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/producs_mobile.png)
+
+</details>
+
+</details>
+<details>
+  <summary>Product Details Page Desktop Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/product_details_desktop.png)
+
+</details>
+
+</details>
+<details>
+  <summary>Product Details Page Mobile Wireframe</summary>
+  
+![Products Page Wireframe](/static/images/readme_images/wireframes/product_details_mobile.png)
+
+</details>
 
 # Database Schemas
 
+![Database Schema](/static/images/readme_images/wireframes/erds.png)
 
 ### User model
 
