@@ -215,7 +215,21 @@
 
 
 ### Other tools and programs.
-
+- [Amazon AWS S3](https://aws.amazon.com/) was used to store static and media files.
+- [Amazon AWS IAM](https://aws.amazon.com/iam/) was used to create a user for the project.
+- [Amazon RDS](https://aws.amazon.com/rds/) was used to create a PostgreSQL database.
+- [Font Awesome](https://fontawesome.com/) was used for all icons.
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
+- [Coolors](https://coolors.co/) was used to create the colour palette.
+- [Favicon.io](https://favicon.io/) was used to create the favicon.
+- [Birme](https://www.birme.net) was used to convert static images to .webp format.
+- [ami.responsivedesign.is](http://ami.responsivedesign.is/) was used to create the mockup image.
+- [Lucid](https://lucid.co/) was used when creating database ERD.
+- [Visual Studio Code.](https://code.visualstudio.com/) Did all of my coding and synchronizing with GitHub on VS Code.
+- [Git](https://git-scm.com/) for version control.
+- [GitHub](https://github.com/) for hosting repositories.
+- [Heroku](https://www.heroku.com/) where the website is deployed.
+- [Grammarly](https://www.grammarly.com/) was used to double-check spelling mistakes.
 
 
 # Features
