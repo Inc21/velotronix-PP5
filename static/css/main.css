@@ -1,5 +1,24 @@
 body {
-    background-color: #e8f1bd;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-text {
+    font-family: 'Sometype Mono', monospace, sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+    vertical-align: baseline;
+}
+
+.navbar-lower {
+    background-color: #264653;
+    color: #fff;
+    margin: 0;
+}
+
+.spinning-icon {
+    position: relative;
+    top: 3px;
 }
