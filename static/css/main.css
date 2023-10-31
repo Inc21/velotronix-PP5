@@ -5,6 +5,59 @@
     font-family: 'Sometype Mono', monospace, sans-serif;
 }
 
+body {
+    
+}
+
+header {
+    min-width: 250px;
+}
+
+/* ------------------------------------------------------------- Colours */
+
+.dark-green {
+    color: #264653;
+}
+
+/* ------------------------------------------------------------- Header and navigation */
+
+.active {
+    color: #fff !important;
+}
+
+.search {
+    border: 1px solid #264653;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
+}
+
+.search-btn {
+    border: 2px solid #264653;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.cart {
+    border: 2px solid #264653;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #264653;
+    font-weight: 700;
+}
+
 .logo-text {
     font-weight: 700;
     font-size: 2.5rem;
@@ -16,12 +69,11 @@
     background-color: #264653;
     color: #fff;
     margin: 0;
-    width: 100vw;
 }
 
 .navbar-upper {
+    background-color: #fff;
     height: 2rem;
-    background-color: #fff
 }
 
 .spinning-icon {
@@ -31,9 +83,35 @@
 
 .nav-link {
     color: #fff;
+    text-decoration: none;
+}
+
+.nav-link:active {
+    color: #264653;
 }
 
 .nav-link:hover {
-    size: 1.5rem;
-    color: #fff;
+    background-color: #fff;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.nav-link:focus {
+    background-color: #fff;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.dropdown-item:active {
+    background-color: #264653 !important;
+}
+
+.dropdown-item:hover {
+    color: #264653;
+    background-color: #26465323;
+    font-weight: 700;
 }
