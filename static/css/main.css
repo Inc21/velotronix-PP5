@@ -1,5 +1,161 @@
-body {
-    background-color: #e8f1bd;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sometype Mono', monospace, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    min-width: 320px;
+}
+
+/* ------------------------------------------------------------- Colours */
+
+.dark-green {
+    color: #264653;
+}
+
+/* ------------------------------------------------------------- Header and navigation */
+
+.active {
+    color: #fff !important;
+}
+
+.search {
+    border: 1px solid #264653;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
+    width: 60%;
+}
+
+.search-burger {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
+}
+
+.search-btn {
+    border: 2px solid #264653;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.search-btn-burger {
+    border: 2px solid #fff;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.cart {
+    border: 2px solid #264653;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #264653;
+    font-weight: 700;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #fff;
+    vertical-align: baseline;
+}
+
+
+
+.navbar-lower {
+    background-color: #264653;
+    color: #fff;
+    margin: 0;
+}
+
+.navbar-upper {
+    background-color: #fff;
+    height: 2rem;
+}
+
+.spinning-icon {
+    position: relative;
+    top: 3px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link:active {
+    color: #264653;
+}
+
+.nav-link:hover {
+    background-color: #fff;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.nav-link:focus {
+    background-color: #fff;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.dropdown-item:active {
+    background-color: #264653 !important;
+}
+
+.dropdown-item:hover {
+    color: #264653;
+    background-color: #26465323;
+    font-weight: 700;
+}
+
+/* ------------------------------------------------------------- Main Container */
+
+
+.main-container {
+    position: relative;
+    top: 6rem;
+    min-width: 320px;
+    min-height: calc(100vh - 10rem);
+}
+
+/* ------------------------------------------------------------- Footer */
+
+.footer {
+    background-color: #264653;
+    color: #fff;
+    padding: 1rem;
+    min-width: 320px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
