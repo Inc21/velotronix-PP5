@@ -5,12 +5,8 @@
     font-family: 'Sometype Mono', monospace, sans-serif;
 }
 
-body {
-    
-}
-
 header {
-    min-width: 250px;
+    min-width: 320px;
 }
 
 /* ------------------------------------------------------------- Colours */
@@ -30,6 +26,14 @@ header {
     border-radius: 5px;
     padding: 5px;
     height: 1.5rem;
+    width: 50%;
+}
+
+.search-burger {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
 }
 
 .search-btn {
@@ -37,6 +41,16 @@ header {
     height: 1.5rem;
     font-weight: 700;
     color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.search-btn-burger {
+    border: 2px solid #fff;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #fff;
     border-radius: 5px;
     padding: 0 5px 2px 5px;
     text-decoration: none;

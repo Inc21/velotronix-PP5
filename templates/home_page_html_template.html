@@ -21,17 +21,17 @@
   <body>
 	<header class="container-fluid fixed-top">
         <div class="row">
-            <div class="col-7 navbar-upper">
-                <form class="d-flex m-1" role="search">
+            <div class="col-10 navbar-upper">
+                <form class="d-none d-md-flex justify-content-center m-1" role="search">
                     <input class="search form-control me-2" type="search" placeholder="Search products" aria-label="Search">
                     <a class="search-btn" role="button" type="submit">Search</a>
                 </form>
             </div>
-            <div class="col-3 d-inline-block text-end text-nowrap">
-                <a class="login-link" href="#">Login</a> | <a class="login-link" href="">Signup</a>
-            </div>
-            <div class="col-2 d-grid justify-content-end">
-                <a class="cart m-1" href="#"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs"></i> 0.00 </a>
+            <div class="col-2 mt-1 d-grid justify-content-end">
+                <div class="d-inline-block text-end text-nowrap">
+                    <a class="login-link" href="#">Login</a> | <a class="login-link" href="">Signup</a>
+                    <a class="cart m-1" href="#"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs"></i> 0.00 </a>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -50,11 +50,11 @@
                             All Products
                             </a>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">By Price</a></li>
-                            <li><a class="dropdown-item" href="#">By Brand</a></li>
-                            <li><a class="dropdown-item" href="#">By Category</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">All products</a></li>
+                                <li><a class="dropdown-item" href="#">By Price</a></li>
+                                <li><a class="dropdown-item" href="#">By Brand</a></li>
+                                <li><a class="dropdown-item" href="#">By Category</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">All products</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -62,22 +62,29 @@
                             Electronics
                             </a>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Bike Computers</a></li>
-                            <li><a class="dropdown-item" href="#">Power Meters</a></li>
-                            <li><a class="dropdown-item" href="#">Bike Lights</a></li>
+                                <li><a class="dropdown-item" href="#">Bike Computers</a></li>
+                                <li><a class="dropdown-item" href="#">Power Meters</a></li>
+                                <li><a class="dropdown-item" href="#">Bike Lights</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle ps-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Accessories
                             </a>
-                            <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Sensors</a></li>
-                            <li><a class="dropdown-item" href="#">Heart Rate Monitors</a></li>
+                                <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sensors</a></li>
+                                <li><a class="dropdown-item" href="#">Heart Rate Monitors</a></li>
                             </ul>
                         </li>
                             <li class="nav-item">
-                                <a class="nav-link ps-1" href="#">About Us</a></li>
+                                <a class="nav-link ps-1" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <form class="d-md-none d-md-flex justify-content-center m-1" role="search">
+                                    <input class="search-burger form-control me-2" type="search" placeholder="Search products" aria-label="Search">
+                                    <a class="search-btn-burger mt-2" role="button" type="submit">Search</a>
+                                </form>
+                            </li>                    
                         </ul>
                     </div>
                 </div>
