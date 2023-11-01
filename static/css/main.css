@@ -5,6 +5,10 @@
     font-family: 'Sometype Mono', monospace, sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     min-width: 320px;
 }
@@ -26,7 +30,7 @@ header {
     border-radius: 5px;
     padding: 5px;
     height: 1.5rem;
-    width: 50%;
+    width: 60%;
 }
 
 .search-burger {
@@ -79,6 +83,8 @@ header {
     vertical-align: baseline;
 }
 
+
+
 .navbar-lower {
     background-color: #264653;
     color: #fff;
@@ -128,4 +134,28 @@ header {
     color: #264653;
     background-color: #26465323;
     font-weight: 700;
+}
+
+/* ------------------------------------------------------------- Main Container */
+
+
+.main-container {
+    position: relative;
+    top: 6rem;
+    min-width: 320px;
+    min-height: calc(100vh - 10rem);
+}
+
+/* ------------------------------------------------------------- Footer */
+
+.footer {
+    background-color: #264653;
+    color: #fff;
+    padding: 1rem;
+    min-width: 320px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
 }
