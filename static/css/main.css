@@ -42,6 +42,7 @@ header {
     border-radius: 5px;
     padding: 5px;
     height: 1.5rem;
+    width: 90%;
 }
 
 .search-btn {
@@ -70,7 +71,7 @@ header {
     font-weight: 700;
     color: #264653;
     border-radius: 5px;
-    padding: 0 5px 2px 5px;
+    padding: 2px 5px 0 5px;
     text-decoration: none;
 }
 
@@ -93,6 +94,7 @@ header {
     background-color: #264653;
     color: #E9EDE9;
     margin: 0;
+    padding: 0;
     height: 4rem;
 }
 
@@ -108,11 +110,13 @@ header {
 
 .nav-link {
     color: #E9EDE9;
+    background-color: #264653;
     text-decoration: none;
 }
 
 .nav-link:active {
     color: #264653;
+    background-color: #E9EDE9;
 }
 
 .nav-link:hover {
@@ -129,6 +133,11 @@ header {
     font-weight: 700;
     border-radius: 5px;
     padding: fit-content;
+}
+
+.navbar-collapse {
+    background-color: #264653;
+    width: 100%;
 }
 
 .dropdown-item:active {
