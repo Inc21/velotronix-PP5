@@ -22,7 +22,7 @@ header {
 /* ------------------------------------------------------------- Header and navigation */
 
 .active {
-    color: #fff !important;
+    color: #E9EDE9 !important;
 }
 
 .search {
@@ -33,11 +33,16 @@ header {
     width: 60%;
 }
 
+.burger-menu {
+    background-color: #264653;
+}
+
 .search-burger {
-    border: 1px solid #fff;
+    border: 1px solid #E9EDE9;
     border-radius: 5px;
     padding: 5px;
     height: 1.5rem;
+    width: 90%;
 }
 
 .search-btn {
@@ -51,10 +56,10 @@ header {
 }
 
 .search-btn-burger {
-    border: 2px solid #fff;
+    border: 2px solid #E9EDE9;
     height: 1.5rem;
     font-weight: 700;
-    color: #fff;
+    color: #E9EDE9;
     border-radius: 5px;
     padding: 0 5px 2px 5px;
     text-decoration: none;
@@ -66,7 +71,7 @@ header {
     font-weight: 700;
     color: #264653;
     border-radius: 5px;
-    padding: 0 5px 2px 5px;
+    padding: 2px 5px 0 5px;
     text-decoration: none;
 }
 
@@ -79,7 +84,7 @@ header {
 .logo-text {
     font-weight: 700;
     font-size: 2.5rem;
-    color: #fff;
+    color: #264653;
     vertical-align: baseline;
 }
 
@@ -87,12 +92,14 @@ header {
 
 .navbar-lower {
     background-color: #264653;
-    color: #fff;
+    color: #E9EDE9;
     margin: 0;
+    padding: 0;
+    height: 4rem;
 }
 
 .navbar-upper {
-    background-color: #fff;
+    background-color: #E9EDE9;
     height: 2rem;
 }
 
@@ -102,16 +109,18 @@ header {
 }
 
 .nav-link {
-    color: #fff;
+    color: #E9EDE9;
+    background-color: #264653;
     text-decoration: none;
 }
 
 .nav-link:active {
     color: #264653;
+    background-color: #E9EDE9;
 }
 
 .nav-link:hover {
-    background-color: #fff;
+    background-color: #E9EDE9;
     color: #264653;
     font-weight: 700;
     border-radius: 5px;
@@ -119,11 +128,16 @@ header {
 }
 
 .nav-link:focus {
-    background-color: #fff;
+    background-color: #E9EDE9;
     color: #264653;
     font-weight: 700;
     border-radius: 5px;
     padding: fit-content;
+}
+
+.navbar-collapse {
+    background-color: #264653;
+    width: 100%;
 }
 
 .dropdown-item:active {
@@ -138,24 +152,48 @@ header {
 
 /* ------------------------------------------------------------- Main Container */
 
-
 .main-container {
     position: relative;
-    top: 6rem;
+    top: 5rem;
     min-width: 320px;
-    min-height: calc(100vh - 10rem);
+    min-height: calc(100vh);
+    z-index: -1;
+    color: #E9EDE9;
+    min-height: calc(100vh - 12.1rem);
+
+    background-image: url(../images/site/background_lady_on_a_bike.webp);
+    background-color: #E9EDE9;
+    background-position: 17% 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-header {
+    font-weight: 700;
+}
+
+.shop_now_btn {
+    background-color: #264653;
+    border: 3px solid #E9EDE9;
+    color: #E9EDE9;
+    width: 300px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
 }
 
 /* ------------------------------------------------------------- Footer */
 
 .footer {
     background-color: #264653;
-    color: #fff;
+    color: #E9EDE9;
     padding: 1rem;
     min-width: 320px;
+    z-index: 999;
+    min-height: 6rem;
 }
 
 footer a {
-    color: #fff;
+    color: #E9EDE9;
     text-decoration: none;
 }
