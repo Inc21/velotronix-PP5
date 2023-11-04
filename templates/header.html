@@ -1,8 +1,8 @@
 <header class="container-fluid fixed-top">
     <div class="row navbar-upper">
         <div class="col-10">
-            <form class="d-none d-md-flex m-1" role="search">
-                <input class="search form-control me-2" type="search" placeholder="Search products" aria-label="Search">
+            <form class="d-none d-md-flex m-1" role="search" method="GET" action="">
+                <input class="search form-control me-2" type="search" placeholder="Search products" name="q" aria-label="Search">
                 <a class="search-btn" role="button" type="submit">Search</a>
             </form>
         </div>
@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
             <div class="container-fluid navbar-lower">
                 <div class="col-4">
-                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="#">Vel<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
+                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="{% url "home" %}">Vel<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
                 </div>
                 <button class="navbar-toggler border-light text-light me-1 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="burger-menu"><i class="fa-solid fa-bars"></i></span>
