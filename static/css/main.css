@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    min-width: 320px;
+    min-width: 300px;
 }
 
 /* ------------------------------------------------------------- Colours */
@@ -33,7 +33,7 @@ header {
     width: 60%;
 }
 
-.burger-menu {
+.burger-btn {
     background-color: #264653;
 }
 
@@ -165,7 +165,7 @@ header {
 section {
     margin-top: 6rem;
     min-height: calc(100vh - 18rem);
-    min-width: 320px;
+    min-width: 300px;
     background-color: #E9EDE9;
 }
 
@@ -238,7 +238,7 @@ section {
     background-color: #264653;
     color: #E9EDE9;
     padding: 1rem;
-    min-width: 320px;
+    min-width: 300px;
     z-index: 999;
     min-height: 6rem;
     z-index: 999;
