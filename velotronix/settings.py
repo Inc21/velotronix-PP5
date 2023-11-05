@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     # My apps
     'velotronix',
     'home',
+    'products',
 
     # Third party apps
     'allauth',
