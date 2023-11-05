@@ -152,17 +152,28 @@ header {
 
 /* ------------------------------------------------------------- Main Container */
 
-.main-container {
-    position: relative;
-    top: 5rem;
+.messages {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    margin-top: 6rem;
+    min-height: calc(100vh - 18rem);
     min-width: 320px;
-    min-height: calc(100vh);
+    background-color: #E9EDE9;
+}
+
+.index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 12.1rem);
+    min-height: calc(100vh - 18rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
-    background-color: #E9EDE9;
     background-position: 17% 75%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -191,6 +202,7 @@ header {
     min-width: 320px;
     z-index: 999;
     min-height: 6rem;
+    z-index: 999;
 }
 
 footer a {
