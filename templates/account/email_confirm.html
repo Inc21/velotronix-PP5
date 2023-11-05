@@ -1,4 +1,6 @@
 {% extends "account/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
 
 {% load i18n %}
 {% load account %}
@@ -7,29 +9,39 @@
 
 
 {% block content %}
-<h1>{% trans "Confirm Email Address" %}</h1>
 
-{% if confirmation %}
+<div class="col-12 d-flex flex-wrap justify-content-center">
+    <div class="d-flex justify-content-center">
+        <div class="card auth-card m-4">
+            <div class="card-body">
+                <h1>{% trans "Confirm Email Address" %}</h1>
 
-{% user_display confirmation.email_address.user as user_display %}
+                {% if confirmation %}
 
-{% if can_confirm %}
-<p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}</p>
+                {% user_display confirmation.email_address.user as user_display %}
 
-<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
-{% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
-</form>
-{% else %}
-<p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}</p>
-{% endif %}
+                {% if can_confirm %}
+                <p>{% blocktrans with confirmation.email_address.email as email %}Please confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an email address for user {{ user_display }}.{% endblocktrans %}</p>
 
-{% else %}
+                <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+                {% csrf_token %}
+                {{form|crispy}}
+                    <button class="auth-btn btn-sm btn btn-success" type="submit">{% trans 'Confirm' %}</button>
+                </form>
+                {% else %}
+                <p>{% blocktrans %}Unable to confirm {{ email }} because it is already confirmed by a different account.{% endblocktrans %}</p>
+                {% endif %}
 
-{% url 'account_email' as email_url %}
+                {% else %}
 
-<p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}</p>
+                {% url 'account_email' as email_url %}
 
-{% endif %}
+                <p>{% blocktrans %}This email confirmation link expired or is invalid. Please <a href="{{ email_url }}">issue a new email confirmation request</a>.{% endblocktrans %}</p>
+
+                {% endif %}
+            </div>
+        </div>
+    </div>
+  </div>
 
 {% endblock content %}

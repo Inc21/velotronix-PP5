@@ -159,6 +159,7 @@ header {
     height: 2rem;
     padding: 0;
     margin: 0;
+    z-index: 999;
 }
 
 section {
@@ -193,6 +194,12 @@ section {
     letter-spacing: 5px;
 }
 
+.shop_now_btn:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 3px solid #264653;
+}
+
 .auth-btn {
     font-weight: bold;
     color: #E9EDE9;
@@ -216,6 +223,13 @@ section {
     max-width: 450px;
     min-width: 220px;
     border: none;
+}
+
+.active-link {
+    color: #264653;
+    text-decoration: underline;
+    list-style: none;
+    font-weight: 700;
 }
 
 /* ------------------------------------------------------------- Footer */
