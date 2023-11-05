@@ -1,15 +1,25 @@
 <header class="container-fluid fixed-top">
     <div class="row navbar-upper">
         <div class="col-10">
-            <form class="d-none d-md-flex m-1" role="search">
-                <input class="search form-control me-2" type="search" placeholder="Search products" aria-label="Search">
+            <form class="d-none d-md-flex m-1" role="search" method="GET" action="">
+                <input class="search form-control me-2" type="search" placeholder="Search products" name="q" aria-label="Search">
                 <a class="search-btn" role="button" type="submit">Search</a>
             </form>
         </div>
         <div class="col-2 mt-1 d-grid justify-content-end">
             <div class="d-inline-block text-end text-nowrap">
-                <a class="login-link" href="#">Login</a> | <a class="login-link" href="">Signup</a>
-                <a class="cart" href="#"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs"></i> 0.00 </a>
+                {% if request.user.is_authenticated %}
+                    <a href="#" class="login-link">Profile</a> | <a href="{% url 'account_logout' %}" class="login-link">Logout</a>
+                {% else %}
+                    <a class="login-link" href="{% url "account_login" %}">Login</a> | <a class="login-link" href="{% url "account_signup" %}">Signup</a>
+                {% endif %}
+                <a class="cart" href="#"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs"></i> 
+                    {% if grand_total %} 
+                        €{{ grand_total|floatformat:2 }}
+                    {% else %}
+                        €0.00
+                    {% endif %}
+                </a>
             </div>
         </div>
     </div>
@@ -17,7 +27,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
             <div class="container-fluid navbar-lower">
                 <div class="col-4">
-                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="#">Vel<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
+                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="{% url "home" %}">Vel<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
                 </div>
                 <button class="navbar-toggler border-light text-light me-1 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="burger-menu"><i class="fa-solid fa-bars"></i></span>

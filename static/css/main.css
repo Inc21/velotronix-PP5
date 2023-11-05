@@ -152,17 +152,29 @@ header {
 
 /* ------------------------------------------------------------- Main Container */
 
-.main-container {
-    position: relative;
-    top: 5rem;
+.messages {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+}
+
+section {
+    margin-top: 6rem;
+    min-height: calc(100vh - 18rem);
     min-width: 320px;
-    min-height: calc(100vh);
+    background-color: #E9EDE9;
+}
+
+.index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 12.1rem);
+    min-height: calc(100vh - 18rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
-    background-color: #E9EDE9;
     background-position: 17% 75%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,12 +186,50 @@ header {
 
 .shop_now_btn {
     background-color: #264653;
-    border: 3px solid #E9EDE9;
+    border: 2px solid #E9EDE9;
     color: #E9EDE9;
     width: 300px;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 5px;
+}
+
+.shop_now_btn:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 3px solid #264653;
+}
+
+.auth-btn {
+    font-weight: bold;
+    color: #E9EDE9;
+    font-weight: 700;
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 1px solid #264653;
+    letter-spacing: normal;
+}
+
+.auth-btn:hover {
+    background-color: #264653;
+    color: #E9EDE9;
+    border: 1px solid #264653;
+}
+
+.auth-card {
+    /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); */
+    background-color: #E9EDE9;
+    color: #264653;
+    max-width: 450px;
+    min-width: 220px;
+    border: none;
+}
+
+.active-link {
+    color: #264653;
+    text-decoration: underline;
+    list-style: none;
+    font-weight: 700;
 }
 
 /* ------------------------------------------------------------- Footer */
@@ -191,6 +241,7 @@ header {
     min-width: 320px;
     z-index: 999;
     min-height: 6rem;
+    z-index: 999;
 }
 
 footer a {

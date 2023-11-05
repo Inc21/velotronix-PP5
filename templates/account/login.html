@@ -1,0 +1,52 @@
+{% extends "account/base.html" %}
+
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+{% load account socialaccount %}
+
+{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+
+{% block content %}
+
+<div class="col-12 d-flex flex-wrap justify-content-center">
+  <div class="d-flex justify-content-center">
+      <div class="card auth-card m-4">
+          <div class="card-body">
+            <h1>{% trans "Login" %}</h1>
+                <hr>
+                {% get_providers as socialaccount_providers %}
+
+                {% if socialaccount_providers %}
+                <p class="text-wrap">{% blocktrans with site.name as site_name %}Please log in with your username and password or with one of the following providers:</p> 
+				{% endblocktrans %}
+				<span class="active-link">{% include "socialaccount/snippets/provider_list.html" with process="login" %}</span>
+                <hr>
+				<p>Don't have an account? <a class="active-link text-nowrap" href="{{ signup_url }}">sign up</a> for one here.</p>
+              <hr>
+              <div class="row d-flex">
+                {% include "socialaccount/snippets/login_extra.html" %}
+
+                {% else %}
+                <p>{% blocktrans %}If you have not created an account yet, then please
+                <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+                {% endif %}
+                
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    {% if redirect_field_value %}
+                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                    {% endif %}
+                    <button class="auth-btn btn-sm btn btn-success" type="submit">{% trans 'Log In' %}</button> | 
+            
+                    <a class="active-link secondaryAction text-nowrap" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+                </form>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</div>
+
+{% endblock content %}

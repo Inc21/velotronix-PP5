@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load i18n %}
+
+  <body>
+
+    {% block body %}
+
+    <div>
+      <strong>{% trans "Menu:" %}</strong>
+      <ul>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'account_email' %}">{% trans "Change Email" %}</a></li>
+        <li><a href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+        {% else %}
+        <li><a href="{% url 'account_login' %}">{% trans "Sign In" %}</a></li>
+        <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    {% block content %}
+    <h1>All auth</h1>
+    {% endblock content %}
+    {% endblock body %}
+    {% block extra_body %}
+    {% endblock extra_body %}
+    
+  </body>
+</html>

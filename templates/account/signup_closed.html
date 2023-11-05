@@ -1,0 +1,22 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Sign Up Closed" %}{% endblock head_title %}
+
+{% block content %}
+
+<div class="col-12 d-flex flex-wrap justify-content-center">
+    <div class="d-flex justify-content-center">
+        <div class="card auth-card m-4">
+            <div class="card-body">
+                <h1>{% trans "Sign Up Closed" %}</h1>
+
+                <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>
+                <a href="{% url "home" %}" class="btn shop_now_btn btn-lg" type="submit">Shop Now <i class="fa-solid fa-angles-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
