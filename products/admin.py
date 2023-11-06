@@ -1,9 +1,9 @@
-# pylint: disable=missing-docstring
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import Category, Product
 
 
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(SummernoteModelAdmin):
     list_display = (
         'sku',
         'name',

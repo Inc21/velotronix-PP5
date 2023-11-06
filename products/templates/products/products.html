@@ -28,7 +28,7 @@
                                         <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                         {% if product.description %}
                                         <div class="card-body pb-0">
-                                            <p class="mb-0">{{ product.description|truncatechars:"23" }}</p>
+                                            <p class="mb-0">{{ product.description|safe}}</p>
                                         </div>
                                         {% endif %}
                                         {% if product.category %}
