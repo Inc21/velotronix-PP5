@@ -152,6 +152,15 @@ header {
 
 /* ------------------------------------------------------------- Main Container */
 
+.card-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .messages {
     position: absolute;
     top: 6rem;
@@ -167,6 +176,7 @@ section {
     min-height: calc(100vh - 18rem);
     min-width: 300px;
     background-color: #E9EDE9;
+    width: 100%;
 }
 
 .index_content {
@@ -230,6 +240,15 @@ section {
     text-decoration: underline;
     list-style: none;
     font-weight: 700;
+}
+
+.card {
+    min-width: 280px;
+    max-width: 350px;
+}
+
+.card-btn {
+    
 }
 
 /* ------------------------------------------------------------- Footer */

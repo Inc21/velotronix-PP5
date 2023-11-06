@@ -3,57 +3,70 @@
 
 {% block content %}
 
-<div class="container mb-4">
-	<div class="row">
-		<div class="col-12 d-flex flex-wrap d-flex justify-content-around">
-			{% for product in products %}
-				<div class="col-sm-6 col-lg-4 col-xl-3 mb-4">
-					<div class="card m-4 h-100">
-						<div class="card-body m-1 p-1 d-grid align-content-between">
-							{% if product.image1 %}
-                            <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+<div class="container-fluid d-flex justify-content-evenly">
+    <div class="col-sm-6 col-lg-4 col-xl-3 d-flex justify-content-center pb-4">
+        {% for product in products %}
+        <div class="card p-3 m-3 h-100">
+            <div class=" m-1 p-1">
+                <div class="row">
+                    <div class="col-12">
+                        {% if product.image1 %}
+                        <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                        {% else %}
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 flex-wrap m-0 p-0">
+                        <h6 class="card-title">{{ product.name }}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer m-0 p-0">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <p class="card-text p-2 fs-4 font-weight-bold">
+                            €{{ product.price }}
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="card-text">SKU: {{ product.sku }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {% if product.category %}
+                        <p class="small card-text">CATEGORY: 
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
                             </a>
-                            {% else %}
-                            <a href="">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                        {% if product.description %}
-                                        <div class="card-body pb-0">
-                                            <p class="mb-0">{{ product.description|safe}}</p>
-                                        </div>
-                                        {% endif %}
-                                        {% if product.category %}
-                                        <p class="small mt-1 mb-0">
-                                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                            </a>
-                                        </p>
-                                        {% endif %}
-                                        <br>
-                                        {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="">Edit</a>
-                                                <a class="text-danger" href="">Delete</a>
-                                            </small>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                            </div>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-		</div>
-	</div>
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mt-3 mb-2">
+                        <p class="card-text">Click on for description and specification.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center m-0 p-0">
+                        {% if request.user.is_superuser %}
+                            <small class="card-text ml-3">
+                                <a class="px-2 text-light bg-primary bg-gradient rounded-pill" href="">Edit</a>
+                                <a class="px-2 text-light bg-danger bg-gradient rounded-pill" href="">Delete</a>
+                            </small>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
 </div>
+
+
 
 {% endblock content %}
