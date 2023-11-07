@@ -152,15 +152,6 @@ header {
 
 /* ------------------------------------------------------------- Main Container */
 
-.card-container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .messages {
     position: absolute;
     top: 6rem;
@@ -248,7 +239,7 @@ section {
 }
 
 .card-btn {
-    
+
 }
 
 /* ------------------------------------------------------------- Footer */
