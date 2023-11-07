@@ -10,7 +10,7 @@
             <div class="card px-4 p-3 m-3 col-6 col-sm-4 col-md-4 col-md-3 col-xl-2">
                 <div class=" m-1 p-1 text-decoration-none">
                     <div class="row">
-                        <a class="card-lnk" href="">
+                        <a class="card-lnk" href="{% url "product_detail" product.id %}">
                             <div class="col-12">
                                 {% if product.image1 %}
                                 <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
@@ -64,15 +64,15 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-3 mb-2 text-center">
-                            <a class="card-lnk" href=""><p class="small card-text">Click Image For More <i class="fa-solid fa-plus"></i></p></a>
+                            <a class="card-lnk" href="{% url "product_detail" product.id %}"><p class="small card-text">Click Image For More <i class="fa-solid fa-plus"></i></p></a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center m-0 p-0">
                             {% if request.user.is_superuser %}
                                 <small class="card-text ml-3">
-                                    <a class="px-2 text-light bg-primary bg-gradient rounded-pill" href="">Edit</a>
-                                    <a class="px-2 text-light bg-danger bg-gradient rounded-pill" href="">Delete</a>
+                                    <a class="small px-3 py-1 text-light bg-primary bg-gradient rounded-pill" href="">Edit</a>
+                                    <a class="small px-2 py-1 text-light bg-danger bg-gradient rounded-pill" href="">Delete</a>
                                 </small>
                             {% endif %}
                         </div>
