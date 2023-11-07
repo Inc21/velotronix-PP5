@@ -236,10 +236,12 @@ section {
 .card {
     min-width: 280px;
     max-width: 350px;
+    color: #264653;
 }
 
-.card-btn {
-
+.card-lnk {
+    color: #264653;
+    text-decoration: none;
 }
 
 /* ------------------------------------------------------------- Footer */

@@ -7,22 +7,24 @@
     <div class="row">
         <div class="col-12 d-flex flex-wrap d-flex justify-content-around pb-4">
             {% for product in products %}
-            <div class="card px-4 p-3 m-3 col-sm-4 col-lg-3">
-                <div class=" m-1 p-1">
+            <div class="card px-4 p-3 m-3 col-6 col-sm-4 col-md-4 col-md-3 col-xl-2">
+                <div class=" m-1 p-1 text-decoration-none">
                     <div class="row">
-                        <div class="col-12">
-                            {% if product.image1 %}
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
-                            {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            {% endif %}
+                        <a class="card-lnk" href="">
+                            <div class="col-12">
+                                {% if product.image1 %}
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                {% else %}
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.wabp" alt="{{ product.name }}">
+                                {% endif %}
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 flex-wrap m-0 p-0">
-                            <h6 class="card-title">{{ product.name }}</h6>
+                        <div class="row">
+                            <div class="col-12 flex-wrap m-0 p-0">
+                                <h6 class="card-title">{{ product.name }}</h6>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="card-footer m-0 p-0">
                     <div class="row">
@@ -62,7 +64,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mt-3 mb-2 text-center">
-                            <p class="small card-text">Click Image For More <i class="fa-solid fa-plus"></i></p>
+                            <a class="card-lnk" href=""><p class="small card-text">Click Image For More <i class="fa-solid fa-plus"></i></p></a>
                         </div>
                     </div>
                     <div class="row">

@@ -36,7 +36,7 @@ class Product(models.Model):
     image1_url = models.URLField(max_length=1024, null=True, blank=True)
     image1 = ResizedImageField(upload_to='product_images/', null=True,
                                force_format='WEBP', quality=85, blank=True,
-                               default='product_images/default.webp')
+                               default='product_images/noimage.webp')
     image2_url = models.URLField(max_length=1024, null=True, blank=True)
     image2 = ResizedImageField(upload_to='product_images/', null=True,
                                force_format='WEBP', quality=85, blank=True)
