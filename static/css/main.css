@@ -244,6 +244,10 @@ section {
     text-decoration: none;
 }
 
+.single-product-detail {
+    max-width: 2000px;
+}
+
 .product-details-container {
     background-color: #E9EDE9;
     color: #264653;
@@ -251,6 +255,7 @@ section {
 
 .image-container {
     color: #264653;
+    background-color: #fff;
 }
 
 .favorites-link {
