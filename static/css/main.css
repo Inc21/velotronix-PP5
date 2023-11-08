@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    min-width: 320px;
+    min-width: 300px;
 }
 
 /* ------------------------------------------------------------- Colours */
@@ -33,7 +33,7 @@ header {
     width: 60%;
 }
 
-.burger-menu {
+.burger-btn {
     background-color: #264653;
 }
 
@@ -165,8 +165,9 @@ header {
 section {
     margin-top: 6rem;
     min-height: calc(100vh - 18rem);
-    min-width: 320px;
+    min-width: 300px;
     background-color: #E9EDE9;
+    width: 100%;
 }
 
 .index_content {
@@ -232,13 +233,38 @@ section {
     font-weight: 700;
 }
 
+.card {
+    min-width: 280px;
+    max-width: 350px;
+    color: #264653;
+}
+
+.card-lnk {
+    color: #264653;
+    text-decoration: none;
+}
+
+.product-details-container {
+    background-color: #E9EDE9;
+    color: #264653;
+}
+
+.image-container {
+    color: #264653;
+}
+
+.favorites-link {
+    color: #264653;
+    text-decoration: none;
+}
+
 /* ------------------------------------------------------------- Footer */
 
 .footer {
     background-color: #264653;
     color: #E9EDE9;
     padding: 1rem;
-    min-width: 320px;
+    min-width: 300px;
     z-index: 999;
     min-height: 6rem;
     z-index: 999;

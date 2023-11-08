@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container mb-2 rounded bg-light my-5">
+                <div class="row">
+                    {% if product.image1 %}
+                        <a href="{{ product.image1.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                        </a>
+                    {% endif %}
+                </div>
+                <hr class="m-0 p-0">
+                <div class="row">
+                    {% if product.image2 or product.image3 or product.image4 %}
+                        <div class="col-4 border-end">
+                            {% if product.image2 %}
+                                <a href="{{ product.image2.url }}" target="_blank">
+                                    <img class="card-img-top img-fluid" src="{{ product.image2.url }}" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-4">
+                            {% if product.image3 %}
+                                <a href="{{ product.image3.url }}" target="_blank">
+                                    <img class="card-img-top img-fluid" src="{{ product.image3.url }}" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+                        <div class="col-4 border-start">
+                            {% if product.image4 %}
+                                <a href="{{ product.image4.url }}" target="_blank">
+                                    <img class="card-img-top img-fluid" src="{{ product.image4.url }}" alt="{{ product.name }}">
+                                </a>
+                            {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                                </a>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center m-0 p-0">
+                {% if request.user.is_superuser %}
+                    <small class="ml-3">
+                        <a class="small px-3 py-1 text-light bg-primary bg-gradient rounded-pill" href="">Edit</a>
+                        <a class="small px-2 py-1 text-light bg-danger bg-gradient rounded-pill" href="">Delete</a>
+                    </small>
+                {% endif %}
+                </div>
+            </div>
+            <form class="form" action="" method="POST">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="col-12">
+                        <p class="mt-3"><strong>Quantity:</strong></p>
+                        <div class="form-group w-50">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button class="decrement-qty btn btn-black rounded-0" 
+                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                        <span class="icon">
+                                            <i class="fas fa-minus"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <div class="input-group-append">
+                                    <button class="increment-qty btn btn-black rounded-0"
+                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                        <span class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col{% if s %}-12 mt-2{% endif %}">
+                        <a href="{% url 'products' %}" class="btn btn-outline-dark rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        <input type="submit" class="btn btn-primary my-1 text-nowrap text-uppercase mt-5" value="Add to Cart">
+                    </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>
+            </form>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 ">
+            <div class="product-details-container mb-5 mt-md-5">
+                <div class="row">
+                    <div class="col-12">
+                        <h3 class="mb-0">{{ product.name }}</h3>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-6 d-flex align-items-center">
+                        {% if request.user.is_authenticated %}
+                            {% if product in favorites %}
+                                <a class="favorites-link" href=""><i class="fa-solid fa-heart fa-beat text-danger"></i> Remove From Favorites</a>
+                            {% else %}
+                                <a class="favorites-link" href=""><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
+                            {% endif %}
+                        {% else %}
+                            <a class="favorites-link" href="{% url 'account_login' %}?next={{ request.path }}"><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        <p class="fs-3 card-title mb-0 text-left "><strong>€{{ product.price }}</strong></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {% if product.category %}
+                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: 
+                            <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand.name }}">{{ product.brand }}
+                            </a>
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> SKU: {{ product.sku }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {% if product.category %}
+                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> CATEGORY: 
+                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">{{ product.category.friendly_name }}
+                            </a>
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+                <p class="mt-3">{{ product.description|safe }}</p>
+                <br>
+                <h3>Product Specifications</h3>
+                <hr >
+                <p class="mt-3">{{ product.specs|safe }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}
