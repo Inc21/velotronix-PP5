@@ -235,6 +235,7 @@ section {
 
 .card {
     width: 280px;
+    height: 420px;
     color: #264653;
     position: relative;
 }
