@@ -250,7 +250,7 @@ section {
 }
 
 .product-details-container {
-    background-color: #E9EDE9;
+    background-color: #e9ede9da;
     color: #264653;
 }
 
@@ -278,6 +278,7 @@ section {
 .card-container {
     position: relative;
     width: 280px;
+    max-height: 420px;
     margin: 10px;
     background-color: #E9EDE9;
     color: #264653;
