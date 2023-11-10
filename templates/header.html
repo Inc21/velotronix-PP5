@@ -1,7 +1,7 @@
 <header class="container-fluid fixed-top">
     <div class="row navbar-upper">
         <div class="col-10">
-            <form class="d-none d-md-flex m-1" role="search" method="GET" action="">
+            <form class="d-none d-lg-flex m-1" role="search" method="GET" action="">
                 <input class="search form-control me-2" type="search" placeholder="Search products" name="q" aria-label="Search">
                 <a class="search-btn" role="button" type="submit">Search</a>
             </form>
@@ -9,7 +9,7 @@
         <div class="col-2 mt-1 d-grid justify-content-end">
             <div class="d-inline-block text-end text-nowrap">
                 {% if request.user.is_authenticated %}
-                    <a href="#" class="login-link">Profile</a> | <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
+                <span class="d-none d-sm-inline">Logged in as:</span><a href="#" class="login-link"> <span class="text-decoration-underline">{{ request.user.username}}</span></a> | <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
                 {% else %}
                     <a class="login-link" href="{% url "account_login" %}?next={{ request.path }}">Login</a> | <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
                 {% endif %}
@@ -68,8 +68,13 @@
                         <li class="nav-item">
                             <a class="nav-link ps-1" href="#">About Us</a>
                         </li>
+                        {% if request.user.is_authenticated %}
                         <li class="nav-item">
-                            <form class="d-md-none d-md-flex justify-content-center m-1" role="search">
+                            <a class="nav-link ps-1" href="#">Profile</a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <form class="d-lg-none d-md-flex justify-content-center m-1" role="search">
                                 <input class="search-burger form-control me-2" type="search" placeholder="Search products" aria-label="Search">
                                 <a class="search-btn-burger mt-2" role="button" type="submit">Search</a>
                             </form>
