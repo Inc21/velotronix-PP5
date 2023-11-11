@@ -25,9 +25,9 @@
     </div>
     <div class="row">
         <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
-            <div class="container-fluid navbar-lower pe-2">
+            <div class="container-fluid navbar-lower">
                 <div class="col-4">
-                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="{% url "home" %}">Vel<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
+                    <a class="navbar-brand text-light logo-text ms-2 fs-1" href="{% url "home" %}">Vel{% if request %}<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>{% else %}o{% endif %}Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
                 </div>
                 <button class="navbar-toggler border-light text-light me-1 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="burger-btn"><i class="fa-solid fa-bars"></i></span>
@@ -39,9 +39,10 @@
                         All Products
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{% url "products" %}?sort=popularity&direction=asc">By Popularity</a></li>
                             <li><a class="dropdown-item" href="{% url "products" %}?sort=price&direction=asc">By Price</a></li>
-                            <li><a class="dropdown-item" href="{% url "products" %}?sort=Brand&direction=asc">By Brand</a></li>
-                            <li><a class="dropdown-item" href="#">By Category</a></li>
+                            <li><a class="dropdown-item" href="{% url "products" %}?sort=brand&direction=asc">By Brand</a></li>
+                            <li><a class="dropdown-item" href="{% url "products" %}?sort=category&direction=asc">By Category</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{% url "products" %}">All products</a></li>
                         </ul>
