@@ -39,8 +39,8 @@
                         All Products
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">By Price</a></li>
-                            <li><a class="dropdown-item" href="#">By Brand</a></li>
+                            <li><a class="dropdown-item" href="{% url "products" %}?sort=price&direction=asc">By Price</a></li>
+                            <li><a class="dropdown-item" href="{% url "products" %}?sort=Brand&direction=asc">By Brand</a></li>
                             <li><a class="dropdown-item" href="#">By Category</a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="{% url "products" %}">All products</a></li>

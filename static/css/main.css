@@ -241,9 +241,9 @@ section {
 }
 
 .cover-image {
-    max-height: 220px;
-    width: auto;
-    object-fit: cover;
+    height: 220px;
+    /* width: auto;
+    overflow: hidden; */
     object-position: center;
 }
 
