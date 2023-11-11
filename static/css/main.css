@@ -240,6 +240,13 @@ section {
     position: relative;
 }
 
+.cover-image {
+    max-height: 220px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
 .card-lnk {
     color: #264653;
     text-decoration: none;

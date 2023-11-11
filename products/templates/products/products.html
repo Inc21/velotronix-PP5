@@ -13,7 +13,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     {% if product.image1 %}
-                                    <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                    <img class="cover-image card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                                     {% else %}
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.wabp" alt="{{ product.name }}">
                                     {% endif %}

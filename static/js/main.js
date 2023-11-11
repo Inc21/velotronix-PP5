@@ -24,7 +24,7 @@ $(document).ready(function(){
     },
     imageBorder: "5px solid #264653",
     borderRadius: "10px",
-    imageWidth: "500px",
+    imageWidth: "500",
     imageHeight: "400px",
     open: function(){
         console.log("opened");
