@@ -1,9 +1,9 @@
 <header class="container-fluid fixed-top">
     <div class="row navbar-upper">
         <div class="col-10">
-            <form class="d-none d-lg-flex m-1" role="search" method="GET" action="">
-                <input class="search form-control me-2" type="search" placeholder="Search products" name="q" aria-label="Search">
-                <a class="search-btn" role="button" type="submit">Search</a>
+            <form class="d-none d-lg-flex m-1" role="search" method="GET" action="{% url "products" %}">
+                <input id="q" class="search form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
+                <button class="search-btn" role="button" type="submit">Search</button>
             </form>
         </div>
         <div class="col-2 mt-1 d-grid justify-content-end">
@@ -77,9 +77,9 @@
                         </li>
                         {% endif %}
                         <li class="nav-item flex-grow-1">
-                            <form class="d-lg-none  m-1" role="search">
-                                <input class="search-burger form-control me-2" type="search" placeholder="Search products" aria-label="Search">
-                                <a class="search-btn-burger mt-2 mb-2" role="button" type="submit">Search</a>
+                            <form method="GET" action="{% url "products" %}" class="d-lg-none  m-1" role="search">
+                                <input id="q" class="search-burger form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
+                                <button class="search-btn-burger mt-2 mb-2" role="button" type="submit">Search</button>
                             </form>
                         </li>                    
                     </ul>
