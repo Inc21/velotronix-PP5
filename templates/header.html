@@ -25,15 +25,17 @@
     </div>
     <div class="row">
         <nav class="navbar navbar-expand-lg bg-body-tertiary m-0 p-0">
-            <div class="container-fluid navbar-lower">
+            <div class="container-fluid navbar-lower d-flex align-items-center">
                 <div class="col-4">
                     <a class="navbar-brand text-light logo-text ms-2 fs-1" href="{% url "home" %}">Vel{% if request %}<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>{% else %}o{% endif %}Tr<i class="spinning-icon fa-solid fa-circle-xmark fa-spin fa-2xs"></i>nix</a>
                 </div>
-                <button class="navbar-toggler border-light text-light me-1 mt-3 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="burger-btn"><i class="fa-solid fa-bars"></i></span>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
                 </button>
-                <div class="collapse navbar-collapse ps-2" id="navbarSupportedContent">
-                    <ul class="navbar-nav gap-1 me-auto mb-2 mb-lg-0">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav p-2">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle ps-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         All Products
@@ -74,10 +76,10 @@
                             <a class="nav-link ps-1" href="#">Profile</a>
                         </li>
                         {% endif %}
-                        <li class="nav-item">
-                            <form class="d-lg-none d-md-flex justify-content-center m-1" role="search">
+                        <li class="nav-item flex-grow-1">
+                            <form class="d-lg-none  m-1" role="search">
                                 <input class="search-burger form-control me-2" type="search" placeholder="Search products" aria-label="Search">
-                                <a class="search-btn-burger mt-2" role="button" type="submit">Search</a>
+                                <a class="search-btn-burger mt-2 mb-2" role="button" type="submit">Search</a>
                             </form>
                         </li>                    
                     </ul>

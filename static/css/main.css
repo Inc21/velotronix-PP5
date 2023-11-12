@@ -19,7 +19,69 @@ header {
     color: #264653;
 }
 
+/* ------------------------------------------------------------- Hamburger menu animation */
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #E9EDE9;
+    display: block;
+    transition: all 0.2s;
+}
+
+.middle-bar {
+    margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #E9EDE9;
+}
+
 /* ------------------------------------------------------------- Header and navigation */
+
+.navbar-toggler {
+    margin: 19px 0 18px 0;
+}
 
 .active {
     color: #E9EDE9 !important;
@@ -33,16 +95,11 @@ header {
     width: 60%;
 }
 
-.burger-btn {
-    background-color: #264653;
-}
-
 .search-burger {
     border: 1px solid #E9EDE9;
     border-radius: 5px;
     padding: 5px;
     height: 1.5rem;
-    width: 90%;
 }
 
 .search-btn {
@@ -93,18 +150,14 @@ header {
 .navbar-lower {
     background-color: #264653;
     color: #E9EDE9;
-    /* margin-right: 1rem;
-    padding: 0; */
     height: 4rem;
-    padding-right: 1rem;
-    /* overflow-y: hidden;     */
+    padding-right: 0.5rem;
 }
 
 .navbar-upper {
     background-color: #E9EDE9;
     height: 2rem;
     padding-right: 0.5rem;
-    overflow: hidden;
 }
 
 .spinning-icon {
@@ -141,8 +194,6 @@ header {
 
 .navbar-collapse {
     background-color: #264653;
-    width: 100%;
-    z-index: 99999;
 }
 
 .dropdown-item:active {
@@ -173,7 +224,7 @@ section {
     min-width: 300px;
     background-color: #E9EDE9;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .index_content {
