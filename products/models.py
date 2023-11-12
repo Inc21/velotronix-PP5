@@ -34,18 +34,22 @@ class Product(models.Model):
     specs = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image1_url = models.URLField(max_length=1024, null=True, blank=True)
-    image1 = ResizedImageField(upload_to='product_images/', null=True,
-                               force_format='WEBP', quality=85, blank=True,
+    image1 = ResizedImageField(size=[500, 400], upload_to='product_images/',
+                               null=True, force_format='WEBP', quality=85,
+                               blank=True,
                                default='product_images/noimage.webp')
     image2_url = models.URLField(max_length=1024, null=True, blank=True)
-    image2 = ResizedImageField(upload_to='product_images/', null=True,
-                               force_format='WEBP', quality=85, blank=True)
+    image2 = ResizedImageField(size=[500, 400], upload_to='product_images/',
+                               null=True, force_format='WEBP', quality=85,
+                               blank=True)
     image3_url = models.URLField(max_length=1024, null=True, blank=True)
-    image3 = ResizedImageField(upload_to='product_images/', null=True,
-                               force_format='WEBP', quality=85, blank=True)
+    image3 = ResizedImageField(size=[500, 400], upload_to='product_images/',
+                               null=True, force_format='WEBP', quality=85,
+                               blank=True)
     image4_url = models.URLField(max_length=1024, null=True, blank=True)
-    image4 = ResizedImageField(upload_to='product_images/', null=True,
-                               force_format='WEBP', quality=85, blank=True)
+    image4 = ResizedImageField(size=[500, 400], upload_to='product_images/',
+                               null=True, force_format='WEBP', quality=85,
+                               blank=True)
     popularity = models.IntegerField(default=0)
 
     def __str__(self):

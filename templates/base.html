@@ -13,11 +13,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/site/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/site/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/site/site.webmanifest' %}">
+
+    {% block extra_css %}
+    {% endblock extra_css %}
+
 	  <script src="https://kit.fontawesome.com/64b115579c.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"/>
-	<link rel="stylesheet" type="text/css" media="screen" href='{% static "css/main.css" %}'>
+	<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/main.css' %}">
   {% comment %} Mailchimp inline form styling {% endcomment %}
   <style type="text/css">
     #mc_embed_signup{background:#264653; clear:left; font:14px 'Sometype Mono', monospace,sans-serif; width: 250px;}
@@ -46,6 +50,7 @@
     </section>
 
 {% include "footer.html" %}
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
@@ -54,6 +59,7 @@
 	  <script src='{% static "js/main.js" %}'></script>
 
     {% block postloadjs %}
+
     {% endblock %}
   </body>
 </html>

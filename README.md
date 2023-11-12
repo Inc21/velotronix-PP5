@@ -367,6 +367,8 @@ NB: You will need to add your Heroku app link to the ALLOWED_HOSTS in the settin
 
 # Content
 - Hero image on the home by Photo by [Marianna Lutkova](https://unsplash.com/@mery_lu_design?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-person-riding-a-bike-in-a-field-at-sunset-4PSLAKVQQ88?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
+
+- JavaScript code for the details page image popup was taken from [CodeHim](https://www.codehim.com/lightbox/onclick-image-popup-jquery-lightbox/) and modified to suit my needs. Author of the code is AleMay96.
   
 
 

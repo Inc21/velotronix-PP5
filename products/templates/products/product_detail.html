@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+
+<!-- Image Popup CSS -->
+<link rel="stylesheet" href="{% static "css/style.css" %}">
+
+{% endblock extra_css %}
+
 {% block content %}
 
 <div class="container-fluid single-product-detail">
-    <div class="row">
+    <div class="row p-1">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div class="image-container mb-2 rounded my-5">
+            <div {% if window.size == 5000px %}id="imageGallery"{% endif %} class="image-container mb-2 rounded my-3">
                 <div class="row">
                     {% if product.image1 %}
                         <a href="{{ product.image1.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
-                        </a>
                     {% endif %}
                 </div>
                 <hr class="m-0 p-0">
@@ -27,9 +32,7 @@
                                     <img class="card-img-top img-fluid" src="{{ product.image2.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
-                                </a>
                             {% endif %}
                         </div>
                         <div class="col-4">
@@ -38,9 +41,7 @@
                                     <img class="card-img-top img-fluid" src="{{ product.image3.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
-                                </a>
                             {% endif %}
                         </div>
                         <div class="col-4 border-start">
@@ -49,9 +50,7 @@
                                     <img class="card-img-top img-fluid" src="{{ product.image4.url }}" alt="{{ product.name }}">
                                 </a>
                             {% else %}
-                                <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
-                                </a>
                             {% endif %}
                         </div>
                     {% endif %}
@@ -61,8 +60,8 @@
                 <div class="col-12 d-flex justify-content-center m-0 p-0">
                 {% if request.user.is_superuser %}
                     <small class="mt-2 ml-3">
-                        <a class="small px-4 py-2 text-light bg-primary bg-gradient rounded-pill" href="">Edit</a>
-                        <a class="small px-3 py-2 text-light bg-danger bg-gradient rounded-pill" href="">Delete</a>
+                        <a class="small px-4 py-2 text-light bg-primary bg-gradient rounded-pill" role="button" href="">Edit</a>
+                        <a class="small px-3 py-2 text-light bg-danger bg-gradient rounded-pill" role="button" href="">Delete</a>
                     </small>
                 {% endif %}
                 </div>
@@ -102,10 +101,9 @@
                     </div>
 
                     <div class="col-12 mt-0 d-flex justify-content-center">
-                        <a href="{% url 'products' %}" class="btn keep-shopping-btn btn-outline-dark rounded-2">
+                        <a href="{% url 'products' %}" class="btn keep-shopping-btn btn-outline-dark rounded-2 mb-2">
                             <span class="icon">
-                                <i class="fas fa-chevron-left"></i>
-                                <i class="fas fa-chevron-left"></i>
+                                <i class="fa-solid fa-angles-left"></i>
                             </span>
                             <span class="text-uppercase">Keep Shopping</span>
                         </a>
@@ -115,7 +113,7 @@
             </form>
         </div>
         <div class="col-12 col-md-6 col-lg-4 ">
-            <div class="product-details-container mb-5 mt-md-5">
+            <div class="product-details-container mb-5 mt-md-2">
                 <div class="row">
                     <div class="col-12">
                         <h3 class="mb-0">{{ product.name }}</h3>
@@ -142,7 +140,7 @@
                     <div class="col-12">
                         {% if product.category %}
                         <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: 
-                            <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand.name }}">{{ product.brand }}
+                            <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand }}">{{ product.brand }}
                             </a>
                         </p>
                         {% endif %}
@@ -163,7 +161,7 @@
                         {% endif %}
                     </div>
                 </div>
-                <p class="mt-3">{{ product.description|safe }}</p>
+                <p class="mt-3 product-description">{{ product.description|safe }}</p>
                 <br>
                 <h3>Product Specifications</h3>
                 <hr >
@@ -173,6 +171,12 @@
     </div>
 </div>
 
-
-
 {% endblock content %}
+
+{% block postloadjs %}
+
+<!-- Image Popup JS -->
+<script src="{% static 'js/jquery.image-popup.js' %}"></script>
+
+{% endblock %}
+ 
