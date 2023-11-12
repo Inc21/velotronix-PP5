@@ -16,6 +16,7 @@ def all_products(request):
     sort = ""
     direction = ""
     current_sorting = ""
+    brands = ""
 
     if request.GET:
         if "sort" in request.GET:
@@ -60,8 +61,6 @@ def all_products(request):
             else:
                 query = request.GET["q"]
                 products = products.filter(queries)
-                messages.success(
-                    request, f' You searched for "{ query }"')
 
     current_sorting = f"{ sort }_{ direction }"
 
@@ -70,6 +69,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'brands': brands,
     }
     return render(request, 'products/products.html', context)
 
