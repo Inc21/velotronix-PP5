@@ -70,6 +70,7 @@ def all_products(request):
         'current_categories': categories,
         'current_sorting': current_sorting,
         'brands': brands,
+        'sort': sort,
     }
     return render(request, 'products/products.html', context)
 

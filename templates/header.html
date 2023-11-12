@@ -35,12 +35,17 @@
                         All Products
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{% url "products" %}?sort=popularity&direction=desc">By Popularity</a></li>
-                            <li><a class="dropdown-item" href="{% url "products" %}?sort=price&direction=desc">By Price</a></li>
-                            <li><a class="dropdown-item" href="{% url "products" %}?sort=brand&direction=asc">By Brand</a></li>
-                            <li><a class="dropdown-item" href="{% url "products" %}?sort=category&direction=asc">By Category</a></li>
+                            <li>
+                                <a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=popularity&direction=desc">By Viewed
+                                    <div class="text-end"><i class="text-end fa-solid fa-signal fa-flip-horizontal"></i></div>
+                                </a>
+                            </li>
+                            <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=price&direction=desc">By Price <i class="text-end fa-solid fa-signal fa-flip-horizontal"></i></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=price&direction=esc">By Price <i class="text-end fa-solid fa-signal"></i></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=brand&direction=asc">By Brand <span class="text-end"><i class="fa-solid fa-arrow-down-a-z"></i></span></a></li>
+                            <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=category&direction=asc">By Category <i class="fa-solid fa-arrow-down-a-z"></i></a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="{% url "products" %}">All products</a></li>
+                            <li><a class="dropdown-item d-flex justify-content-center" href="{% url "products" %}">All products</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

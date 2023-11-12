@@ -23,6 +23,10 @@
                                 <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Brand: {{ b }}</span>
                                 <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
                             {% endfor %}
+                            {% if sort %}
+                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sort: {{ sort }}</span>
+                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
