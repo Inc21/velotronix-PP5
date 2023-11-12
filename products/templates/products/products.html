@@ -8,14 +8,23 @@
         <div class="col-12 ">
             <div class="row">
                 <div class="col-12 d-grid justify-content-center">
-                    <h1 class="dark-green text-center mb-0 mt-3 text-uppercase">Products</h1>
-                
-                    {% for c in current_categories %}
-                    <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">Category: {{ c.friendly_name }}</span>
-                    {% endfor %}
-                    {% for b in brands %}
-                    <span class="category-badge text-decoration-none p-2 mt-2 badge badge-white text-black rounded-0 border border-dark"> Brand: {{ b }}</span>
-                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="dark-green text-center mb-0 mt-3 text-uppercase">Products</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            {% for c in current_categories %}
+                                <span class="p-2 dark-green mt-2 badge rounded-1 border border-dark">Category: {{ c.friendly_name }}</span>
+                                <a type="button" class="dark-green badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endfor %}
+                            {% for b in brands %}
+                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Brand: {{ b }}</span>
+                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -66,7 +75,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 flex-wrap m-0 px-3">
-                                    <h6 class="card-title">{{ product.name }}</h6>
+                                    <h6 class="card-title mt-1">{{ product.name|truncatechars:"45" }}</h6>
                                 </div>
                             </div>
                             <div class="card-footer m-0 p-0">

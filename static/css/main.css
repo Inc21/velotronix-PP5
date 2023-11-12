@@ -124,8 +124,6 @@ header {
 
 .cart {
     border: 2px solid #264653;
-    /* height: 1rem;
-    margin-top: 10px; */
     font-weight: 700;
     color: #264653;
     border-radius: 5px;
@@ -316,8 +314,23 @@ section {
     text-decoration: none;
 }
 
+.card-title {
+    height: 2.5rem;
+}
+
 .single-product-detail {
     max-width: 2000px;
+}
+
+.badge-back {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+.badge-back:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 1px solid #264653;
 }
 
 .product-details-container {
