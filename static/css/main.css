@@ -124,12 +124,17 @@ header {
 
 .cart {
     border: 2px solid #264653;
-    height: 1.5rem;
+    /* height: 1rem;
+    margin-top: 10px; */
     font-weight: 700;
     color: #264653;
     border-radius: 5px;
     padding: 2px 5px 0 5px;
     text-decoration: none;
+}
+
+.top-icon {
+    font-size: 11px;
 }
 
 .login-link {
@@ -145,7 +150,9 @@ header {
     vertical-align: baseline;
 }
 
-
+.login-box {
+    margin-top: 3px;
+}
 
 .navbar-lower {
     background-color: #264653;
