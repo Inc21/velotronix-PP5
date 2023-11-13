@@ -33,5 +33,20 @@ $(document).ready(function(){
         console.log("closed");
     }
 });
-
 });
+
+// Back to top button
+var btt = $('.btt-button');
+var deliveryBanner = $('.delivery-banner');
+$(window).scroll(function() {
+    if ($(window).scrollTop() > 200) {
+        btt.removeClass('d-none');
+        deliveryBanner.addClass('d-none');
+    } else {
+        btt.addClass('d-none');
+        deliveryBanner.removeClass('d-none');
+    }
+});
+$('.btt-button').click(function(e) {
+    window.scrollTo(0, 0);
+})

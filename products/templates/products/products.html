@@ -137,18 +137,7 @@
 {{ block.super }}
     
     <script type="text/javascript">
-        // Back to top button
-        var btt = $('.btt-button');
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 100) {
-                btt.removeClass('d-none');
-            } else {
-                btt.addClass('d-none');
-            }
-        });
-        $('.btt-button').click(function(e) {
-            window.scrollTo(0, 0);
-        })
+        
     </script>
 
 {{ block.super }}

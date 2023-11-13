@@ -455,8 +455,8 @@ section {
     height: 40px;
     width: 40px;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1rem;
+    right: 1rem;
     background-color: #264653;
     color: #E9EDE9;
     border: 1px solid #E9EDE9;
