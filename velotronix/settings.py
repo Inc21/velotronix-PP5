@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'velotronix',
     'home',
     'products',
+    'cart',
 
     # Third party apps
     'allauth',

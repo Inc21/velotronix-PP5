@@ -13,7 +13,7 @@
                 {% else %}
                     <a class="login-link" href="{% url "account_login" %}?next={{ request.path }}">Login</a> | <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
                 {% endif %}
-                <a class="cart" href="#"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs top-icon"></i>{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
+                <a class="cart" href="{% url "cart" %}"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs top-icon"></i>{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
             </div>
         </div>
     </div>
