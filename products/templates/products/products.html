@@ -14,19 +14,17 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            {% for c in current_categories %}
-                                <span class="p-2 dark-green mt-2 badge rounded-1 border border-dark">Category: {{ c.friendly_name }}</span>
-                                <a type="button" class="dark-green badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
-                            {% endfor %}
-                            {% for b in brands %}
-                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Brand: {{ b }}</span>
-                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
-                            {% endfor %}
-                            {% if sort %}
-                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sort: {{ sort }}</span>
-                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
-                            {% endif %}
+                        <div class="col-12 d-flex justify-content-center">
+                                {% for c in current_categories %}
+                                    <span class="p-2 dark-green ms-2 mt-2 badge rounded-1 border border-dark">Category: {{ c.friendly_name }}</span>
+                                {% endfor %}
+                                {% for b in brands %}
+                                    <span class="category-badge ms-2 text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Brand: {{ b }}</span>
+                                {% endfor %}
+                                {% if sort %}
+                                    <span class="category-badge ms-2 text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sort: {{ sort }}</span>
+                                {% endif %}
+                                <a type="button" class="dark-green badge badge-back btn p-2 ms-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
                         </div>
                     </div>
                 </div>
