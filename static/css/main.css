@@ -333,6 +333,13 @@ section {
     border: 1px solid #264653;
 }
 
+.form-select {
+    background-color: #fff;
+    color: #264653;
+    width: auto;
+    border: 1px solid #264653;
+}
+
 .product-details-container {
     background-color: #e9ede9da;
     color: #264653;
@@ -424,6 +431,24 @@ section {
     background-color: #E9EDE9;
     color: #264653;
     border: 2px solid #264653;
+}
+
+.btt-button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #264653;
+    color: #E9EDE9;
+    border: 1px solid #E9EDE9;
+    z-index: 999;
+}
+
+.btt-button:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 1px solid #264653;
 }
 
 /* ------------------------------------------------------------- Footer */
