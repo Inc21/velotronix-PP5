@@ -211,6 +211,22 @@ header {
     font-weight: 700;
 }
 
+.delivery-banner {
+    background-color: #264653;
+    color: #E9EDE9;
+    border-top: 1px solid #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    width: 40rem;
+    position: fixed;
+    top: 7.5rem;
+    left: -15.5rem;
+    rotate: -35deg;
+    z-index: 999;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
 /* ------------------------------------------------------------- Main Container */
 
 .messages {
