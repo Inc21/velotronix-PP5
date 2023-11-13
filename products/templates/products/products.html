@@ -8,14 +8,27 @@
         <div class="col-12 ">
             <div class="row">
                 <div class="col-12 d-grid justify-content-center">
-                    <h1 class="dark-green text-center mb-0 mt-3 text-uppercase">Products</h1>
-                
-                    {% for c in current_categories %}
-                    <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">Category: {{ c.friendly_name }}</span>
-                    {% endfor %}
-                    {% for b in brands %}
-                    <span class="category-badge text-decoration-none p-2 mt-2 badge badge-white text-black rounded-0 border border-dark"> Brand: {{ b }}</span>
-                    {% endfor %}
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="dark-green text-center mb-0 mt-3 text-uppercase">Products</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            {% for c in current_categories %}
+                                <span class="p-2 dark-green mt-2 badge rounded-1 border border-dark">Category: {{ c.friendly_name }}</span>
+                                <a type="button" class="dark-green badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endfor %}
+                            {% for b in brands %}
+                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Brand: {{ b }}</span>
+                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endfor %}
+                            {% if sort %}
+                                <span class="category-badge text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sort: {{ sort }}</span>
+                                <a type="button" class="dark-green btn-sm badge badge-back btn p-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                            {% endif %}
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -31,16 +44,16 @@
                         </div>
                         <div class="col-12 col-md-4 my-auto">
                             <div class="sort-select-wrapper d-flex justify-content-center">
-                                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <select id="sort-selector" class="form-select form-select-sm rounded-1">
                                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                     <option value="popularity_asc" {% if current_sorting == 'popularity_asc' %}selected{% endif %}>Viewed (least to most)</option>
                                     <option value="popularity_desc" {% if current_sorting == 'popularity_desc' %}selected{% endif %}>Viewed (most to least)</option>
                                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
                                     <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                    <option value="brand_asc" {% if current_sorting == 'brand_asc' %}selected{% endif %}>Brand (A-Z)</option>
+                                    <option value="brand_desc" {% if current_sorting == 'brand_desc' %}selected{% endif %}>Brand (Z-A)</option>
                                     <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
                                     <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                                 </select>
@@ -66,7 +79,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 flex-wrap m-0 px-3">
-                                    <h6 class="card-title">{{ product.name }}</h6>
+                                    <h6 class="card-title mt-1">{{ product.name|truncatechars:"45" }}</h6>
                                 </div>
                             </div>
                             <div class="card-footer m-0 p-0">
@@ -115,5 +128,54 @@
         </div>
     </div>
 </div>
+<a role="button" class="btn btt-button d-flex d-none shadow-sm rounded-1">
+    <i class="fas fa-arrow-up mx-auto my-auto"></i>
+</a>
 
 {% endblock content %}
+
+{% block postloadjs %}
+
+{{ block.super }}
+    
+    <script type="text/javascript">
+        // Back to top button
+        var btt = $('.btt-button');
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 100) {
+                btt.removeClass('d-none');
+            } else {
+                btt.addClass('d-none');
+            }
+        });
+        $('.btt-button').click(function(e) {
+            window.scrollTo(0, 0);
+        })
+    </script>
+
+{{ block.super }}
+<script>
+    // Sort selector
+    $('#sort-selector').change(function() {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
+
+        var selectedVal = selector.val();
+        if(selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
+
+{% endblock postloadjs %}
