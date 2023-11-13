@@ -54,6 +54,9 @@ def all_products(request):
 
             queries = Q(
                 name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(specs__icontains=query)
             if products.filter(queries).count() == 0:
                 messages.info(
                     request, f'The term "{ query }" was not found in products \

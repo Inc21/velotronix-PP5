@@ -211,6 +211,22 @@ header {
     font-weight: 700;
 }
 
+.delivery-banner {
+    background-color: #264653;
+    color: #E9EDE9;
+    border-top: 1px solid #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    width: 40rem;
+    position: fixed;
+    top: 7.5rem;
+    left: -15.5rem;
+    rotate: -35deg;
+    z-index: 999;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
 /* ------------------------------------------------------------- Main Container */
 
 .messages {
@@ -315,7 +331,9 @@ section {
 }
 
 .card-title {
-    height: 2.5rem;
+    height: 2.2rem;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .single-product-detail {
@@ -437,8 +455,8 @@ section {
     height: 40px;
     width: 40px;
     position: fixed;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1rem;
+    right: 1rem;
     background-color: #264653;
     color: #E9EDE9;
     border: 1px solid #E9EDE9;
