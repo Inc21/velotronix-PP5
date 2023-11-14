@@ -222,9 +222,20 @@ header {
     top: 7.5rem;
     left: -15.5rem;
     rotate: -35deg;
-    z-index: 999;
     font-size: 15px;
     letter-spacing: 2px;
+    z-index: 1;
+}
+
+.header-container {
+    z-index: 2;
+}
+
+.header-container h1 {
+    text-shadow: -2px 0px 2px #E9EDE9,
+    2px 0px 2px #E9EDE9,
+    0px -2px 2px #E9EDE9,
+    0px 2px 2px #E9EDE9;
 }
 
 /* ------------------------------------------------------------- Main Container */
@@ -467,6 +478,11 @@ section {
     background-color: #E9EDE9;
     color: #264653;
     border: 1px solid #264653;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 /* ------------------------------------------------------------- Footer */

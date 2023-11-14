@@ -212,6 +212,12 @@
 ### Languages and Frameworks
 
 ### Django Packages
+- [Django](https://www.djangoproject.com/) was used as the main framework for the project.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to style Django forms.
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) was used to handle user authentication.
+- [Django Mathfilters](https://pypi.org/project/django-mathfilters/) was used to perform calculations in templates.
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) was used to store static and media files on Amazon AWS S3.
+
 
 
 ### Other tools and programs.
