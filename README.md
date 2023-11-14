@@ -1,3 +1,6 @@
+![VeloTronix Logo](/static/images/readme_images/velotronix_logo.png)
+![mockup](/static/images/readme_images/mockup.png)
+
 # Introduction
 
 
