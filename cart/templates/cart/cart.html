@@ -64,7 +64,7 @@
                                 <p><strong>Subtotal: </strong>€{{ item.product.price|mul:item.quantity }}</p>
                             </div>
                             <div class="col-12 col-sm-6">
-                                <form class="form update-form" action="" method="POST">
+                                <form class="form update-form" action="{% url "adjust_cart" item.item_id %}" method="POST">
                                     {% csrf_token %}
                                     <div class="form-row">
                                         <div class="col-12 d-flex justify-content-center">
@@ -136,7 +136,7 @@
                                     <p class="my-0">€{{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
-                                    <form class="form update-form" action="" method="POST">
+                                    <form class="form update-form" action="{% url "adjust_cart" item.item_id %}" method="POST">
                                         {% csrf_token %}
                                         <div class="form-row">
                                             <div class="col-12 d-flex justify-content-center">
