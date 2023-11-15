@@ -1,19 +1,19 @@
 <header class="container-fluid fixed-top">
     <div class="row navbar-upper">
-        <div class="col-10">
+        <div class="col-8">
             <form class="d-none d-lg-flex m-1" role="search" method="GET" action="{% url "products" %}">
                 <input id="q" class="search form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
                 <button class="search-btn" role="button" type="submit">Search</button>
             </form>
         </div>
-        <div class="col-2 login-box d-grid align-items-center justify-content-end">
-            <div class="d-inline-block text-end text-nowrap">
+        <div class="col-4 login-box">
+            <div class="d-flex justify-content-end align-items-center text-end text-nowrap">
                 {% if request.user.is_authenticated %}
-                <span class="d-none d-sm-inline">Logged in as:</span><a href="#" class="login-link"> <span class="text-decoration-underline">{{ request.user.username}}</span></a> | <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
+                <span class="d-none d-sm-inline">Logged in as:</span><a href="#" class="login-link"> <span class="text-decoration-underline">{{ request.user.username}}</span></a> <span class="ms-2 me-2">|</span> <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
                 {% else %}
-                    <a class="login-link" href="{% url "account_login" %}?next={{ request.path }}">Login</a> | <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
+                    <a class="login-link" href="{% url "account_login" %}?next={{ request.path }}">Login</a> <span class="ms-2 me-2">|</span> <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
                 {% endif %}
-                <a class="cart" href="{% url "cart" %}"><i class="fa-solid fa-cart-plus dark-green"></i> <i class="fa-solid fa-euro-sign fa-xs top-icon"></i>{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
+                <a class="cart ms-2 text-center" href="{% url "cart" %}"><i class="fa-solid fa-cart-plus dark-green"></i> €{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
             </div>
         </div>
     </div>
