@@ -396,6 +396,11 @@ section {
     text-decoration: none;
 }
 
+.mobile-cart-container {
+    background-color: #fff;
+    color: #264653;
+}
+
 /* ------------------------------------------------------------- Product Cards overlay*/
 
 .middle {
