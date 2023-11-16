@@ -1,4 +1,13 @@
+![VeloTronix Logo](/static/images/readme_images/velotronix_logo.png)
+![mockup](/static/images/readme_images/mockup.png)
+
 # Introduction
+Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
+
+
+The live website can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/ "Velotronix")
+
+Admin panel can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/admin/login/?next=/admin/ "velotronix Admin Panel.")
 
 
 ### Project Goals
@@ -212,6 +221,12 @@
 ### Languages and Frameworks
 
 ### Django Packages
+- [Django](https://www.djangoproject.com/) was used as the main framework for the project.
+- [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to style Django forms.
+- [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) was used to handle user authentication.
+- [Django Mathfilters](https://pypi.org/project/django-mathfilters/) was used to perform calculations in templates.
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/) was used to store static and media files on Amazon AWS S3.
+
 
 
 ### Other tools and programs.

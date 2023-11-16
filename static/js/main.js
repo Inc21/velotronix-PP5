@@ -11,30 +11,6 @@ $(document).ready(function() {
     })
 });
 
-
-// onclick Image Popup jQuery Lightbox Plugin
-$(document).ready(function(){
-    
-	$("#imageGallery").imagePopup({
-    overlay: "#e9ede9da",
-
-    closeButton:{
-        width: "40px",
-        height:"40px"
-    },
-    imageBorder: "5px solid #264653",
-    borderRadius: "10px",
-    imageWidth: "500",
-    imageHeight: "400px",
-    open: function(){
-        console.log("opened");
-    },
-    close: function(){
-        console.log("closed");
-    }
-});
-});
-
 // Back to top button
 var btt = $('.btt-button');
 var deliveryBanner = $('.delivery-banner');
