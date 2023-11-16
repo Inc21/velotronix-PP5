@@ -502,6 +502,23 @@ section {
     cursor: pointer;
 }
 
+/* ------------------------------------------------------------- Cart */
+
+.table thead tr th {
+    background-color: #264653;
+    color: #E9EDE9;
+    text-align: center;
+}
+
+.cart-totals {
+    text-align: end;
+    color: #264653;
+}
+
+.cart-buttons {
+    text-align: center;
+}
+
 /* ------------------------------------------------------------- Footer */
 
 .footer {
