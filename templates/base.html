@@ -34,11 +34,11 @@
     <section>
 
       {% if messages %}
-        <div class="messages col-12 p-0 m-0 text-center messages">
+        <div class="messages col-12 text-center messages">
             {% for message in messages %}
-            <div {% if message.tags %} class="text-center alert alert-{% if message.tags == 'warning' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" {% endif %} role="alert">
+            <div {% if message.tags %} class="d-flex justify-content-center align-items-center p-3 text-center alert alert-{% if message.tags == 'warning' %}danger{% else %}{{ message.tags }}{% endif %} alert-dismissible fade show" {% endif %} role="alert">
                 {{ message }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <button type="button" class="btn-close text-light p-2 me-3" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
         
             {% endfor %}
