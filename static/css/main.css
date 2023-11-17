@@ -264,7 +264,7 @@ header {
 
 section {
     margin-top: 6rem;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 17.5rem);
     min-width: 300px;
     background-color: #E9EDE9;
     width: 100%;
@@ -274,7 +274,7 @@ section {
 .index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 17.5rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
     background-position: 17% 75%;
@@ -529,6 +529,10 @@ section {
     color: #264653 !important;
 }
 
+.cart-totals {
+    text-align: end;
+}
+
 .cart-buttons {
     text-align: center;
 }
@@ -562,5 +566,13 @@ section {
 
 footer a {
     color: #E9EDE9;
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+.fb-icon {
+    color: #1877F2;
+    text-shadow: -1px 0px 1px #E9EDE9,
+    1px 0px 1px #E9EDE9,
+    0px -1px 1px #E9EDE9,
+    0px 1px 1px #E9EDE9;
 }
