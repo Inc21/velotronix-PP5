@@ -14,10 +14,11 @@
             <hr>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 d-block d-md-none mobile-cart-container">
+    <div class="row m-1">
+        <div class="col-12 p-0 rounded d-block d-md-none mobile-cart-container">
+            <h4 class="cart-mobile-header">Cart Details</h4>
             {% if cart_items %}
-            <div class="row">
+            <div class="row m-1">
                 <div class="col-12 p-3 text-end">
                     <div class="row">
                         <h6 class="text-uppercase">Cart Total: <strong>€{{ total|floatformat:2 }}</strong></h6>
@@ -30,14 +31,14 @@
                     </div>
                     <div class="row ms-4 me-4 text-center">
                         {% if free_delivery_delta > 0 %}
-                            <p class="mb-1 dark_green">
-                                You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
+                            <p class="mb-1 delivery-delta">
+                                You could get free delivery by spending just <strong class="text-danger">€{{ free_delivery_delta }}</strong> more!
                             </p>
                         {% endif %}
                     </div>                  
                 </div>
             </div>
-            <div class="row">
+            <div class="row m-1">
                 <div class="col-12 d-flex flex-column align-items-center">
                     <div class="row">
                         <div class="col-12">
@@ -72,23 +73,23 @@
                     <div class="row">
                         <div class="col-12 d-flex justify-content-center">
                             {% if item.product.image1 %}
-                            <img src="{{ item.product.image1.url }}" class="img-fluid" alt="{{ item.product.name }}">
+                            <img src="{{ item.product.image1.url }}" class="img-fluid w-75" alt="{{ item.product.name }}">
                             {% else %}
                             <img src="{{ MEDIA_URL }}noimage.webp" class="img-fluid rounded" alt="{{ item.product.name }}">
                             {% endif %}                            
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row ms-1">
                         <div class="col-12 mb-2">
                             <p class="my-0"><strong>{{ item.product.brand }} {{ item.product.name }}</strong></p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row ms-1">
                         <div class="col-12 mb-2">
-                            <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                            <a href="{% url "product_detail" item.item_id %}" class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row me-1">
                         <div class="col-12 text-end">
                             <p class="my-0">Price Each: <strong>€{{ item.product.price }}</strong></p>
                             <p>Subtotal: <strong>€{{ item.product.price|mul:item.quantity }}</strong></p>
@@ -105,7 +106,7 @@
                                                 <div class="row">
                                                     <div class="col-6 mt-3 d-inline-flex">
                                                         <div class="input-group-prepend">
-                                                            <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn btn-dark" 
+                                                            <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn" 
                                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                                 <span class="d-flex justify-content-center align-items-center">
                                                                     <i class="fas fa-minus"></i>
@@ -114,7 +115,7 @@
                                                         </div>
                                                         <input class="form-control qty-input qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                                         <div class="input-group-append mb-0">
-                                                            <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn btn-dark rounded-end-2"
+                                                            <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn rounded-end-2"
                                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                                 <span class="d-flex justify-content-center align-items-center">
                                                                     <i class="fas fa-plus"></i>
@@ -140,7 +141,7 @@
     <div class="row">
         <div class="col-12 cart-desktop-container d-none d-md-block">
             <div class="table-responsive rounded">
-                <table class="table table-sm table-borderless">
+                <table class="cart-table table table-sm table-borderless">
                     <thead>
                         <tr>
                             <th scope="col">Product Details</th>
@@ -151,7 +152,7 @@
                         </tr>
                     </thead>
                     {% for item in cart_items %}
-                    <tbody class="dark-green">
+                    <tbody class="cart-body m-5">
                         <tr>
                             <td class="p-3 w-25">
                                 {% if item.product.image1 %}
@@ -177,7 +178,7 @@
                                                     <div class="row">
                                                         <div class="col-6 mt-3 d-inline-flex">
                                                             <div class="input-group-prepend">
-                                                                <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn btn-dark" 
+                                                                <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn" 
                                                                     data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                                     <span class="d-flex justify-content-center align-items-center">
                                                                         <i class="fas fa-minus"></i>
@@ -186,7 +187,7 @@
                                                             </div>
                                                             <input class="form-control qty-input qty_input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                                             <div class="input-group-append mb-0">
-                                                                <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn btn-dark rounded-end-2"
+                                                                <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn rounded-end-2"
                                                                     data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                                     <span class="d-flex justify-content-center align-items-center">
                                                                         <i class="fas fa-plus"></i>
@@ -209,19 +210,19 @@
                         </tr>
                         {% endfor %}
                         <tr>
-                            <td colspan="5" class="p-3 cart-totals">
-                                <h6>Cart Total: <strong>€{{ total|floatformat:2 }}</strong></h6>
-                                <h6>Delivery: <strong>€{{ delivery|floatformat:2 }}</strong></h6>
-                                <h4 class="mt-4">Grand Total: <strong>€{{ grand_total|floatformat:2 }}</strong></h4>
+                            <td colspan="5" class="p-0 cart-totals">
+                                <h6 class="pe-3">Cart Total: <strong>€{{ total|floatformat:2 }}</strong></h6>
+                                <h6 class="pe-3">Delivery: <strong>€{{ delivery|floatformat:2 }}</strong></h6>
+                                <h4 class="mt-4 pe-3">Grand Total: <strong>€{{ grand_total|floatformat:2 }}</strong></h4>
                                 {% if free_delivery_delta > 0 %}
-                                    <p class="mb-1 dark-green">
-                                        You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
+                                    <p class="mb-1 pe-3 delivery-delta">
+                                        You could get free delivery by spending just <strong class="text-danger">€{{ free_delivery_delta }}</strong> more!
                                     </p>
                                 {% endif %}
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="5" class="cart-buttons">
+                            <td colspan="5" class="cart-buttons pb-3">
                                 <a href="{% url 'products' %}" class="btn keep-shopping-btn">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>

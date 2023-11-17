@@ -504,19 +504,48 @@ section {
 
 /* ------------------------------------------------------------- Cart */
 
+.cart-table {
+    border: 1px solid #264653;
+}
+
+.mobile-cart-container {
+    border: 1px solid #264653;   
+}
+
+.cart-mobile-header {
+    text-align: center;
+    background-color: #264653;
+    color: #E9EDE9;
+    padding: 5px 0 5px 0;
+}
+
 .table thead tr th {
     background-color: #264653;
     color: #E9EDE9;
     text-align: center;
 }
 
-.cart-totals {
-    text-align: end;
-    color: #264653;
+.cart-body tr td {
+    color: #264653 !important;
 }
 
 .cart-buttons {
     text-align: center;
+}
+
+.delivery-delta {
+    background-color: #26465323;
+    color: #264653;
+}
+
+.decrement-qty {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+.increment-qty {
+    background-color: #264653;
+    color: #E9EDE9;
 }
 
 /* ------------------------------------------------------------- Footer */
