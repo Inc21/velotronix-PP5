@@ -11,4 +11,3 @@ class Order(models.Model):
                                       blank=True, null=True)
     grand_total = models.DecimalField(max_digits=10, decimal_places=2,
                                       blank=True, null=True)
-   

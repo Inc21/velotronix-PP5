@@ -303,6 +303,10 @@ section {
     border: 3px solid #264653;
 }
 
+.product-description {
+    padding: 1rem;
+}
+
 .auth-btn {
     font-weight: bold;
     color: #E9EDE9;
