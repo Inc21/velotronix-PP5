@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'mathfilters',
+    'django_countries',
 
     # SocialAccount providers
     'allauth.socialaccount.providers.google',

@@ -286,12 +286,6 @@ header {
     height: 1rem;
 }
 
-.btn-close {
-    background-color: red;
-    color: #E9EDE9;
-    height: .9rem;
-}
-
 section {
     margin-top: 6rem;
     min-height: calc(100vh - 17.5rem);

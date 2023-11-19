@@ -28,7 +28,7 @@ class Product(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True,
                                  on_delete=models.SET_NULL)
     sku = models.CharField(max_length=255, null=True, blank=True)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=40)
     brand = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     specs = models.TextField(null=True, blank=True)
@@ -54,6 +54,7 @@ class Product(models.Model):
                                null=True, force_format='WEBP', quality=85,
                                blank=True)
     popularity = models.IntegerField(default=0)
+    added_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
         return str(self.name)
