@@ -91,8 +91,13 @@
                     </div>
                     <div class="row me-1">
                         <div class="col-12 text-end">
+                            {% if item.product.on_sale %}
+                            <p class="my-0">Sale Price: <strong class="text-danger">€{{ item.product.sale_price }}</strong></p>
+                            <p>Subtotal: <strong>€{{ item.product.sale_price|mul:item.quantity }}</strong></p>
+                            {% else %}
                             <p class="my-0">Price Each: <strong>€{{ item.product.price }}</strong></p>
                             <p>Subtotal: <strong>€{{ item.product.price|mul:item.quantity }}</strong></p>
+                            {% endif %}
                         </div>
                     </div>
                     <div class="row">
@@ -166,7 +171,11 @@
                                 <a href="{% url "product_detail" item.item_id %}" class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</a>                               
                             </td>
                             <td class="py-3">
-                                <p class="my-0"><strong>€{{ item.product.price }}</strong></p>
+                                {% if item.product.on_sale %}
+                                    <p class="my-0"><strong class="text-danger">€{{ item.product.sale_price }}</strong></p>
+                                {% else %}
+                                    <p class="my-0"><strong>€{{ item.product.price }}</strong></p>
+                                {% endif %}
                             </td>
                             <td class="py-3 w-25 text-center">
                                 <form class="form update-form" action="{% url "adjust_cart" item.item_id %}" method="POST">
@@ -205,7 +214,11 @@
                                 <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><small>Remove</small></a>                                
                             </td>
                             <td class="p-3 text-end">
-                                <p class="my-0"><strong>€{{ item.product.price|mul:item.quantity }}</strong></p>
+                                {% if item.product.on_sale %}
+                                    <p class="my-0"><strong class="text-danger">€{{ item.product.sale_price|mul:item.quantity }}</strong></p>
+                                {% else %}
+                                    <p class="my-0"><strong>€{{ item.product.price|mul:item.quantity }}</strong></p>
+                                {% endif %}
                             </td>
                         </tr>
                         {% endfor %}

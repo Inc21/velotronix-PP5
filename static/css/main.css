@@ -230,6 +230,36 @@ header {
     z-index: 1;
 }
 
+.sale-banner {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
+.sale-banner-details {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
 .header-container {
     z-index: 2;
 }
@@ -341,7 +371,7 @@ section {
 
 .card {
     width: 280px;
-    height: 420px;
+    height: 425px;
     color: #264653;
     position: relative;
 }

@@ -16,11 +16,18 @@
             <div {% if window.size == 5000px %}id="imageGallery"{% endif %} class="image-container mb-2 rounded my-3">
                 <div class="row">
                     {% if product.image1 %}
-                        <a href="{{ product.image1.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
-                        </a>
+                        {% if product.on_sale %}
+                            <a class="position-relative" href="{{ product.image1.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                <div class="sale-banner-details">SALE</div>
+                            </a> 
                         {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                            <a href="{{ product.image1.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    {% else %}
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
                     {% endif %}
                 </div>
                 <hr class="m-0 p-0">
@@ -133,16 +140,26 @@
                         {% endif %}
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <p class="fs-3 card-title mb-0 text-left "><strong>€{{ product.price }}</strong></p>
+                        <p class="fs-3 card-title mb-0 text-left ">
+                            {% if product.on_sale %}
+                                <strong class="text-decoration-line-through">€{{ product.price }}</strong>
+                            {% else %}
+                                <strong>€{{ product.price }}</strong></p>
+                            {% endif %}
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-6">
                         {% if product.category %}
                         <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: 
                             <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand }}">{{ product.brand }}
                             </a>
                         </p>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        {% if product.on_sale %}
+                        <p class="p-0 m-0 text-danger fs-5">€{{ product.sale_price }}</p>
                         {% endif %}
                     </div>
                 </div>
