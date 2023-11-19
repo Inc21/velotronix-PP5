@@ -24,7 +24,10 @@
                                 {% if sort %}
                                     <span class="category-badge ms-2 text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sort: {{ sort }}</span>
                                 {% endif %}
-                                <a type="button" class="{% if brands or current_categories or  sort %}d-flex{% else %}d-none{% endif %} dark-green badge badge-back btn p-2 ms-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                                {% if on_sale %}
+                                    <span class="category-badge ms-2 text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sale Itemes</span>
+                                {% endif %}
+                                <a type="button" class="{% if brands or current_categories or sort or on_sale %}d-flex{% else %}d-none{% endif %} dark-green badge badge-back btn p-2 ms-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
                         </div>
                     </div>
                 </div>
@@ -62,16 +65,21 @@
             </div> 
             <div class="row">
                 <div class="col-12 d-flex flex-wrap justify-content-center p-0">
-                    {% for product in products %}
+                {% for product in products %}
                 <div class="card-container my-3">
                     <a class="text-decoration-none" href="{% url "product_detail" product.id %}">
                         <div class="card p-3 me-3 col-6 col-sm-4 col-md-4 col-md-3 col-xl-2">
                             <div class="row">
-                                <div class="col-12 d-flex justify-content-center">
+                                <div class="col-12 position-relative d-flex justify-content-center">
                                     {% if product.image1 %}
-                                    <img class="cover-image card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                        {% if product.on_sale %}
+                                        <img class="cover-image card-img-top img-fluid pos" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                        <div class="sale-banner">SALE</div>
+                                        {% else %}
+                                        <img class="cover-image card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                        {% endif %}
                                     {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                                     {% endif %}
                                 </div>
                             </div>
@@ -87,14 +95,23 @@
                                     </div>
                                     <div class="col-6 d-flex justify-content-end">
                                         <p class="card-text my-2 fs-4 font-weight-bold">
+                                            {% if product.on_sale %}
+                                            <strong class="text-decoration-line-through">€{{ product.price }}</strong>
+                                            {% else %}
                                             <strong>€{{ product.price }}</strong>
+                                            {% endif %}
                                         </p>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12">
+                                    <div class="col-8 d-flex justify-content-start">
                                         {% if product.brand %}
                                         <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: {{ product.brand }}</p>
+                                        {% endif %}
+                                    </div>
+                                    <div class="col-4 d-flex justify-content-end">
+                                        {% if product.on_sale %}
+                                        <p class="small p-0 m-0 text-danger fs-6">€{{ product.sale_price }}</p>
                                         {% endif %}
                                     </div>
                                 </div>

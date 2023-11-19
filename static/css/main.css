@@ -230,6 +230,36 @@ header {
     z-index: 1;
 }
 
+.sale-banner {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
+.sale-banner-details {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
 .header-container {
     z-index: 2;
 }
@@ -264,7 +294,7 @@ header {
 
 section {
     margin-top: 6rem;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 17.5rem);
     min-width: 300px;
     background-color: #E9EDE9;
     width: 100%;
@@ -274,7 +304,7 @@ section {
 .index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 18rem);
+    min-height: calc(100vh - 17.5rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
     background-position: 17% 75%;
@@ -301,6 +331,10 @@ section {
     background-color: #E9EDE9;
     color: #264653;
     border: 3px solid #264653;
+}
+
+.product-description {
+    padding: 1rem;
 }
 
 .auth-btn {
@@ -337,7 +371,7 @@ section {
 
 .card {
     width: 280px;
-    height: 420px;
+    height: 425px;
     color: #264653;
     position: relative;
 }
@@ -502,6 +536,56 @@ section {
     cursor: pointer;
 }
 
+/* ------------------------------------------------------------- Cart */
+
+.cart-table {
+    border: 1px solid #264653;
+}
+
+.mobile-cart-container {
+    border: 1px solid #264653;   
+}
+
+.cart-mobile-header {
+    text-align: center;
+    background-color: #264653;
+    color: #E9EDE9;
+    padding: 5px 0 5px 0;
+}
+
+.table thead tr th {
+    background-color: #264653;
+    color: #E9EDE9;
+    text-align: center;
+}
+
+.cart-body tr td {
+    color: #264653 !important;
+}
+
+.cart-totals {
+    text-align: end;
+}
+
+.cart-buttons {
+    text-align: center;
+}
+
+.delivery-delta {
+    background-color: #26465323;
+    color: #264653;
+}
+
+.decrement-qty {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+.increment-qty {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
 /* ------------------------------------------------------------- Footer */
 
 .footer {
@@ -516,5 +600,13 @@ section {
 
 footer a {
     color: #E9EDE9;
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+.fb-icon {
+    color: #1877F2;
+    text-shadow: -1px 0px 1px #E9EDE9,
+    1px 0px 1px #E9EDE9,
+    0px -1px 1px #E9EDE9,
+    0px 1px 1px #E9EDE9;
 }

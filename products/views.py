@@ -17,6 +17,7 @@ def all_products(request):
     direction = ""
     current_sorting = ""
     brands = ""
+    on_sale = False
 
     if request.GET:
         if "sort" in request.GET:
@@ -37,6 +38,13 @@ def all_products(request):
             categories = request.GET["category"].split(",")
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if "on_sale" in request.GET:
+            # get_sale = request.GET["on_sale"].split(",")
+            products = products.filter(on_sale=True)
+            on_sale = products
+            # on_sale = Product.objects.filter(on_sale=True)
+            print(on_sale)
 
         if "brand" in request.GET:
             brands = request.GET["brand"].split(",")
@@ -75,6 +83,7 @@ def all_products(request):
         'current_sorting': current_sorting,
         'brands': brands,
         'sort': sort,
+        'on_sale': on_sale,
     }
     return render(request, 'products/products.html', context)
 

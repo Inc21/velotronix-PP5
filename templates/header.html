@@ -45,6 +45,7 @@
                             <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=brand&direction=asc">By Brand <span class="text-end"><i class="fa-solid fa-arrow-down-a-z"></i></span></a></li>
                             <li><a class="dropdown-item d-flex justify-content-between" href="{% url "products" %}?sort=category&direction=asc">By Category <i class="fa-solid fa-arrow-down-a-z"></i></a></li>
                             <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item d-flex justify-content-center" href="{% url "products" %}?on_sale">Sale Items</a></li>
                             <li><a class="dropdown-item d-flex justify-content-center" href="{% url "products" %}">All products</a></li>
                         </ul>
                     </li>
@@ -56,6 +57,7 @@
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=bike_computers">Bike Computers</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=power_meters">Power Meters</a></li>
                             <li><a class="dropdown-item" href="{% url 'products' %}?category=bike_lights">Bike Lights</a></li>
+                            <li><a class="dropdown-item" href="{% url 'products' %}?category=wearable_tech">Wearable Tech</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

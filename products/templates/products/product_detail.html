@@ -16,11 +16,18 @@
             <div {% if window.size == 5000px %}id="imageGallery"{% endif %} class="image-container mb-2 rounded my-3">
                 <div class="row">
                     {% if product.image1 %}
-                        <a href="{{ product.image1.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
-                        </a>
+                        {% if product.on_sale %}
+                            <a class="position-relative" href="{{ product.image1.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                <div class="sale-banner-details">SALE</div>
+                            </a> 
                         {% else %}
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                            <a href="{{ product.image1.url }}" target="_blank">
+                                <img class="card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                            </a>
+                        {% endif %}
+                    {% else %}
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
                     {% endif %}
                 </div>
                 <hr class="m-0 p-0">
@@ -75,7 +82,7 @@
                                 <div class="row">
                                     <div class="col-6 mt-3 d-inline-flex">
                                         <div class="input-group-prepend">
-                                            <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn btn-dark" 
+                                            <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn" 
                                                 data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                                 <span class="d-flex justify-content-center align-items-center">
                                                     <i class="fas fa-minus"></i>
@@ -84,7 +91,7 @@
                                         </div>
                                         <input class="form-control qty-input qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <div class="input-group-append mb-0">
-                                            <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn btn-dark rounded-end-2"
+                                            <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn rounded-end-2"
                                                 data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                                 <span class="d-flex justify-content-center align-items-center">
                                                     <i class="fas fa-plus"></i>
@@ -133,16 +140,26 @@
                         {% endif %}
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <p class="fs-3 card-title mb-0 text-left "><strong>€{{ product.price }}</strong></p>
+                        <p class="fs-3 card-title mb-0 text-left ">
+                            {% if product.on_sale %}
+                                <strong class="text-decoration-line-through">€{{ product.price }}</strong>
+                            {% else %}
+                                <strong>€{{ product.price }}</strong></p>
+                            {% endif %}
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-6">
                         {% if product.category %}
                         <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: 
                             <a class="text-muted" href="{% url 'products' %}?brand={{ product.brand }}">{{ product.brand }}
                             </a>
                         </p>
+                        {% endif %}
+                    </div>
+                    <div class="col-6 d-flex justify-content-end">
+                        {% if product.on_sale %}
+                        <p class="p-0 m-0 text-danger fs-5">€{{ product.sale_price }}</p>
                         {% endif %}
                     </div>
                 </div>
@@ -161,11 +178,11 @@
                         {% endif %}
                     </div>
                 </div>
-                <p class="mt-3 product-description">{{ product.description|safe }}</p>
+                <p class="product-description">{{ product.description|safe }}</p>
                 <br>
                 <h3>Product Specifications</h3>
                 <hr >
-                <p class="mt-3">{{ product.specs|safe }}</p>
+                <p class="mt-3 me-4">{{ product.specs|safe }}</p>
             </div>
         </div>
     </div>
