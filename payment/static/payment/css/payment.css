@@ -1,0 +1,9 @@
+.checkout-form,
+.order-summary,
+.fieldset-label,
+.form-box,
+.placeholder,
+.dark-green {
+    color: #264653;
+    /* color: red; */
+}
