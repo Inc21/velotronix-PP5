@@ -9,6 +9,7 @@ class ProductAdmin(SummernoteModelAdmin):
         'name',
         'category',
         'price',
+        'added_date',
         'popularity',
         'image1',
         'image2',
@@ -16,7 +17,7 @@ class ProductAdmin(SummernoteModelAdmin):
         'image4',
     )
 
-    ordering = ('sku',)
+    ordering = ('-added_date', 'sku')
 
 
 class CategoryAdmin(admin.ModelAdmin):
