@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static "payment/css/payment.css" %}">
+{% endblock extra_css %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-7">
+            <div class="row">
+                <div class="col-12 mt-2 header-container text-uppercase">
+                    <h1 class="logo-font dark-green d-none d-sm-block mt-4 m-2">Thank You!</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 dark-green">
+                    <p>A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
+                    <p class="">Your order information is below.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+        
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-right">
+                    {% if from_profile %}
+                        <a href="" class="btn keep-shopping-btn rounded my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-user"></i>
+                            </span>
+                            <span class="text-uppercase">Back to profile</span>
+                        </a> 
+                    {% else %}
+                        <a href="{% url 'products' %}?on_sale" class="btn keep-shopping-btn rounded my-2">
+                            <span class="icon mr-2">
+                                <i class="fas fa-gifts"></i>
+                            </span>
+                            <span class="text-uppercase">Get Latest deals!</span>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
