@@ -5,7 +5,6 @@
 .placeholder,
 .dark-green {
     color: #264653;
-    /* color: red; */
 }
 
 .StripeElement,
@@ -19,6 +18,10 @@
   box-shadow: 0 1px 3px 0 #e6ebf1;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
+}
+
+#id_country {
+  width: 100%;
 }
 
 .StripeElement--focus,
