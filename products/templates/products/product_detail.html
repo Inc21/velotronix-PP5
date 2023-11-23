@@ -13,7 +13,7 @@
 <div class="container-fluid single-product-detail">
     <div class="row p-1">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-            <div {% if window.size == 5000px %}id="imageGallery"{% endif %} class="image-container mb-2 rounded my-3">
+            <div class="image-container mb-2 rounded my-3">
                 <div class="row">
                     {% if product.image1 %}
                         {% if product.on_sale %}
@@ -30,16 +30,16 @@
                         <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
                     {% endif %}
                 </div>
-                <hr class="m-0 p-0">
+                {% comment %} <hr class="m-0 p-0"> {% endcomment %}
                 <div class="row">
                     {% if product.image2 or product.image3 or product.image4 %}
-                        <div class="col-4 border-end">
+                        <div class="col-4">
                             {% if product.image2 %}
                                 <a href="{{ product.image2.url }}" target="_blank">
                                     <img class="card-img-top img-fluid" src="{{ product.image2.url }}" alt="{{ product.name }}">
                                 </a>
-                            {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                            {% comment %} {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}"> {% endcomment %}
                             {% endif %}
                         </div>
                         <div class="col-4">
@@ -47,17 +47,17 @@
                                 <a href="{{ product.image3.url }}" target="_blank">
                                     <img class="card-img-top img-fluid" src="{{ product.image3.url }}" alt="{{ product.name }}">
                                 </a>
-                            {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                            {% comment %} {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}"> {% endcomment %}
                             {% endif %}
                         </div>
-                        <div class="col-4 border-start">
+                        <div class="col-4">
                             {% if product.image4 %}
                                 <a href="{{ product.image4.url }}" target="_blank">
                                     <img class="card-img-top img-fluid" src="{{ product.image4.url }}" alt="{{ product.name }}">
                                 </a>
-                            {% else %}
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}">
+                            {% comment %} {% else %}
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}product_images/noimage.webp" alt="{{ product.name }}"> {% endcomment %}
                             {% endif %}
                         </div>
                     {% endif %}

@@ -9,7 +9,7 @@
         <div class="col-4 login-box">
             <div class="d-flex justify-content-end align-items-center text-end text-nowrap">
                 {% if request.user.is_authenticated %}
-                <span class="d-none d-sm-inline">Logged in as:</span><a href="#" class="login-link"> <span class="text-decoration-underline">{{ request.user.username}}</span></a> <span class="ms-2 me-2">|</span> <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
+                <span class="d-none d-sm-inline">Logged in as:</span><a href="{% url "profile" %}" class="login-link"> <span class="text-decoration-underline">{{ request.user.username}}</span></a> <span class="ms-2 me-2">|</span> <a href="{% url 'account_logout' %}?next={{ request.path }}" class="login-link">Logout</a>
                 {% else %}
                     <a class="login-link" href="{% url "account_login" %}?next={{ request.path }}">Login</a> <span class="ms-2 me-2">|</span> <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
                 {% endif %}

@@ -53,7 +53,8 @@ INSTALLED_APPS = [
     'home',
     'products',
     'cart',
-    'checkout',
+    'payment',
+    'profiles',
 
     # Third party apps
     'allauth',
@@ -63,6 +64,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'django_summernote',
     'mathfilters',
+    'django_countries',
 
     # SocialAccount providers
     'allauth.socialaccount.providers.google',
@@ -115,6 +117,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
                 'cart.context.cart_contents'
+            ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ],
         },
     },
@@ -203,7 +209,14 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "home"
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'eur'
+STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY", "")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
+STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", "")
+
+COUNTRIES_FIRST = ['IE', 'GB', 'US']
