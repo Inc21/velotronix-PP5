@@ -1,6 +1,17 @@
 #id_country {
-    width: 1000px;
+    width: 100%;
+    /* color: red; */
+    border: none;
+  }
+
+  #id_default_country,
+  #id_default_country option:not(:first-child) {
     color: #264653;
+  }
+
+  #id_country,
+  #id_country option:is(:first-child) {
+    color: red;
   }
 
   .profile-form-input {
@@ -8,5 +19,13 @@
   }
 
   .green {
+    color: #264653;
+  }
+
+  #profile-update-form .form-control {
+    color: #264653;
+  }
+
+  #profile-update-form input::placeholder {
     color: #264653;
   }
