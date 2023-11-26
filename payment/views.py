@@ -167,15 +167,16 @@ def checkout_success(request, order_number):
             user_profile_form = UserProfileForm(profile_data, instance=profile)
             if user_profile_form.is_valid():
                 user_profile_form.save()
+            messages.success(request, 'Your order was successful!')
     else:
         if order.email in UserProfile.objects.all().values_list('email',
                                                                 flat=True):
-            messages.warning(request, f'Profile with {order.email} already \
-                exists. Please login.')
-            return render(request, 'account/login.html')
-
-        else:
-            messages.success(request, 'Your order was successful!')
+            if 'save_info':
+                messages.warning(request, f'Profile with {order.email} \
+                    already exists. Please login.')
+                return redirect(('account_login'))
+            else:
+                messages.success(request, 'Your order was successful!')
 
     if 'cart' in request.session:
         del request.session['cart']
