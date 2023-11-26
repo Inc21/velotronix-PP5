@@ -1,5 +1,10 @@
 #id_country {
-    width: 1000px;
+    width: 100%;
+    border: none;
+  }
+
+  #id_default_country,
+  #id_default_country option {
     color: #264653;
   }
 
@@ -8,5 +13,13 @@
   }
 
   .green {
+    color: #264653;
+  }
+
+  #profile-update-form .form-control {
+    color: #264653;
+  }
+
+  #profile-update-form input::placeholder {
     color: #264653;
   }

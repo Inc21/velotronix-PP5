@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+from profiles.models import UserProfile
 import stripe
 
 from .models import Order, OrderLineItem
@@ -21,10 +22,10 @@ class StripeWH_Handler:
         """Send the user a confirmation email"""
         cust_email = order.email
         subject = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_subject.txt',
+            'payment/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
-            'checkout/confirmation_emails/confirmation_email_body.txt',
+            'payment/confirmation_emails/confirmation_email_body.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
         send_mail(
             subject,
@@ -48,7 +49,7 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
-        save_info = intent.metadata.save_info  # noqa: F841
+        save_info = intent.metadata.save_info
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
@@ -68,8 +69,9 @@ class StripeWH_Handler:
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            # profile = UserProfile.objects.get(user__username=username)
+            profile = UserProfile.objects.get(user__username=username)
             if save_info:
+                profile.full_name = shipping_details.name,
                 profile.phone_number = shipping_details.phone,
                 profile.country = shipping_details.address.country,
                 profile.postcode = shipping_details.address.postal_code,
@@ -135,13 +137,12 @@ class StripeWH_Handler:
                         )
                         order_line_item.save()
                     else:
-                        for size, quantity in item_data['items_\
+                        for quantity in item_data['items_\
                         by_size'].items():
                             order_line_item = OrderLineItem(
                                 order=order,
                                 product=product,
-                                quantity=quantity,
-                                product_size=size,
+                                quantity=quantity
                             )
                             order_line_item.save()
 
