@@ -63,7 +63,7 @@ form.addEventListener('submit', function(ev) {
         'client_secret': clientSecret,
         'save_info': saveInfo,
     };
-    var url = '/payment/cache_checkout_data/';
+    var url = '/checkout/cache_checkout_data/';
 
     $.post(url, postData).done(function () {
         stripe.confirmCardPayment(clientSecret, {
@@ -110,7 +110,7 @@ form.addEventListener('submit', function(ev) {
             } else {
                 if (result.paymentIntent.status === 'succeeded') {
                     form.submit();
-                }
+                } 
             }
         });
     }).fail(function () {

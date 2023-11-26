@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.conf import settings
+from profiles.models import UserProfile
 import stripe
 
 from .models import Order, OrderLineItem
@@ -48,7 +49,7 @@ class StripeWH_Handler:
         intent = event.data.object
         pid = intent.id
         bag = intent.metadata.bag
-        save_info = intent.metadata.save_info  # noqa: F841
+        save_info = intent.metadata.save_info
 
         # Get the Charge object
         stripe_charge = stripe.Charge.retrieve(
@@ -68,8 +69,9 @@ class StripeWH_Handler:
         profile = None
         username = intent.metadata.username
         if username != 'AnonymousUser':
-            # profile = UserProfile.objects.get(user__username=username)
+            profile = UserProfile.objects.get(user__username=username)
             if save_info:
+                profile.full_name = shipping_details.name,
                 profile.phone_number = shipping_details.phone,
                 profile.country = shipping_details.address.country,
                 profile.postcode = shipping_details.address.postal_code,

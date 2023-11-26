@@ -196,7 +196,7 @@
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
-                    {% if from_profile %}
+                    {% if 'profiles' in request.path %}
                         <a href="{% url "profile" %}" class="btn keep-shopping-btn rounded my-2">
                             <span class="icon mr-2">
                                 <i class="fa-solid fa-angles-left"></i>

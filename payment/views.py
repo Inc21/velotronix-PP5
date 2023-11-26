@@ -152,23 +152,30 @@ def checkout_success(request, order_number):
         order.user_profile = profile
         order.save()
 
-    if 'save_info':
-        profile_data = {
-            'full_name': order.full_name,
-            'email': order.email,
-            'phone_number': order.phone_number,
-            'country': order.country,
-            'postcode': order.postcode,
-            'town_or_city': order.town_or_city,
-            'street_address1': order.street_address1,
-            'street_address2': order.street_address2,
-            'county': order.county,
-        }
-        user_profile_form = UserProfileForm(profile_data, instance=profile)
-        if user_profile_form.is_valid():
-            user_profile_form.save()
+        if 'save_info':
+            profile_data = {
+                'full_name': order.full_name,
+                'email': order.email,
+                'phone_number': order.phone_number,
+                'country': order.country,
+                'postcode': order.postcode,
+                'town_or_city': order.town_or_city,
+                'street_address1': order.street_address1,
+                'street_address2': order.street_address2,
+                'county': order.county,
+            }
+            user_profile_form = UserProfileForm(profile_data, instance=profile)
+            if user_profile_form.is_valid():
+                user_profile_form.save()
+    else:
+        if order.email in UserProfile.objects.all().values_list('email',
+                                                                flat=True):
+            messages.warning(request, f'Profile with {order.email} already \
+                exists. Please login.')
+            return render(request, 'account/login.html')
 
-    messages.success(request, 'Your order was successful!')
+        else:
+            messages.success(request, 'Your order was successful!')
 
     if 'cart' in request.session:
         del request.session['cart']

@@ -30,11 +30,6 @@ def order_history(request, order_number):
     """ Display the user's order history. """
     order = get_object_or_404(Order, order_number=order_number)
 
-    messages.info(request, (
-        f'This is a past confirmation for order number {order_number}. '
-        'A confirmation email was sent on the order date.'
-    ))
-
     template = 'payment/checkout_success.html'
     context = {
         'order': order,
