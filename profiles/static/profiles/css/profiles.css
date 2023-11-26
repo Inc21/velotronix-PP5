@@ -1,17 +1,11 @@
 #id_country {
     width: 100%;
-    /* color: red; */
     border: none;
   }
 
   #id_default_country,
-  #id_default_country option:not(:first-child) {
+  #id_default_country option {
     color: #264653;
-  }
-
-  #id_country,
-  #id_country option:is(:first-child) {
-    color: red;
   }
 
   .profile-form-input {
