@@ -1,5 +1,6 @@
 from django.db import models
 from django_resized import ResizedImageField
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -50,6 +51,8 @@ class Product(models.Model):
                                null=True, force_format='WEBP', quality=85,
                                blank=True)
     popularity = models.IntegerField(default=0)
+    favorites = models.ManyToManyField(User, related_name='favorites',
+                                       blank=True, default=None)
     added_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     hidden = models.BooleanField(default=False)
 

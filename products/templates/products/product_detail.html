@@ -130,14 +130,14 @@
                 <div class="row">
                     <div class="col-6 d-flex align-items-center">
                         {% if request.user.is_authenticated %}
-                            {% if product in favorites %}
-                                <a class="favorites-link" href=""><i class="fa-solid fa-heart fa-beat text-danger"></i> Remove From Favorites</a>
+                            {% if favorites %}
+                                <a class="favorites-link" href="{% url "favorites_add" product.id %}"><i class="fa-solid fa-heart fa-beat text-danger"></i> Remove From Favorites</a>
                             {% else %}
-                                <a class="favorites-link" href=""><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
+                                <a class="favorites-link" href="{% url "favorites_add" product.id %}"><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
                             {% endif %}
                         {% else %}
-                            <a class="favorites-link" href="{% url 'account_login' %}?next={{ request.path }}"><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
-                        {% endif %}
+                            <a class="favorites-link" href="{% url 'account_login' %}?next={{ request.path }}"><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Login to Add to Favorites</a>
+                        {% endif %} 
                     </div>
                     <div class="col-6 d-flex justify-content-end">
                         <p class="fs-3 card-title mb-0 text-left ">

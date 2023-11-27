@@ -23,7 +23,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="">
-                            <table class="table table-sm">
+                            <table class="table table-responsive table-striped table-sm">
                                 <thead>
                                     <tr>
                                         <th>Image</th>
@@ -51,14 +51,14 @@
                                                     <img class="admin-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                                                 {% endif %}
                                             </td>
-                                            <td class="pt-3 small">
-                                                <a class="dark-green" href="{% url "product_detail" product.id %}">{{ product.name }}</a>
+                                            <td class="align-middle small">
+                                                <a class="dark-green small" href="{% url "product_detail" product.id %}">{{ product.name }}</a>
                                             </td>
-                                            <td class="pt-3 small">{{ product.sku }}</td>
-                                            <td class="pt-3 small">{{ product.category }}</td>
-                                            <td class="pt-3 small"><strong>{{ product.price }}</strong></td>
-                                            <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
-                                            <td class="pt-3 text-center"><a class="text-danger" href="{% url "delete_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-trash-can"></i></a></td>
+                                            <td class="align-middle small">{{ product.sku }}</td>
+                                            <td class="align-middle small">{{ product.category }}</td>
+                                            <td class="align-middle small"><strong>{{ product.price }}</strong></td>
+                                            <td class="align-middle text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
+                                            <td class="align-middle text-center"><a class="text-danger" href="{% url "delete_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-trash-can"></i></a></td>
                                         </tr>
                                         {% endif %}
                                     {% endfor %}
@@ -82,7 +82,7 @@
 
                     <div class="col-12 mb-3">
                         <div class="">
-                            <table class="table table-sm">
+                            <table class="table table-sm table-responsive table-striped">
                                 <thead>
                                     <tr>
                                         <th>Image</th>
@@ -110,14 +110,14 @@
                                                         <img class="admin-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                                                     {% endif %}
                                                 </td>
-                                                <td class="pt-3 small">
+                                                <td class="align-middle small">
                                                     <a class="dark-green" href="{% url "product_detail" product.id %}">{{ product.name }}</a>
                                                 </td>
-                                                <td class="pt-3 small">{{ product.sku }}</td>
-                                                <td class="pt-3 small">{{ product.category }}</td>
-                                                <td class="pt-3 small"><strong>{{ product.price }}</strong></td>
-                                                <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
-                                                <td class="pt-3 text-center"><a class="text-success" href="{% url "unhide_product" product.id %}"><i class="fa-solid fa-eye"></i></a></td>
+                                                <td class="align-middle small">{{ product.sku }}</td>
+                                                <td class="align-middle small">{{ product.category }}</td>
+                                                <td class="align-middle small"><strong>{{ product.price }}</strong></td>
+                                                <td class="align-middle text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
+                                                <td class="align-middle text-center"><a class="text-success" href="{% url "unhide_product" product.id %}"><i class="fa-solid fa-eye"></i></a></td>
                                             </tr>
                                         {% endif %}
                                     {% endfor %}
@@ -129,7 +129,7 @@
                 {% else %}
                 <div class="row">
                     <div class="col-12">
-                        <table class="table table-sm mb-3">
+                        <table class="table table-responsive table-sm mb-3">
                             <thead>
                                 <tr>
                                     <th>Image</th>
