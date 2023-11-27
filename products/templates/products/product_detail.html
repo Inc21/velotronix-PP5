@@ -68,7 +68,7 @@
                 {% if request.user.is_superuser %}
                     <div class="mt-2 ml-3">
                         <a class="border border-success px-4 py-2 rounded-2 bg-light text-success" href="{% url "edit_product" product.id %}"><i class="fa-solid fa-pen"></i></a>
-                        <a class="border border-danger px-4 py-2 rounded-2 bg-light text-danger" href=""><i class="fa-solid fa-trash-can"></i></a>
+                        <a class="border border-danger px-4 py-2 rounded-2 bg-light text-danger" href="{% url "delete_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-trash-can"></i></a>
                     </div>
                 {% endif %}
                 </div>

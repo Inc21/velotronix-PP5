@@ -16,6 +16,11 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-12 text-left mt-3">
+                        <h5 class="text-muted mb-3">Visible Products <strong>{{ visible.count }}</strong></h5>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-12">
                         <div class="">
                             <table class="table table-sm">
@@ -32,6 +37,7 @@
                                 </thead>
                                 <tbody>
                                     {% for product in products %}
+                                        {% if not product.hidden %}
                                         <tr>
                                             <td class="p-3 position-relative">
                                                 {% if product.image1 %}
@@ -51,15 +57,101 @@
                                             <td class="pt-3 small">{{ product.sku }}</td>
                                             <td class="pt-3 small">{{ product.category }}</td>
                                             <td class="pt-3 small"><strong>{{ product.price }}</strong></td>
-                                            <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}"><i class="fa-solid fa-pen"></i></a></td>
-                                            <td class="pt-3 text-center"><a class="text-danger" href=""><i class="fa-solid fa-trash-can"></i></a></td>
+                                            <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
+                                            <td class="pt-3 text-center"><a class="text-danger" href="{% url "delete_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-trash-can"></i></a></td>
                                         </tr>
+                                        {% endif %}
                                     {% endfor %}
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 text-left mt-3">
+                        <h5 class="text-muted mb-3">Hidden Products <strong>{{ hidden.count}}</strong></h5>
+                    </div>
+                </div>
+
+                <div class="row">
+                {% if hidden.count >= 1 %}
+
+                    <div class="col-12 mb-3">
+                        <div class="">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>SKU</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Edit</th>
+                                        <th>UnHide</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for product in products %}
+                                        {% if product.hidden %}
+                                            <tr>
+                                                <td class="p-3 position-relative">
+                                                    {% if product.image1 %}
+                                                        {% if product.on_sale %}
+                                                            <img class="admin-img" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                                            <div class="sale-banner-admin">SALE</div>
+                                                        {% else %}
+                                                            <img class="admin-img" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <img class="admin-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
+                                                    {% endif %}
+                                                </td>
+                                                <td class="pt-3 small">
+                                                    <a class="dark-green" href="{% url "product_detail" product.id %}">{{ product.name }}</a>
+                                                </td>
+                                                <td class="pt-3 small">{{ product.sku }}</td>
+                                                <td class="pt-3 small">{{ product.category }}</td>
+                                                <td class="pt-3 small"><strong>{{ product.price }}</strong></td>
+                                                <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen"></i></a></td>
+                                                <td class="pt-3 text-center"><a class="text-success" href="{% url "unhide_product" product.id %}"><i class="fa-solid fa-eye"></i></a></td>
+                                            </tr>
+                                        {% endif %}
+                                    {% endfor %}
+                                  
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% else %}
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table table-sm mb-3">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th>SKU</th>
+                                    <th>Category</th>
+                                    <th>Price</th>
+                                    <th>Edit</th>
+                                    <th>UnHide</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="7" class="text-center">No Hidden Products</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+                {% endif %}
+
+                </div>
+            
             </div>
         </div>
     </div>

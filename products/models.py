@@ -32,7 +32,7 @@ class Product(models.Model):
     brand = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     specs = models.TextField(null=True, blank=True)
-    on_sale = models.BooleanField(default=False, null=True, blank=True)
+    on_sale = models.BooleanField(default=False)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     sale_price = models.DecimalField(max_digits=6, decimal_places=2,
                                      null=True, blank=True)
@@ -51,6 +51,7 @@ class Product(models.Model):
                                blank=True)
     popularity = models.IntegerField(default=0)
     added_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
+    hidden = models.BooleanField(default=False)
 
     def __str__(self):
         return str(self.name)

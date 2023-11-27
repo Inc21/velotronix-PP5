@@ -15,6 +15,8 @@ def all_products(request):
     """
 
     products = Product.objects.all()
+    visible = products.filter(hidden=False)
+
     query = ""
     categories = ""
     sort = ""
@@ -88,6 +90,7 @@ def all_products(request):
         'brands': brands,
         'sort': sort,
         'on_sale': on_sale,
+        'visible': visible,
     }
     return render(request, 'products/products.html', context)
 
@@ -109,11 +112,16 @@ def product_detail(request, product_id):
 @login_required
 def product_admin(request):
     """
-    A view to show all products with admin controls"""
+    A view all products within product admin page"""
     products = Product.objects.all()
+    visible = products.filter(hidden=False)
+    hidden = products.filter(hidden=True)
+
     template = "products/product_admin.html"
     context = {
         'products': products,
+        'visible': visible,
+        'hidden': hidden,
     }
     return render(request, template, context)
 
@@ -174,3 +182,31 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def delete_product(request, product_id):
+    """ Delete/hide a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.hidden = True
+    product.save()
+    messages.success(request, f'{product.name} deleted!')
+    return redirect(reverse('product_admin'))
+
+
+@login_required
+def unhide_product(request, product_id):
+    """ unhide a product from """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.hidden = False
+    product.save()
+    messages.success(request, f'{product.name} reactivated!')
+    return redirect(reverse('product_admin'))

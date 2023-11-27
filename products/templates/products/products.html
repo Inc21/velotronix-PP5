@@ -40,7 +40,7 @@
                                 {% if search_term or current_categories or current_sorting != 'None_None' %}
                                     <span class="small"><a class="text-muted active-link" href="{% url 'products' %}">All Products</a> | </span>
                                 {% endif %}
-                                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                                <strong>{{ visible.count }}</strong> Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                             </p>
                         </div>
                         <div class="col-12 col-md-4 my-auto">
@@ -66,76 +66,78 @@
             <div class="row">
                 <div class="col-12 d-flex flex-wrap justify-content-center p-0">
                 {% for product in products %}
-                <div class="card-container my-3">
-                    <a class="text-decoration-none" href="{% url "product_detail" product.id %}">
-                        <div class="card p-3 me-3 col-6 col-sm-4 col-md-4 col-md-3 col-xl-2">
-                            <div class="row">
-                                <div class="col-12 position-relative d-flex justify-content-center">
-                                    {% if product.image1 %}
-                                        {% if product.on_sale %}
-                                        <img class="cover-image card-img-top img-fluid " src="{{ product.image1.url }}" alt="{{ product.name }}">
-                                        <div class="sale-banner">SALE</div>
-                                        {% else %}
-                                        <img class="cover-image card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
-                                        {% endif %}
-                                    {% else %}
-                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
-                                    {% endif %}
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12 flex-wrap m-0 px-3 text-uppercase">
-                                    <h6 class="card-title mt-1">{{ product.name|truncatechars:"50" }}</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer m-0 p-0">
+                {% if not product.hidden %}
+                    <div class="card-container my-3">
+                        <a class="text-decoration-none" href="{% url "product_detail" product.id %}">
+                            <div class="card p-3 me-3 col-6 col-sm-4 col-md-4 col-md-3 col-xl-2">
                                 <div class="row">
-                                    <div class="col-6 mt-2">
-                                        <p class="btn-sm btn btn-primary my-1 text-nowrap">Add to Cart</p>
-                                    </div>
-                                    <div class="col-6 d-flex justify-content-end">
-                                        <p class="card-text my-2 fs-4 font-weight-bold">
+                                    <div class="col-12 position-relative d-flex justify-content-center">
+                                        {% if product.image1 %}
                                             {% if product.on_sale %}
-                                            <strong class="text-decoration-line-through">€{{ product.price }}</strong>
+                                            <img class="cover-image card-img-top img-fluid " src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                            <div class="sale-banner">SALE</div>
                                             {% else %}
-                                            <strong>€{{ product.price }}</strong>
+                                            <img class="cover-image card-img-top img-fluid" src="{{ product.image1.url }}" alt="{{ product.name }}">
                                             {% endif %}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-8 d-flex justify-content-start">
-                                        {% if product.brand %}
-                                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: {{ product.brand }}</p>
-                                        {% endif %}
-                                    </div>
-                                    <div class="col-4 d-flex justify-content-end">
-                                        {% if product.on_sale %}
-                                        <p class="small p-0 m-0 text-danger fs-6">€{{ product.sale_price }}</p>
+                                        {% else %}
+                                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
                                         {% endif %}
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12">
-                                        {% if product.sku %}
-                                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> SKU: {{ product.sku }}</p>
-                                        {% endif %}
+                                    <div class="col-12 flex-wrap m-0 px-3 text-uppercase">
+                                        <h6 class="card-title mt-1">{{ product.name|truncatechars:"50" }}</h6>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        {% if product.category %}
-                                        <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> CATEGORY: {{ product.category.friendly_name }}</p>
-                                        {% endif %}
+                                <div class="card-footer m-0 p-0">
+                                    <div class="row">
+                                        <div class="col-6 mt-2">
+                                            <p class="btn-sm btn btn-primary my-1 text-nowrap">Add to Cart</p>
+                                        </div>
+                                        <div class="col-6 d-flex justify-content-end">
+                                            <p class="card-text my-2 fs-4 font-weight-bold">
+                                                {% if product.on_sale %}
+                                                <strong class="text-decoration-line-through">€{{ product.price }}</strong>
+                                                {% else %}
+                                                <strong>€{{ product.price }}</strong>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8 d-flex justify-content-start">
+                                            {% if product.brand %}
+                                            <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> BRAND: {{ product.brand }}</p>
+                                            {% endif %}
+                                        </div>
+                                        <div class="col-4 d-flex justify-content-end">
+                                            {% if product.on_sale %}
+                                            <p class="small p-0 m-0 text-danger fs-6">€{{ product.sale_price }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            {% if product.sku %}
+                                            <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> SKU: {{ product.sku }}</p>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            {% if product.category %}
+                                            <p class="small card-text"><i class="fa-solid fa-tag fa-rotate-90 text-danger"></i> CATEGORY: {{ product.category.friendly_name }}</p>
+                                            {% endif %}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="middle">
-                            <a class="btn overlay_btn btn-lg text-nowrap" href="{% url "product_detail" product.id %}">Click for more</a>
-                        </div>
-                    </a>
-                </div>
+                            <div class="middle">
+                                <a class="btn overlay_btn btn-lg text-nowrap" href="{% url "product_detail" product.id %}">Click for more</a>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
             {% endfor %}
                 </div>
             </div>
