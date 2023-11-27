@@ -260,6 +260,21 @@ header {
     z-index: 997;
 }
 
+.sale-banner-admin {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    /* font-weight: 700; */
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    z-index: 997;  
+}
+
 .header-container {
     z-index: 2;
 }
@@ -573,6 +588,14 @@ section {
 .increment-qty {
     background-color: #264653;
     color: #E9EDE9;
+}
+
+/* ------------------------------------------------------------- Product Admin */
+
+.admin-img {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
 }
 
 /* ------------------------------------------------------------- Footer */

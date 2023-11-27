@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container dark-green">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 text-center mt-3">
+                        <h2 class="logo-font mb-4">Product Admin</h2>
+                        <h5 class="text-muted mb-3">Edit or Delete Products</h5>
+                        <hr>
+                        <p class="small">Edit and delete buttons also available for logged in admin on product details page. When editing products on mobile screen, open product detail page instead by clicking on product name.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>SKU</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for product in products %}
+                                        <tr>
+                                            <td class="p-3 position-relative">
+                                                {% if product.image1 %}
+                                                    {% if product.on_sale %}
+                                                        <img class="admin-img" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                                        <div class="sale-banner-admin">SALE</div>
+                                                    {% else %}
+                                                        <img class="admin-img" src="{{ product.image1.url }}" alt="{{ product.name }}">
+                                                    {% endif %}
+                                                {% else %}
+                                                    <img class="admin-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ product.name }}">
+                                                {% endif %}
+                                            </td>
+                                            <td class="pt-3 small">
+                                                <a class="dark-green" href="{% url "product_detail" product.id %}">{{ product.name }}</a>
+                                            </td>
+                                            <td class="pt-3 small">{{ product.sku }}</td>
+                                            <td class="pt-3 small">{{ product.category }}</td>
+                                            <td class="pt-3 small"><strong>{{ product.price }}</strong></td>
+                                            <td class="pt-3 text-center"><a class="text-success" href="{% url "edit_product" product.id %}"><i class="fa-solid fa-pen"></i></a></td>
+                                            <td class="pt-3 text-center"><a class="text-danger" href=""><i class="fa-solid fa-trash-can"></i></a></td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a role="button" class="btn btt-button d-flex d-none shadow-sm rounded-1">
+        <i class="fas fa-arrow-up mx-auto my-auto"></i>
+    </a>
+{% endblock %}

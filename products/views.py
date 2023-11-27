@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.db.models.functions import Lower
 from django.contrib import messages
 from django.db.models import Q
+from django.contrib.auth.decorators import login_required
+
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -104,6 +106,19 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
+def product_admin(request):
+    """
+    A view to show all products with admin controls"""
+    products = Product.objects.all()
+    template = "products/product_admin.html"
+    context = {
+        'products': products,
+    }
+    return render(request, template, context)
+
+
+@login_required
 def add_product(request):
     """
     Add a product to the store
@@ -125,4 +140,37 @@ def add_product(request):
     context = {
         "form": form,
     }
+    return render(request, template, context)
+
+
+@login_required
+def edit_product(request, product_id):
+    """ Edit a product in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                request, f'Successfully updated {product.name}!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.warning(
+                request,
+                f'Failed to update {product.name}. Please\
+                    ensure the form is valid.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are editing {product.name}')
+
+    template = 'products/edit_product.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
     return render(request, template, context)
