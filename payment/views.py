@@ -3,6 +3,9 @@ from django.shortcuts import (render, redirect, reverse, get_object_or_404,
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 
 from .forms import OrderForm
 from .models import Order, OrderLineItem
@@ -140,6 +143,23 @@ def checkout(request):
     return render(request, template, context)
 
 
+def _send_conformation_email(order):
+    """Send the user a conformation email"""
+    cust_email = order.email
+    subject = render_to_string(
+        'payment/conformation_emails/conformation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'payment/conformation_emails/conformation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
+
 def checkout_success(request, order_number):
     """
     Handle successful checkouts
@@ -174,7 +194,7 @@ def checkout_success(request, order_number):
             if 'save_info':
                 messages.warning(request, f'Profile with {order.email} \
                     already exists. Please login.')
-                return redirect(('account_login'))
+                return redirect(('account_login') + '?next=/checkout/')
             else:
                 messages.success(request, 'Your order was successful!')
 
@@ -186,4 +206,5 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
+    # _send_conformation_email(order)
     return render(request, template, context)
