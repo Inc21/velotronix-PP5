@@ -206,5 +206,5 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
-    # _send_conformation_email(order)
+    _send_conformation_email(order)
     return render(request, template, context)

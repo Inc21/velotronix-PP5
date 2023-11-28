@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+    <div class="container d-flex justify-content-center">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h2 class="logo-font mb-4">Product Management</h2>
+                        <h5 class="text-muted">Edit a Product</h5>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <form method="POST" action="{% url "edit_product" product.id %}" class="form mb-2" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                {% if field.name != 'image' %}
+                                    {{ field | as_crispy_field }}
+                                {% else %}
+                                    {{ field }}
+                                {% endif %}
+                            {% endfor %}
+                            <div class="text-center mb-3">
+                                <a href="{% url "product_admin" %}?next={{ request.path }}" class="auth-btn btn-sm btn btn-dark">Cancel</a>
+                                <button class="auth-btn btn-sm btn btn-success" type="submit">Update Product</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block post_load_js %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('filename').text(`Image will be set to: ${file.name}`);
+        });  
+    </script>
+{% endblock %}

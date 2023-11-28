@@ -10,13 +10,56 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container dark-green">
     <div class="row">
         <div class="col-12 header-container d-flex justify-content-center text-uppercase">
             <h1 class="logo-font mt-4 m-2">My Profile</h1>
-            <hr>
         </div>
     </div>
+    {% if favorites %}
+        <div class="row">
+            <p class="text-muted">Favorites</p>
+            <div class="col-12">
+                <table class="table table-responsive table-sm mb-3">
+                    <thead>
+                        <tr>
+                            <th class="ps-4 text-start">Image</th>
+                            <th class="text-start">Name</th>
+                            <th class="text-start">Price</th>
+                            <th>Remove</th>
+                            <th>Add to Cart</th>
+
+                        </tr>
+                    </thead>
+                        <tbody>
+                            {% for favorite in favorites %}
+                                <tr>
+                                    <td class="p-3 position-relative">
+                                        {% if favorite.image1 %}
+                                            {% if favorite.on_sale %}
+                                                <img class="admin-img" src="{{ favorite.image1.url }}" alt="{{ favorite.name }}">
+                                                <div class="sale-banner-admin">SALE</div>
+                                            {% else %}
+                                                <img class="admin-img" src="{{ favorite.image1.url }}" alt="{{ favorite.name }}">
+                                            {% endif %}
+                                        {% else %}
+                                            <img class="admin-img" src="{{ MEDIA_URL }}noimage.webp" alt="{{ favorite.name }}">
+                                        {% endif %}
+                                    </td>
+                                    <td class="align-middle small">
+                                        <a class="dark-green small" href="{% url "product_detail" favorite.id %}">{{ favorite.name }}</a>
+                                    </td>
+                                    <td class="align-middle small"><strong>€{{ favorite.price }}</strong></td>
+                                    <td class="align-middle text-center"><a class="border border-danger px-2 py-1 rounded-2 bg-danger text-light fa-sm" href="{% url "favorites_add" favorite.id %}"><i class="fa-solid fa-heart-crack"></i></a></td>
+                                    <td class="align-middle text-center"><a class="border border-success px-2 py-1 rounded-2 bg-primary text-light fa-sm" href="{% url "product_detail" favorite.id %}"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+    {% endif %}
+    <br>
     <div class="row d-flex justify-content-center">
         <div class="green col-12 col-lg-6">
             <p class="text-muted">Default Delivery Informattion</p>
@@ -42,7 +85,7 @@
                         {% for order in orders %}
                             <tr>
                                 <td>
-                                    <a href="{% url "order_history" order.order_number %}" title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                                    <a class="dark-green" href="{% url "order_history" order.order_number %}" title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
                                 </td>
                                 <td>{{ order.date }}</td>
                                 <td>
