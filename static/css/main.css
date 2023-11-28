@@ -598,6 +598,14 @@ section {
     object-fit: contain;
 }
 
+/* ------------------------------------------------------------- About page */
+
+.about-card {
+    background-color: #fff;
+    color: #264653;
+    border: none;
+}
+
 /* ------------------------------------------------------------- Footer */
 
 .footer {
