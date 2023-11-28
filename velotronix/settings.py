@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'cart',
     'payment',
     'profiles',
+    'about',
 
     # Third party apps
     'allauth',
