@@ -73,15 +73,17 @@
                             <a class="nav-link ps-1" href="#">About Us</a>
                         </li>
                         {% if request.user.is_authenticated %}
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle ps-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Product-Admin
-                            </a>
-                                <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="{% url "add_product" %}">Add Product</a></li>
-                                <li><a class="dropdown-item" href="{% url "product_admin" %}">Edit/Delete Products</a></li>
-                            </ul>
-                        </li>
+                            {% if request.user.is_staff %}
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle ps-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Product-Admin
+                                    </a>
+                                        <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="{% url "add_product" %}">Add Product</a></li>
+                                        <li><a class="dropdown-item" href="{% url "product_admin" %}">Edit/Delete Products</a></li>
+                                    </ul>
+                                </li>
+                            {% endif %}
                         {% endif %}
                         <li class="nav-item flex-grow-1">
                             <form method="GET" action="{% url "products" %}" class="d-lg-none  m-1" role="search">

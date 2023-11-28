@@ -3,7 +3,7 @@ from django.db.models.functions import Lower
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
-
+from django.contrib.auth.models import User
 
 from .models import Product, Category
 from .forms import ProductForm
@@ -99,12 +99,14 @@ def product_detail(request, product_id):
     """
     A view to show individual product details
     """
-    favorites = Product.objects.filter(favorites=request.user.id)
+    user = User.objects.all()
     product = get_object_or_404(Product, pk=product_id)
+    favorites = product.favorites.filter(id=request.user.id).exists()
 
     context = {
         'product': product,
         'favorites': favorites,
+        'user': user,
     }
 
     return render(request, 'products/product_detail.html', context)

@@ -132,7 +132,8 @@
                         {% if request.user.is_authenticated %}
                             {% if favorites %}
                                 <a class="favorites-link" href="{% url "favorites_add" product.id %}"><i class="fa-solid fa-heart fa-beat text-danger"></i> Remove From Favorites</a>
-                            {% else %}
+                            {% endif %}
+                            {% if not favorites %}
                                 <a class="favorites-link" href="{% url "favorites_add" product.id %}"><i class="fa-solid fa-heart fa-beat-fade text-danger"></i> Add To Favorites</a>
                             {% endif %}
                         {% else %}
