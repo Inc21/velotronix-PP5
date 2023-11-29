@@ -4,8 +4,8 @@ from .forms import ContactForm, AboutForm
 from django.template.loader import render_to_string
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 
 def about(request):
@@ -66,39 +66,39 @@ def about(request):
     return render(request, template, context)
 
 
-# def contactUs(request):
-#     """
-#     This view will display the contact form.
-#     """
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         tm_email = request.user.userprofile.email
-#         tm_profile = request.user.userprofile.username
-#         if form.is_valid():
-#             author = form.cleaned_data['author']
-#             email = form.cleaned_data['email']
-#             subject = form.cleaned_data['subject']
-#             message = form.cleaned_data['message']
+@login_required(login_url='/accounts/login/')
+def edit_about(request):
+    """ A view to edit the about page """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
 
-#             html = render_to_string('users/emails/contact_developer.html', {
-#                 'author': author,
-#                 'email': email,
-#                 'subject': subject,
-#                 'message': message,
-#                 'tm_profile': tm_profile,
-#                 'tm_email': tm_email,
-#             })
+    about = About.objects.all()
+    delivery = about[0].delivery_info
+    returns = about[0].returns_info
+    faq = about[0].faq
+    privacy = about[0].privacy_policy
 
-#             send_mail('The contact form entry',
-#                       'The contact form message',
-#                       'noreply@test.com', ['intc21@gmail.com'],
-#                       fail_silently=False, html_message=html)
-#             messages.success(request, 'Message sent successfully!')
-#             # next = request.GET.get('next', reverse('contact-form'))
-#             # return HttpResponseRedirect(next)
-#     else:
-#         form = ContactForm()
+    if request.method == 'POST':
+        form = AboutForm(request.POST, instance=about[0])
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated About page!')
+            return redirect('about')
+        else:
+            messages.error(request, 'Failed to update About page. '
+                                    'Please ensure the form is valid.')
+    else:
+        form = AboutForm(instance=about[0])
+        messages.info(request, 'You are editing the About page.')
 
-#     template = "about/about.html"
-#     context = {'form': form}
-#     return render(request, template, context)
+    template = 'about/edit_about.html'
+    context = {
+        'form': form,
+        'delivery': delivery,
+        'returns': returns,
+        'faq': faq,
+        'privacy': privacy,
+    }
+
+    return render(request, template, context)

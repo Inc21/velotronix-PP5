@@ -9,8 +9,10 @@ class AboutForm(forms.ModelForm):
         model = About
         fields = ('delivery_info', 'returns_info', 'faq', 'privacy_policy')
         widgets = {
-            'description': SummernoteWidget(),
-            'specs': SummernoteWidget(),
+            'delivery_info': SummernoteWidget(),
+            'returns_info': SummernoteWidget(),
+            'faq': SummernoteWidget(),
+            'privacy_policy': SummernoteWidget(),
         }
 
     def __init__(self, *args, **kwargs):
@@ -24,17 +26,16 @@ class AboutForm(forms.ModelForm):
             'privacy_policy': 'Privacy policy',
         }
 
-        self.fields['about'].widget.attrs['autofocus'] = True
+        self.fields['delivery_info'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if field != 'about':
-                if self.fields[field].required:
-                    placeholder = f'{placeholders[field]} *'
-                else:
-                    placeholder = placeholders[field]
-                self.fields[field].widget.attrs['placeholder'] = placeholder
-                self.fields[field].widget.attrs['class'] = (
-                    'border rounded-1 profile-form-input')
-            self.fields[field].label = False
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = (
+                'border rounded-1 profile-form-input')
+        self.fields[field].label = False
 
 
 class ContactForm(forms.ModelForm):

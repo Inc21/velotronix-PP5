@@ -228,3 +228,5 @@ STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "")
 STRIPE_WH_SECRET = os.environ.get("STRIPE_WH_SECRET", "")
 
 COUNTRIES_FIRST = ['IE', 'GB', 'US']
+
+SUMMERNOTE_THEME = 'bs5'
