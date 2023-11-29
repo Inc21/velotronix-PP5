@@ -600,11 +600,16 @@ section {
 
 /* ------------------------------------------------------------- About page */
 
-.about-card {
+/* .about-card {
     background-color: #fff;
     color: #264653;
     border: none;
-}
+    min-height: 300px;
+    border-radius: 5px;
+    margin: 0 2rem 2rem 0;
+    padding: 1rem;
+    
+} */
 
 /* ------------------------------------------------------------- Footer */
 
