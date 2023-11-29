@@ -103,12 +103,14 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     favorites = product.favorites.filter(id=request.user.id).exists()
 
+    # Increment product popularity by 1 each time the product is viewed
+    product.increment_popularity()
+
     context = {
         'product': product,
         'favorites': favorites,
         'user': user,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
