@@ -1,5 +1,5 @@
 from django import forms
-from .models import About, Contact
+from .models import About, Contact, faq
 from django_summernote.widgets import SummernoteWidget
 
 
@@ -61,6 +61,33 @@ class ContactForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
+
+        for name, field in self.fields.items():
+            field.widget.attrs.update({'class': 'form-control'})
+
+
+class FaqForm(forms.ModelForm):
+    """
+    This class is used to create a form for the faqForm model.
+    """
+    class Meta:
+        model = faq
+        fields = ['faq_name', 'faq_email', 'faq_question']
+        labels = {
+            'faq_name': '',
+            'faq_email': '',
+            'faq_question': ''
+        }
+        widgets = {
+          'faq_name': forms.TextInput(
+              attrs={'placeholder': 'Enter Your Name *'}),
+          'faq_email': forms.EmailInput(attrs={'placeholder': 'Email *'}),
+          'faq_question': forms.Textarea(attrs={
+              'rows': 2, 'placeholder': 'Question *'}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super(FaqForm, self).__init__(*args, **kwargs)
 
         for name, field in self.fields.items():
             field.widget.attrs.update({'class': 'form-control'})

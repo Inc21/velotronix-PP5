@@ -1,0 +1,12 @@
+<h2>FAQ form submission</h2>
+<br>
+<h3>If user was authenticated</h3>
+<hr>
+<p><b>Signed in User: </b>{{ user }}</p>
+<p><b>Signed in User's e-mail: </b>{{ user.email }}</p>
+<br>
+<h3>User entered data</h3>
+<hr>
+<p><b>Name: </b>{{ faq_name }}</p>
+<p><b>E-Mail: </b>{{ faq_email }}</p>
+<p><b>Question: </b>{{ faq_question|linebreaks }}</p>

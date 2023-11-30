@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import About
-from .forms import ContactForm, AboutForm
+from .forms import ContactForm, AboutForm, FaqForm
 from django.template.loader import render_to_string
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -22,33 +22,69 @@ def about(request):
     subject = ""
     message = ""
 
+    faq_form = FaqForm()
+    faq_name = ""
+    faq_email = ""
+    faq_question = ""
+
     if request.method == "POST":
-        form = ContactForm(request.POST)
-        user = request.user
-        if form.is_valid():
-            author = form.cleaned_data['author']
-            email = form.cleaned_data['email']
-            subject = form.cleaned_data['subject']
-            message = form.cleaned_data['message']
-            form.save()
+        if request.POST.get('form_type') == 'contact_form':
+            form = ContactForm(request.POST)
+            user = request.user
+            if form.is_valid():
+                author = form.cleaned_data['author']
+                email = form.cleaned_data['email']
+                subject = form.cleaned_data['subject']
+                message = form.cleaned_data['message']
+                form.save()
 
-            html = render_to_string('about/emails/contact_form.html', {
-                'author': author,
-                'email': email,
-                'subject': subject,
-                'message': message,
-                'user': user,
-            })
+                html = render_to_string('about/emails/contact_form.html', {
+                    'author': author,
+                    'email': email,
+                    'subject': subject,
+                    'message': message,
+                    'user': user,
+                })
 
-            send_mail('The contact form entry',
-                      'The contact form message',
-                      'noreply@test.com', ['intc21@gmail.com'],
-                      fail_silently=False, html_message=html)
-            messages.success(request, 'Message sent successfully!')
-            return redirect("about")
+                send_mail('The contact form entry',
+                          'The contact form message',
+                          'info.velotronix@gmail.com',
+                          ['info.velotronix@gmail.com'],
+                          fail_silently=False, html_message=html)
+                messages.success(request, 'Your message was sent successfully!')
+                return redirect('about')
+            else:
+                messages.error(request, 'Failed to send message. '
+                                        'Please ensure the form is valid.')
+                form = ContactForm(request.POST)
 
-    else:
-        form = ContactForm()
+        elif request.POST.get('form_type') == 'faq_form':
+            faq_form = FaqForm(request.POST)
+            user = request.user
+            if faq_form.is_valid():
+                faq_name = faq_form.cleaned_data['faq_name']
+                faq_email = faq_form.cleaned_data['faq_email']
+                faq_question = faq_form.cleaned_data['faq_question']
+                faq_form.save()
+
+                html = render_to_string('about/emails/faq_form.html', {
+                    'faq_name': faq_name,
+                    'faq_email': faq_email,
+                    'faq_question': faq_question,
+                    'user': user,
+                })
+
+                send_mail('The faq form entry',
+                          'The faq form message',
+                          'info.velotronix@gmail.com',
+                          ['info.velotronix@gmail.com'],
+                          fail_silently=False, html_message=html)
+                messages.success(request, 'Your question was sent successfully!')
+                return redirect('about')
+            else:
+                messages.error(request, 'Failed to send question. '
+                                        'Please ensure the form is valid.')
+                faq_form = FaqForm(request.POST)
 
     template = "about/about.html"
     context = {
@@ -57,10 +93,7 @@ def about(request):
         'faq': faq,
         'privacy': privacy,
         'form': form,
-        'author': author,
-        'email': email,
-        'subject': subject,
-        'message': message,
+        'faq_form': faq_form,
     }
 
     return render(request, template, context)
@@ -68,7 +101,10 @@ def about(request):
 
 @login_required(login_url='/accounts/login/')
 def edit_about(request):
-    """ A view to edit the about page """
+    """
+    A view to edit the about page
+    """
+
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

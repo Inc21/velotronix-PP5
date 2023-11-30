@@ -32,3 +32,18 @@ class Contact(models.Model):
 
     class Meta:
         ordering = ['-created']
+
+
+class faq(models.Model):
+    """ faq model """
+    faq_name = models.CharField(max_length=254, null=False, blank=False)
+    faq_email = models.EmailField(max_length=254, null=False, blank=False)
+    faq_question = models.CharField(max_length=254, null=False, blank=False)
+    created = models.DateTimeField(auto_now_add=True)
+    id = models.AutoField(primary_key=True)
+
+    def __str__(self):
+        return self.question
+
+    class Meta:
+        ordering = ['-created']
