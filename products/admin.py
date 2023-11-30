@@ -7,6 +7,7 @@ class ProductAdmin(SummernoteModelAdmin):
     list_display = (
         'sku',
         'name',
+        'hidden',
         'category',
         'price',
         'added_date',

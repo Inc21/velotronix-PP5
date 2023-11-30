@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 
@@ -9,41 +10,119 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12 header-container d-flex justify-content-center text-uppercase">
-                    <h1 class="mt-4 m-2">About Us</h1>
+                    <h2 class="mt-4 m-2">About Us</h2>
                 </div>
             </div>
-            <br>
+            {% if request.user.is_superuser %}
+                <hr>
+                <div class="mt-2 ml-3">
+                    <a class="btn keep-shopping-btn rounded text-uppercase mb-3" href="{% url "edit_about" %}"><i class="fa-solid fa-pen"></i> Edit about us page</a>
+                </div>
+            {% endif %}
+            <hr class="mt-0">
+            <div class="row ">
+                <div class="col-12">
+                    <table class="table caption-top table-sm table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ps-2 text-uppercase text-start">Contact Us</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1">
+                                    <form class="pt-2" method="POST" action="">
+                                        {% csrf_token %}{{form|crispy}}
+                                        <input type="hidden" name="form_type" value="contact_form">
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-center">
+                                                <button type="submit" class="btn keep-shopping-btn rounded text-uppercase mb-2">SEND</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <div class="row ">
                 <div class="col-12 col-lg-6">
-                    <p class="text-muted">Delivery Informattion</p>
-                    <div class="about-card">
-                    <p>{{ delivery|safe }}</p>
-                    </div>
+                    <table class="table caption-top table-sm table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ps-2 text-uppercase text-start">Delivery Information</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1"><p>{{ delivery|safe }}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <p class="text-muted">Returns Informattion</p>
-                    <div class="about-card">
-                        {{ returns|safe }}
-                        </div>
-                    </div>
+                    <table class="table caption-top table-sm table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ps-3 text-uppercase text-start">Returns Informattion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1"><p>{{ returns|safe }}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-6">
-                    <p class="text-muted text-uppercase">faq</p>
-                    <div class="about-card">
-                        {{ faq|safe }}
-                    </div>
+                    <table class="table caption-top table-sm table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ps-2 text-uppercase text-start">faq</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1"><p>{{ faq|safe }}</p>
+                                    <br>
+                                    <form class="pt-2" method="POST" action="">
+                                        {% csrf_token %}
+                                        {{faq_form|crispy}}
+                                        <input type="hidden" name="form_type" value="faq_form">
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-center">
+                                                <button type="submit" class="btn keep-shopping-btn rounded text-uppercase mb-2">SEND</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <div class="col-12 col-lg-6">
-                    <p class="text-muted">Privacy Policy</p>
-                    <div class="about-card">
-                        {{ privacy|safe }}
-                    </div>
+                    <table class="table caption-top table-sm table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ps-2 text-uppercase text-start">Privacy Policy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-1"><p>{{ privacy|safe }}</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<a role="button" class="btn btt-button d-flex d-none shadow-sm rounded-1">
+    <i class="fas fa-arrow-up mx-auto my-auto"></i>
+</a>
 
 {% endblock  %}

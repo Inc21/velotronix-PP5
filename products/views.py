@@ -103,19 +103,26 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     favorites = product.favorites.filter(id=request.user.id).exists()
 
+    # Increment product popularity by 1 each time the product is viewed
+    product.increment_popularity()
+
     context = {
         'product': product,
         'favorites': favorites,
         'user': user,
     }
-
     return render(request, 'products/product_detail.html', context)
 
 
 @login_required
 def product_admin(request):
     """
-    A view all products within product admin page"""
+    A view all products within product admin page
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     products = Product.objects.all()
     visible = products.filter(hidden=False)
     hidden = products.filter(hidden=True)
@@ -135,12 +142,16 @@ def add_product(request):
     Add a product to the store
     """
 
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, "Successfully added a product!")
-            return redirect(reverse("add_product"))
+            return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.warning(
                 request, "Failed to add product. \
@@ -156,7 +167,9 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """
+    Edit a product in the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -189,7 +202,9 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete/hide a product from the store """
+    """
+    Delete/hide a product from the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -203,7 +218,9 @@ def delete_product(request, product_id):
 
 @login_required
 def unhide_product(request, product_id):
-    """ unhide a product from """
+    """
+    unhide a product from
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
