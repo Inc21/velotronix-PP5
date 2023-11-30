@@ -51,7 +51,8 @@ def about(request):
                           'info.velotronix@gmail.com',
                           ['info.velotronix@gmail.com'],
                           fail_silently=False, html_message=html)
-                messages.success(request, 'Your message was sent successfully!')
+                messages.success(request,
+                                 'Your message was sent successfully!')
                 return redirect('about')
             else:
                 messages.error(request, 'Failed to send message. '
@@ -79,7 +80,8 @@ def about(request):
                           'info.velotronix@gmail.com',
                           ['info.velotronix@gmail.com'],
                           fail_silently=False, html_message=html)
-                messages.success(request, 'Your question was sent successfully!')
+                messages.success(request,
+                                 'Your question was sent successfully!')
                 return redirect('about')
             else:
                 messages.error(request, 'Failed to send question. '
