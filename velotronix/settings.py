@@ -31,10 +31,10 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
+    'https://velotronix-2a1fbfe0d0b1.herokuapp.com/',
     'localhost',
     '127.0.0.1',
     '.herokuapp.com',
-    'https://velotronix-2a1fbfe0d0b1.herokuapp.com/'
 ]
 
 
@@ -213,6 +213,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
