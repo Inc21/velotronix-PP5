@@ -49,7 +49,11 @@
                                     <td class="align-middle small">
                                         <a class="dark-green small" href="{% url "product_detail" favorite.id %}">{{ favorite.name }}</a>
                                     </td>
-                                    <td class="align-middle small d-none d-sm-table-cell"><strong>€{{ favorite.price }}</strong></td>
+                                    {% if favorite.on_sale %}
+                                        <td class="align-middle small d-none d-sm-table-cell"><span class="px-1 ms-2 bg-danger small text-light">SALE</span><br><strong class="text-danger">€{{ favorite.sale_price }}</strong></td>
+                                    {% else %}
+                                        <td class="align-middle small d-none d-sm-table-cell"><strong>€{{ favorite.price }}</strong></td>
+                                    {% endif %}
                                     <td class="align-middle text-center"><a class="border border-danger px-2 py-1 rounded-2 bg-danger text-light fa-sm" href="{% url "favorites_add" favorite.id %}"><i class="fa-solid fa-heart-crack"></i></a></td>
                                     <td class="align-middle text-center"><a class="border border-success px-2 py-1 rounded-2 bg-primary text-light fa-sm" href="{% url "product_detail" favorite.id %}"><i class="fa-solid fa-cart-plus"></i></a></td>
                                 </tr>
