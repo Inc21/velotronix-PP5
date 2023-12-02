@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <div class="col-12 d-flex flex-wrap justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="card auth-card m-4">
+                <div class="card-body">
+                  <h1 class="text-center"><i class="fa-solid fa-magnifying-glass"></i> 404</h1>
+                      <hr>
+                    <div class="row flex-nowrap">
+                      <h6>We can't find the page you are looking for.</h6>
+                    </div>
+                    <hr>
+                    <div class="row flex-nowrap">
+                        <a type="button" class="auth-btn btn-sm btn btn-success" href="{% url "home" %}"><i class="fa-solid fa-angles-left"></i> Back to home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+{% endblock %}
