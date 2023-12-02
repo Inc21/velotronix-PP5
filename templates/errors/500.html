@@ -1,24 +1,46 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<section class="auth-section">
-    <div class="col-12 d-flex flex-wrap justify-content-center">
-        <div class="d-flex justify-content-center">
-            <div class="card auth-card m-4">
-                <div class="card-body">
-                    <h1 class="text-center"><i class="fa-solid fa-server"></i> 500</h1>
-                    <hr>
-                    <div class="row flex-nowrap">
-                      <h6>Server has encountered an error!</h6>
-                    </div>
-                    <hr>
-                    <div class="row flex-nowrap">
-                        <a type="button" class="auth-btn btn-sm btn btn-success text-uppercase" href="{% url "home" %}"><i class="fa-solid fa-angles-left"></i> Back to home</a>
-                    </div>
+
+<div class="col-12 d-flex flex-wrap justify-content-center">
+    <div class="d-flex justify-content-center">
+        <div class="card auth-card m-4">
+            <div class="card-body">
+                
+                <hr>
+                <div class="row flex-nowrap">
+                    <h6>Server has encountered an error!</h6>
+                </div>
+                <hr>
+                <div class="row flex-nowrap">
+                    <a type="button" class="auth-btn btn-sm btn btn-success text-uppercase" href="{% url "home" %}"><i class="fa-solid fa-angles-left"></i> Back to home</a>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
+<div class="container error-container">
+    <div class="row d-flex justify-content-center flex-wrap">
+        <div class="col-6 card auth-card m-4">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center"><i class="fa-solid fa-server"></i> 500</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="text-center">Server has encountered an error!</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a type="button" class="mt-2 p-1 auth-btn btn-sm btn btn-success text-uppercase" href="{% url "home" %}"><i class="fa-solid fa-angles-left"></i> Back to home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

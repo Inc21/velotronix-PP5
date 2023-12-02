@@ -321,6 +321,11 @@ section {
     padding: 1rem;
 }
 
+.error-container {
+    color: #264653;
+    min-height: calc(100vh - 17.26rem);
+}
+
 .hero-header {
     font-weight: 700;
 }
