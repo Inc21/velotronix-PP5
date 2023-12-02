@@ -312,7 +312,7 @@ section {
 .index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 17.5rem);
+    min-height: calc(100vh - 17rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
     background-position: 17% 75%;

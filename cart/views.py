@@ -9,7 +9,14 @@ def cart(request):
 
 def add_to_cart(request, item_id):
     """ Add a quantity of the specified product to the shopping cart"""
-    quantity = int(request.POST.get('quantity'))
+    quantity = request.POST.get('quantity')
+    redirect_url = request.POST.get('redirect_url')
+    if quantity is None or quantity == '0' or quantity == '':
+        messages.warning(request, 'Please select a quantity!')
+        return redirect(reverse('products'))
+    else:
+        quantity = int(quantity)
+    print(quantity)
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
 
