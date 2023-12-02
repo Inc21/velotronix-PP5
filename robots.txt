@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /admin/
+Sitemap: https://velotronix-2a1fbfe0d0b1.herokuapp.com/sitemap.xml
