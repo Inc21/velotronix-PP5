@@ -9,6 +9,23 @@ The live website can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp
 
 Admin panel can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/admin/login/?next=/admin/ "velotronix Admin Panel.")
 
+To complete mock payments you can use the following test card details:
+![Card Details](/static/images/readme_images/card.png)
+
+
+### Project Goals
+
+- To create a full-stack website using Django and PostgreSQL.
+- To create a website that is fully responsive and has a clean and modern design.
+- To create a website that is easy to navigate and use.
+- To create a website that is easy to maintain and update.
+- To create a website that is secure and safe to use.
+- To create a website that is accessible to all users.
+- To create a website that is SEO friendly.
+- To create a website that is user friendly.
+- To create a e-commerce website that allows users to browse and purchase products.
+- To create a e-commerce website that allows users to create an account and save their details for future purchases.
+
 
 ### Project Goals
 
@@ -99,6 +116,35 @@ Admin panel can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/
     - [Fork repository](#fork-repository)
 - [Content](#content)
 - [Credits](#credits)
+
+
+
+# SEO and Web Marketing.
+
+### Business Model
+
+Velotronix is a business to consumer (B2C) e-commerce website. 
+The main goal of the website is to sell bicycle and sport related accessories. The website is aimed at people who are interested in cycling and other sports. The website is designed to be easy to navigate and use. The website is designed to be easy to maintain and update. The website is designed to be secure and safe to use. The website is designed to be accessible to all users. The website is designed to be SEO friendly. The website is designed to be user friendly. The website is designed to allow users to browse and purchase products. The website is designed to allow users to create an account and save their details for future purchases. Velotronix will deliver internationally but main customers will be from Ireland and aiming to deliver within 1-2 business days.
+
+- Provide a safe and secure website for users to browse and purchase products.
+- Deliver quality products to customers.
+- Provide efficient and reliable delivery service.
+
+
+### SEO
+
+- Descriptive meta tags were added to base.html which is extended on all the pages. Including title, description and keywords. Meta tags are important for SEO as they help search engines to understand what the page is about. Meta tags are also important for accessibility as they are used by screen readers to describe the page to the user.
+- Used [xml-sitemaps](https://www.xml-sitemaps.com/ "xml-sitemaps") to generate sitemap.xml file. Sitemap.xml file is important for SEO as it helps search engines to crawl the website. Sitemap.xml file is also important for accessibility as it helps screen readers to navigate the website.
+- Used [robots.txt](https://www.robotstxt.org/ "robots.txt") to tell search engines which pages to crawl and which pages to ignore. robots.txt file is important for SEO as it helps search engines to crawl the website. robots.txt file is also important for accessibility as it helps screen readers to navigate the website.
+- Add rel attribute to all links. rel attribute is important for SEO as it helps search engines to understand the relationship between pages. rel attribute is also important for accessibility as it helps screen readers to navigate the website.
+
+### Web Marketing
+
+- Created a [Facebook Business Page](https://www.facebook.com/people/Velotronix/61554100205665/ "Facebook Business Page")
+ for the website. Facebook business page is important for web marketing as it helps to reach a wider audience.
+
+ 
+![Facebook Business Page](/static/images/readme_images/facebook_page.png)
 
 # User Stories
 
