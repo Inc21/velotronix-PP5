@@ -413,17 +413,63 @@ Sans-serif is used as a fallback font in case the font fails to load for any rea
 
 # Agile Development
 
+Link to Velotronix [GitHub Agile Project](https://github.com/users/Inc21/projects/7)
+
+This project was my second time using Agile Development. Did find it much more helpful in managing my time than it did previous project. Also added [sprints](https://github.com/Inc21/velotronix-PP5/milestones) using GitHub milestones feature to my agile planning and this increased my time management even further. I decided to use the [Kanban](https://en.wikipedia.org/wiki/Kanban_(development)) and [MoSCoW](https://en.wikipedia.org/wiki/MoSCoW_method) prioritization method again. I used [GitHub Projects](https://github.com/users/Inc21/projects/7) to create the board. 
+
+I created 5 columns: Epics, To-Do, In Progress, Done and Backlog. I also created 9 labels:
+
+- For MoSCoW prioritization: Must Have, Should Have, Could Have, Won't Have.
+
+![Must Have](/static/images/readme_images/labels/must-have.png) ![Should Have](/static/images/readme_images/labels/should-have.png) ![Could Have](/static/images/readme_images/labels/could-have.png) ![Won't Have](/static/images/readme_images/labels/wont-have.png)
+
+- And 5 helper labels: Dev-task, Epic, User-story, In-progress, Done.
+
+![Dev-task](/static/images/readme_images/labels/dev-task.png) ![Epic](/static/images/readme_images/labels/epic.png) ![User-story](/static/images/readme_images/labels/user-story.png) ![In-progress](/static/images/readme_images/labels/in-progress.png) ![Done](/static/images/readme_images/labels/done.png)
+
+-  9 Epics divided into 24 User stories. Epics and user stories are connected with the # link on the title and in the description.
+- Project issues were divided into 4 sprints. Sprints were created to according to the available time I had to complete the project. Each sprint was given a 2 week time frame. 
+Project then was divided into 10 Epics and 30 User stories and tasks. Epics and user stories are connected with the # link on the title and in the description.
+
+| Example | Image |
+| --- | --- |
+| Sprint | ![Sprint](/static/images/readme_images/sprints.png) |
+| Epic | ![Epic](/static/images/readme_images/epic_example.png) |
+| User story | ![User story](/static/images/readme_images/user_storie_example.png) |
+| Task | ![Task](/static/images/readme_images/task_example.png) |
+
+- My Kanban board:
+
+| then | now |
+| --- | --- |
+| ![Kanban board](/static/images/readme_images/kanban.png) | ![Kanban board](/static/images/readme_images/kanban_now.png) |
+
+* Items in the backlog are not being developed at the moment but will be added to the project in the future. They marked with the "Won't Have" label.
+
 
 
 # Tools and technologies used
 
 ### Languages and Frameworks
 
+This project was created using the following languages and frameworks:
+
+- [Django](https://www.djangoproject.com/) as the Python web framework.
+    - [Python](https://www.python.org/) as the backend programming language.
+- [HTML](https://en.wikipedia.org/wiki/HTML) as the markup language and templating language.
+- [CSS](https://en.wikipedia.org/wiki/CSS) as the style sheet language.
+    - [Bootstrap 5](https://getbootstrap.com/) as the CSS framework.
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) to create carousel on index.html.
+    - [jQuery](https://jquery.com/) to simplify DOM manipulation.
+
 ### Django Packages
 - [Django](https://www.djangoproject.com/) was used as the main framework for the project.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to style Django forms.
 - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) was used to handle user authentication.
 - [Django Mathfilters](https://pypi.org/project/django-mathfilters/) was used to perform calculations in templates.
+- [Django Countries](https://pypi.org/project/django-countries/) was used to create a country field in the checkout form.
+- [Django Resized](https://pypi.org/project/django-resized/) was used to resize images and convert them to .webp format.
+- [Django Summernote](https://pypi.org/project/django-summernote/) was used to create a rich text editor for the about us page.
 - [Django Storages](https://django-storages.readthedocs.io/en/latest/) was used to store static and media files on Amazon AWS S3.
 
 
