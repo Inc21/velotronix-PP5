@@ -497,7 +497,7 @@ This project was created using the following languages and frameworks:
 - [Grammarly](https://www.grammarly.com/) was used to double-check spelling mistakes.
 
 
-# Features
+# Existing Features
 
 - All pages are responsive on all devices.
 - All pages feature a sticky header with the site logo and a navigation bar with links to other pages, login/sign-up links and a search bar. 
@@ -506,6 +506,8 @@ This project was created using the following languages and frameworks:
 - All user-uploaded content will be automatically converted to .webp format to save space and bandwidth using [Django-resized](https://pypi.org/project/django-resized/).  
 
 ![Django messages](/static/images/readme_images/existing_features/messages.png)
+
+**Screenshots and description of existing features are available below in collapsed sections.**
 
 ### Header
 
@@ -527,7 +529,31 @@ This project was created using the following languages and frameworks:
 
   ![Header](/static/images/readme_images/existing_features/nav_all_products.png) ![Header](/static/images/readme_images/existing_features/nav_electronics.png) ![Header](/static/images/readme_images/existing_features/nav_accessories.png) ![Header](/static/images/readme_images/existing_features/nav_about.png) ![Header](/static/images/readme_images/existing_features/nav_admin.png)
 
+</details>
+
+### Contact and FAQ Form emails
+
+<details>
+  <summary>Contact and FAQ Form emails</summary>
+
+  - When user submits contact form or FAQ form, email is sent to the site admin and user with the information from the form.
+
+  ![Contact Form](/static/images/readme_images/existing_features/contact_form_email.png) ![FAQ Form](/static/images/readme_images/existing_features/faq_form_email.png)
+
+</details>
+
 ### Footer
+
+<details>
+  <summary>Footer</summary>
+
+  - The footer is available on all pages.
+  - The footer features a link to privacy policy page and social media links.
+  - Also features a newsletter sign up form provided by [Mailchimp](https://mailchimp.com/ "Mailchimp").
+
+  ![Footer](/static/images/readme_images/existing_features/footer.png)
+
+</details>
 
 ### Home Page
 
@@ -645,30 +671,126 @@ This project was created using the following languages and frameworks:
 
 ### Shopping Cart Page 
 
+<details>
+  <summary>Shopping Cart Page</summary>
+
+  - Link to the shopping cart page is alway displayed in the top navigation bar. User can see the number of items in the shopping cart and the total cost of the items in the shopping cart. User will navigate to the shopping cart page when they click on the shopping cart icon.
+  - When there are items in the shopping cart, user will see a list of all items in the shopping cart. Each item will display the product name, image, price, quantity input, subtotal and a button to remove the item from the shopping cart.
+
+  ![Shopping Cart Page](/static/images/readme_images/existing_features/cart.png)
+
+  - When there is no items in the shopping cart, user will see a message "Your cart is empty".
+
+  ![Shopping Cart Page](/static/images/readme_images/existing_features/empty_cart.png)
+
+</details>
+
+### Checkout Page
+
+<details>
+  <summary>Checkout Page</summary>
+
+  - This page features a form to enter billing and shipping information.
+  - The form is pre-populated with the user information if the user is authenticated.
+  - The form includes a button to cancel the checkout and return to the shopping cart page.
+  - The form includes a button to submit the checkout and proceed to the payment page.
+  - The customer is shown the order summary including the order total and delivery cost.
+
+  ![Checkout Page](/static/images/readme_images/existing_features/checkout.png)
+
+  - After successful checkout, the customer is redirected to the checkout success page.
+
+  ![Checkout Page](/static/images/readme_images/existing_features/checkout_success.png)
+
+  - Confirmation email is sent to the customer after successful checkout.
+
+  ![Checkout Page](/static/images/readme_images/existing_features/checkout_success_email.png)
+
+</details>
+
+### Profile Page
+
+<details>
+  <summary>Profile Page</summary>
+
+  - This page features a form to enter billing and shipping information, favorites list and order history.
+  - The form includes a button to cancel the edit and return to the profile page.
+  - The form includes a button to submit the edit and update the profile information.
+  - The favorites list includes a button to remove the item from the favorites list and a button to add the item to the shopping cart.
+  - The customer is shown the order history including the order number, date, items and order total. 
+
+  ![Profile Page](/static/images/readme_images/existing_features/profile_page.png)
+
+  - The customer is shown the order history including the order number, date, items, order total and delivery cost.
+
+</details>
 
 ### Login Page
 
+<details>
+  <summary>Login Page</summary>
+
+  - Django Allauth was used to handle user authentication.
+  - This page features a form to login to the website.
+  - The form includes a button to submit the login and login to the website.
+  - The customer is shown a link to the sign-up page if they do not have an account.
+  - The customer is shown a link to the password reset page if they forgot their password.
+
+  ![Login Page](/static/images/readme_images/existing_features/login.png)
+
+</details>
+
 ### Logout Page
 
+<details>
+  <summary>Logout Page</summary>
+
+  - Django Allauth was used to handle user authentication.
+  - This page features a message to confirm that the user has logged out of the website.
+
+  ![Logout Page](/static/images/readme_images/existing_features/logout_confirm.png)
+
+</details>
 
 ### Sign-up Page
 
+<details>
+  <summary>Sign-up Page</summary>
 
+  - Django Allauth was used to handle user authentication.
+  - This page features a form to sign-up to the website.
+  - The form includes a button to submit the sign-up and sign-up to the website.
+  - The customer is shown a link to the login page if they already have an account.
 
-### Delete Profile Confirmation Page
+  ![Sign-up Page](/static/images/readme_images/existing_features/signup.png)
 
-### Upload Meme / Edit Meme Page
-
-
+</details>
 
 ### Password Reset Page
 
+<details>
+  <summary>Password Reset Page</summary>
 
-### Contact Developer Page
+  - Django Allauth was used to handle user authentication.
+  - This page features a form to reset the password.
+  - The form includes a button to submit the password reset and reset the password.
 
+  ![Password Reset Page](/static/images/readme_images/existing_features/password_reset.png)
+
+</details>
 
 ### Custom Error 404 Page
 
+<details>
+  <summary>Custom Error 404 Page</summary>
+
+  - This page features a message to confirm that the page does not exist.
+  - The customer is shown a link to the home page.
+  - also custom error 500, 403 and 400 pages were created but not shown here but they are using the same template as the 404 page.
+
+  ![Custom Error 404 Page](/static/images/readme_images/existing_features/404.png)
+
+</details>
 
 
 ## Features Left to Implement
