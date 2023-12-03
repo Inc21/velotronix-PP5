@@ -462,7 +462,7 @@ This project was created using the following languages and frameworks:
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript) to create carousel on index.html.
     - [jQuery](https://jquery.com/) to simplify DOM manipulation.
 
-### Django Packages
+### Main Django Packages
 - [Django](https://www.djangoproject.com/) was used as the main framework for the project.
 - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to style Django forms.
 - [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) was used to handle user authentication.
@@ -471,18 +471,23 @@ This project was created using the following languages and frameworks:
 - [Django Resized](https://pypi.org/project/django-resized/) was used to resize images and convert them to .webp format.
 - [Django Summernote](https://pypi.org/project/django-summernote/) was used to create a rich text editor for the about us page.
 - [Django Storages](https://django-storages.readthedocs.io/en/latest/) was used to store static and media files on Amazon AWS S3.
+- [crispy-bootstrap5](https://pypi.org/project/crispy-bootstrap5/) was used to style Django forms with Bootstrap 5.
+
+#### Other Django Packages
+[django-bleach](https://pypi.org/project/django-bleach/), [boto3](https://pypi.org/project/boto3/), [dj-database-url](https://pypi.org/project/dj-database-url/),
+[gunicorn](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/), [Pillow](https://pypi.org/project/Pillow/), [psycopg2](https://pypi.org/project/psycopg2/) and others that come with Django and packages above.
 
 
 
 ### Other tools and programs.
 - [Amazon AWS S3](https://aws.amazon.com/) was used to store static and media files.
+- [ElephantSQL](https://www.elephantsql.com/) was used to create a PostgreSQL database for development.
 - [Amazon AWS IAM](https://aws.amazon.com/iam/) was used to create a user for the project.
-- [Amazon RDS](https://aws.amazon.com/rds/) was used to create a PostgreSQL database.
 - [Font Awesome](https://fontawesome.com/) was used for all icons.
 - [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
 - [Coolors](https://coolors.co/) was used to create the colour palette.
 - [Favicon.io](https://favicon.io/) was used to create the favicon.
-- [Birme](https://www.birme.net) was used to convert static images to .webp format.
+- [Birme](https://www.birme.net) was used to convert static images to .webp format. All new content will be automatically converted by Django Resized to .webp format.
 - [ami.responsivedesign.is](http://ami.responsivedesign.is/) was used to create the mockup image.
 - [Lucid](https://lucid.co/) was used when creating database ERD.
 - [Visual Studio Code.](https://code.visualstudio.com/) Did all of my coding and synchronizing with GitHub on VS Code.
