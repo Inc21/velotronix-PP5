@@ -259,28 +259,156 @@ Sans-serif is used as a fallback font in case the font fails to load for any rea
 
 # Database Schemas
 
-![Database Schema](/static/images/readme_images/wireframes/erds.png)
+![Database Schema](/static/images/readme_images/erds.png)
 
-### User model
+### auth_user / User model
+
+- The user model is the default Django user model.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| id | IntegerField | |
+| password | CharField |  |
+| last_login | DateTimeField |  |
+| is_superuser | BooleanField |  |
+| username | CharField | max_length=150, unique=True |
+| first_name | CharField | max_length=150, blank=True |
+| last_name | CharField | max_length=150, blank=True |
+| email | EmailField | max_length=254, unique=True |
+| is_staff | BooleanField |  |
+| is_active | BooleanField |  |
+| date_joined | DateTimeField |  |
 
 
+### UserProfile model - profiles app
 
-### UserProfile model - users app
+- UserProfile model is connected to the User model with OneToOneField. This model is used to store extra user information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| user | OneToOneField | User, on_delete=models.CASCADE |
+| full_name | CharField | max_length=50, null=True, blank=True |
+| email | EmailField | max_length=254, null=True, blank=True |
+| phone_number | CharField | max_length=20, null=True, blank=True |
+| country | CountryField | blank_label="Country", max_length=40, null=True, blank=True |
+| postcode | CharField | max_length=20, null=True, blank=True |
+| town_or_city | CharField | max_length=40, null=True, blank=True |
+| street_address1 | CharField | max_length=80, null=True, blank=True |
+| street_address2 | CharField | max_length=80, null=True, blank=True |
+| county | CharField | max_length=80, null=True, blank=True |
+| created | DateTimeField | auto_now_add=True |
 
 
+### Product model - product app
 
-### Meme model - memes app
+- The Product model is used to store all the product information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| id | AutoField | primary_key=True |
+| category | ForeignKey | 'Category', null=True, blank=True, on_delete=models.SET_NULL |
+| sku | CharField | max_length=255, null=True, blank=True |
+| name | CharField | max_length=50 |
+| brand | CharField |  max_length=255, null=True, blank=True |
+| description | TextField |  null=True, blank=True |
+| specs | TextField | null=True, blank=True |
+| on_sale | BooleanField | default=False |
+| price | DecimalField | max_digits=6, decimal_places=2 |
+| sale_price | DecimalField | max_digits=6, decimal_places=2 |
+| image1 | ResizedImageField | size=[500, 400], upload_to='product_images/', null=True, force_format='WEBP', quality=85, blank=True, default='product_images/noimage.webp' |
+| image2 | ResizedImageField | size=[500, 400], upload_to='product_images/', null=True, force_format='WEBP', quality=85, blank=True, default='product_images/noimage.webp' |
+| image3 | ResizedImageField | size=[500, 400], upload_to='product_images/', null=True, force_format='WEBP', quality=85, blank=True, default='product_images/noimage.webp' |
+| image4 | ResizedImageField | size=[500, 400], upload_to='product_images/', null=True, force_format='WEBP', quality=85, blank=True, default='product_images/noimage.webp' |
+| popularity | IntegerField | default=0 |
+| favorites | ManyToManyField | User, related_name='favorites', blank=True, default=None |
+| added_date | DateTimeField | auto_now_add=True, blank=True, null=True |
+| hidden | BooleanField | default=False |
 
 
-### Comment model - memes app
+### Category model - Product app
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| id | AutoField | primary_key=True |
+| name | CharField | max_length=255 |
+| friendly_name | CharField | max_length=255, null=True, blank=True |
 
 
+### Order model - payment app
 
-### Tag model - memes app
+- The Order model is used to store all the order information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| order_number | CharField | max_length=32, null=False, editable=False |
+| user_profile | ForeignKey | UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders' |
+| full_name | CharField | max_length=50, null=True, blank=True |
+| email | EmailField | max_length=254, null=True, blank=True |
+| phone_number | CharField | max_length=20, null=True, blank=True |
+| country | CountryField | blank_label="Country", max_length=40, null=True, blank=True |
+| postcode | CharField | max_length=20, null=True, blank=True |
+| town_or_city | CharField | max_length=40, null=True, blank=True |
+| street_address1 | CharField | max_length=80, null=True, blank=True |
+| street_address2 | CharField | max_length=80, null=True, blank=True |
+| county | CharField | max_length=80, null=True, blank=True |
+| date | DateTimeField | auto_now_add=True |
+| delivery_cost | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
+| order_total | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
+| grand_total | DecimalField | max_digits=6, decimal_places=2, null=False, default=0 |
+| original_bag | TextField | null=False, blank=False, default='' |
+| stripe_pid | CharField | max_length=254, null=False, blank=False, default='' |
 
 
-### ContactForm model - memes app
+### OrderLineItem model - payment app
 
+- The OrderLineItem model is used to store all the order line item information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| order | ForeignKey | Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems' |
+| product | ForeignKey | Product, null=False, blank=False, on_delete=models.CASCADE |
+| quantity | IntegerField | null=False, blank=False, default=0 |
+| lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False |
+
+
+### About model - about app
+
+- The About model is used to store all the about us information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| name | CharField | max_length=254, null=False, blank=False, default="velotronix" |
+| delivery_info | TextField | null=True, blank=True |
+| returns_info | TextField | null=True, blank=True |
+| faq | TextField | null=True, blank=True |
+| privacy_policy | TextField | null=True, blank=True |
+
+
+### Contact model - about app
+
+- The Contact model is used to create contact form and store all the contact information.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| author | CharField | max_length=254, null=False, blank=False |
+| email | EmailField | max_length=254, null=False, blank=False |
+| subject | CharField | max_length=254, null=False, blank=False |
+| message | TextField | null=False, blank=False |
+| created | DateTimeField | auto_now_add=True |
+| id | AutoField | primary_key=True |
+
+
+### faq model - about app
+
+- The faq model is used to store all the frequently asked questions and create faq form for user to submit their questions.
+
+| key | Field Type | Validation |
+| --- | --- | --- |
+| faq_name | CharField | max_length=254, null=False, blank=False |
+| faq_email | EmailField | max_length=254, null=False, blank=False |
+| faq_question | CharField | max_length=254, null=False, blank=False |
+| created | DateTimeField | auto_now_add=True |
+| id | AutoField | primary_key=True |
 
 
 # Agile Development
