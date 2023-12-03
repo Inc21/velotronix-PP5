@@ -499,51 +499,175 @@ This project was created using the following languages and frameworks:
 
 # Features
 
+- All pages are responsive on all devices.
+- All pages feature a sticky header with the site logo and a navigation bar with links to other pages, login/sign-up links and a search bar. 
+- All pages feature a footer with link to privacy policy and social media links.
+- All user actions are confirmed with Django messages.
+- All user-uploaded content will be automatically converted to .webp format to save space and bandwidth using [Django-resized](https://pypi.org/project/django-resized/).  
 
+![Django messages](/static/images/readme_images/existing_features/messages.png)
+
+### Header
+
+<details>
+  <summary>Header</summary>
+
+  - The header is sticky and available on all pages.
+  - On mobile devices the header is collapsed into a hamburger menu including search bar.
+  - The header features top navigation bar with search bar, login/sign-up links and a shopping cart icon.
+
+  ![Header](/static/images/readme_images/existing_features/top_nav.png)
+
+  - The header features a logo which is a link to the home page.
+  - The lower header features a website logo, navigation bar with links to all products, electronics, accessories and about page. For authenticated users with admin permissions, the navigation bar also includes a link to product management page.
+
+  ![Header](/static/images/readme_images/existing_features/lower_nav.png)
+
+  - Navigation items are in a dropdown menu and will be in a hamburger menu on mobile devices.
+
+  ![Header](/static/images/readme_images/existing_features/nav_all_products.png) ![Header](/static/images/readme_images/existing_features/nav_electronics.png) ![Header](/static/images/readme_images/existing_features/nav_accessories.png) ![Header](/static/images/readme_images/existing_features/nav_about.png) ![Header](/static/images/readme_images/existing_features/nav_admin.png)
+
+### Footer
 
 ### Home Page
 
-### Memes Page
+<details>
+  <summary>Home page</summary>
 
-### Delete Meme Confirmation Page
+  - This page is the first page the user sees when they visit the website.
+  - The home page features a hero image with a welcome message and a call to action button to shop now.
 
-### Single Meme Page
+  ![Home Page](/static/images/readme_images/existing_features/home_page.png)
+</details>
 
+### Products Page
 
-### Report Meme Page
+<details>
+  <summary>Products page</summary>
 
+  - This page features a list of all products.
+  - The products are displayed in a grid with 4 products per row on large screens, 3 products per row on medium screens and 2 products per row on small screens and 1 product per row on extra small screens.
+  - Each product displays the product name, price, image and a button to add the product to the shopping cart.
 
-### Users Page 
+  ![Products Page](/static/images/readme_images/existing_features/all_products.png)
 
+  - When product card is hovered, button "click for more" is rendered. When clicked, user is taken to the product details page.
 
-### Single User Page
+  ![Products Page](/static/images/readme_images/existing_features/all_products_hover.png)
 
+  - When admin selects "on_sale" checkbox when editing or adding a product, product is displayed with a sale price and a "sale" badge.
 
-### Edit Profile Page
+  ![Products Page](/static/images/readme_images/existing_features/product_on_sale.png)
 
+  - Free delivery banner is displayed on all product pages.
 
-### Delete Profile Confirmation Page
+  ![Products Page](/static/images/readme_images/existing_features/delivery_banner.png)
 
-### Upload Meme / Edit Meme Page
+</details>
+
+### Product Details Page
+
+<details>
+  <summary>Product details page</summary>
+
+  - This page features all the information about the product.
+  - Each product displays the product name, price, image, description, specs, quantity input and a button to add the product to the shopping cart.
+  - If the user is authenticated and they have admin permissions, they will also see a buttons to edit and delete the product.
+
+  ![Product Detail Page](/static/images/readme_images/existing_features/product_detail.png)
+
+  - Also page includes a link to add the product to the favorites list. If user is not authenticated, they will be redirected to the login page. If the product is already in the favorites list, the button text will change to "remove from favorites" and the link will remove the product from the favorites list.
+
+  ![Product Detail Page](/static/images/readme_images/existing_features/product_detail_favorite.png)
+
+</details>
+
+### Product Management Page
+
+<details>
+  <summary>Product Management Page</summary>
+
+  - When user is authenticated and they have admin they will see a link to product management page in the navigation bar.
+
+  ![Product Management Page](/static/images/readme_images/existing_features/nav_admin.png)
+
+  Edit Product form:
+
+  - This page features a form to edit the product.
+  - The form is pre-populated with the product information.
+  - The form includes a button to cancel the edit and return to the product details page.
+
+  ![Edit Product Page](/static/images/readme_images/existing_features/edit_product.png)
+
+  Add Product form:
+
+  - This page features a form to add a new product.
+  - The form includes a button to cancel the edit and return to the product details page.
+
+  ![Add Product Page](/static/images/readme_images/existing_features/admin_add_product.png)
+
+  Edit or Delete Product page:
+
+  - Page features all products in a table with a button to edit or delete the product.
+
+  ![Edit or Delete Product Page](/static/images/readme_images/existing_features/edit_delete_products.png)
+
+  - Product soft delete is performed by setting the "hidden" field to True. This way the product is not displayed on the website but is still available in the database. This is done to preserve the order history. If the product is deleted, the order history will be lost. Products can be restored by setting the "hidden" field to False through the edit product form. Products can be permanently deleted through admin panel.
+
+  ![Edit or Delete Product Page](/static/images/readme_images/existing_features/hidden_edit_delete_products.png) 
+
+</details>
+
+### About Page
+
+<details>
+  <summary>About page</summary>
+
+  - This page features all the information about the company.
+  -  For site admin the about page features a rich text editor to add and edit the about us information inc.
+  - If the user is authenticated and they have admin permissions, they will also see a buttons to edit and delete the about us information.
+
+  ![About Page](/static/images/readme_images/existing_features/about_page.png)
+  ![About Page](/static/images/readme_images/existing_features/contct_form.png)
+  ![About Page](/static/images/readme_images/existing_features/faq_form.png)
+  ![About Page](/static/images/readme_images/existing_features/returns.png)
+  ![About Page](/static/images/readme_images/existing_features/faq.png)
+  ![About Page](/static/images/readme_images/existing_features/delivery_info.png)
+  ![About Page](/static/images/readme_images/existing_features/privacy_policy.png)
+
+  Edit About form:
+
+  - For a site admin edit button is displayed on the about page. When clicked, user is taken to the edit about page.
+
+  ![Edit About Page](/static/images/readme_images/existing_features/edit_about.png)
+
+</details>
+
+### Shopping Cart Page 
+
 
 ### Login Page
-
-
-### Password Reset Page
-
 
 ### Logout Page
 
 
 ### Sign-up Page
 
+
+
+### Delete Profile Confirmation Page
+
+### Upload Meme / Edit Meme Page
+
+
+
+### Password Reset Page
+
+
 ### Contact Developer Page
 
 
 ### Custom Error 404 Page
-
-
-### Custom Error 500 Page
 
 
 
