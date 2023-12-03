@@ -265,8 +265,6 @@ header {
     color: #E9EDE9;
     text-align: center;
     overflow: hidden;
-    /* font-weight: 700; */
-
     position: absolute;
     top: 10px;
     left: 10px;
@@ -367,7 +365,6 @@ section {
 }
 
 .auth-card {
-    /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); */
     background-color: #E9EDE9;
     color: #264653;
     max-width: 450px;
@@ -602,19 +599,6 @@ section {
     width: auto;
     object-fit: contain;
 }
-
-/* ------------------------------------------------------------- About page */
-
-/* .about-card {
-    background-color: #fff;
-    color: #264653;
-    border: none;
-    min-height: 300px;
-    border-radius: 5px;
-    margin: 0 2rem 2rem 0;
-    padding: 1rem;
-    
-} */
 
 /* ------------------------------------------------------------- Footer */
 
