@@ -6,13 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="copyright" content="Velotronix">
+    <meta name="author" content="Indrek Mannik">
+    <meta name="theme-color" content="#264653">
+    <meta name="description" 
+			    content="Online retailer selling cycling and sport related electronics and accsessories. Business is 
+          based in Cork, Ireland but deliverys are available world wide. ">
+		<meta name="keywords" 
+			    content="quality bike electronics Ireland, cycling accsessories for sale Ireland, sport gadgets delivered
+          world wide, Wahoo cycling computers, powermeters for sale, bike accsessories, bike headunits, wearable
+          electronics, smart sports products, indoor bike training, turbo trainer">
+
+
+    {% comment %} Google Fonts {% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sometype+Mono:wght@400;700&display=swap" rel="stylesheet">
+      
+    {% comment %} Favicons {% endcomment %}
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/site/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/site/favicon-32x32.png' %}">
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/site/favicon-16x16.png' %}">
     <link rel="manifest" href="{% static 'images/site/site.webmanifest' %}">
+
+    {% block core_css %}
+    {% endblock core_css %}
 
     {% block extra_css %}
     {% endblock extra_css %}
