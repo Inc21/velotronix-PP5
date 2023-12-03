@@ -143,8 +143,18 @@ The main goal of the website is to sell bicycle and sport related accessories. T
 - Created a [Facebook Business Page](https://www.facebook.com/people/Velotronix/61554100205665/ "Facebook Business Page")
  for the website. Facebook business page is important for web marketing as it helps to reach a wider audience.
 
- 
+
 ![Facebook Business Page](/static/images/readme_images/facebook_page.png)
+
+
+- Newsletter sign up form was added to the footer of the website. This one field form is designed to be easy to use and fill out. Newsletter sign up form is important for web marketing as it helps to reach a wider audience. Service is provided by [Mailchimp](https://mailchimp.com/ "Mailchimp").
+
+
+![Newsletter Sign Up Form](/static/images/readme_images/subscribe.png)
+
+
+Seo and marketing are possibly the most important aspects of any e-commerce website. Without them, the website will not be found by potential customers. Given my time restraints and if it would be a real world project, these areas could be improved upon. I would add more meta relevant meta tags and more do more market research to find out what keywords to use. I would also add more content to the website to improve SEO. I would also add more marketing strategies to reach a wider audience. Including more social media platforms and email marketing.
+
 
 # User Stories
 
@@ -185,10 +195,25 @@ The main goal of the website is to sell bicycle and sport related accessories. T
 ### Look and feel
 
 
+With the design for this e-commerce website was chosen to be clean and modern. Both colours and typography were chosen to be easy on the eye and to create a relaxing atmosphere while being very high in contrast and easy to read. Main colour for the website is nice darker shade of green and off-white being used as a background colour to make website more comfortable to browse.
+
+
 ### Colour
 
+Colour palette was created with [Coolors](https://coolors.co/).
+
+![Color Palette](/static/images/readme_images/colour_palette.png)
 
 ### Typography
+
+- [Google Fonts](https://fonts.google.com/) was used for the font. 
+
+Font used for the website is "Sometype Mono". This font was chosen for its clean and modern look. It is also very easy to read and has a high contrast. This font is used for all text on the website. This font is very accessible as it is easy to read and has a high contrast. This font is also very easy to read on all devices and screen sizes. 
+Sans-serif is used as a fallback font in case the font fails to load for any reason. Sans-serif is also very easy to read and has a high contrast. Sans-serif is also very easy to read on all devices and screen sizes.
+
+| Font Weight 400 | Font Weight 700 |
+| --- | --- |
+| ![Sometype Mono 400](/static/images/readme_images/sometype-mono-400.png) | ![Sometype Mono 700](/static/images/readme_images/sometype-mono-700.png) |
 
 
 ### Wireframes
