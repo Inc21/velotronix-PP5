@@ -32,6 +32,61 @@ All pages were tested with [Google Chrome Lighthouse](https://developer.chrome.c
 
 ### HTML Validation
 
+- All pages were passed through the official [W3C](https://validator.w3.org/nu/) validator.
+- Validating was done by a live website on Heroku. Some errors were found but they were fixed immediately.
+
+| Page | Image |
+| --- | --- |
+| Home | ![Home](/static/images/readme_images/validators/no_error.png) |
+| All Products | ![All Products](/static/images/readme_images/validators/no_error.png) |
+| Product Details | ![Product Details](/static/images/readme_images/validators/product_detail.png) |
+| | Product Details returned 60 CSS parse errors. All coming from Django_Summernote. Product detail page has description and specification fields that are using Django_Summernote. |
+
+<details>
+    <summary>Add Product and edit product</summary>
+
+- Add Product returned 16 different errors. All coming from Django_Summernote. Add Product page has description and specification fields that are using Django_Summernote.
+- Given more time I would like to try to fix these errors.
+- Because these pages are using same form they have same errors. 
+
+![Add Product](/static/images/readme_images/validators/add_product1.png)
+![Add Product](/static/images/readme_images/validators/add_product2.png)
+![Add Product](/static/images/readme_images/validators/add_product3.png)
+![Product Management](/static/images/readme_images/validators/no_error.png)
+
+- About page returned 4 errors. All coming from Django_Summernote.
+
+![About](/static/images/readme_images/validators/about.png)
+
+</details>
+
+<details>
+    <summary>Edit About</summary>
+
+- Edit About page returned 36 errors. All coming from Django_Summernote.
+
+    ![Edit Product](/static/images/readme_images/validators/edit_about1.png)
+    ![Edit Product](/static/images/readme_images/validators/edit_about2.png)
+    ![Edit Product](/static/images/readme_images/validators/edit_about3.png)
+    ![Edit Product](/static/images/readme_images/validators/edit_about4.png)
+    ![Edit Product](/static/images/readme_images/validators/edit_about5.png)
+    ![Edit Product](/static/images/readme_images/validators/edit_about6.png)
+
+</details>
+
+| Page | Image |
+| --- | --- |
+| Cart Empty | ![Cart Empty](/static/images/readme_images/validators/no_error.png) |
+| Cart with Products | ![Cart with Products](/static/images/readme_images/validators/no_error.png) |
+| Profile | ![Profile](/static/images/readme_images/validators/profile.png |
+|         | Profile returned 1 error. Missing alt tag on image. That image is a flag in django-countries. |
+| Checkout | ![Checkout](/static/images/readme_images/validators/no_error.png) |
+| Checkout Success | ![Checkout Success](/static/images/readme_images/validators/no_error.png) |
+| Login | ![Login](/static/images/readme_images/validators/no_error.png) |
+| logout | ![Logout](/static/images/readme_images/validators/no_error.png) |
+| Sign Up | ![Sign Up](/static/images/readme_images/validators/no_error.png) |
+| Password Reset | ![Password Reset](/static/images/readme_images/validators/no_error.png) |
+
 
 ### JavaScript Validation
 

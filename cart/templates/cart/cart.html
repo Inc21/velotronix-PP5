@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col header-container dark-green d-flex justify-content-center text-uppercase">
             <h1 class="logo-font d-none d-sm-block mt-4 m-2">Shopping Cart</h1>
-            <h3 class="logo-font d-sm-none p-2 mt-3"><i class="fa-solid fa-cart-shopping fa-2xl"></i></h3>
+            <span class="logo-font d-sm-none p-2 mt-3"><i class="fa-solid fa-cart-shopping fa-2xl"></i></span>
             <hr>
         </div>
     </div>
@@ -112,7 +112,7 @@
                                                     <div class="col-6 mt-3 d-inline-flex">
                                                         <div class="input-group-prepend">
                                                             <button class="decrement-qty_{{ product.id }} rounded-start-2 me-1 decrement-qty btn" 
-                                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                                data-item_id="{{ product.id }}">
                                                                 <span class="d-flex justify-content-center align-items-center">
                                                                     <i class="fas fa-minus"></i>
                                                                 </span>
@@ -121,7 +121,7 @@
                                                         <input class="form-control qty-input qty_input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ item.item_id }}">
                                                         <div class="input-group-append mb-0">
                                                             <button class="increment-qty_{{ product.id }} ms-1 increment-qty btn rounded-end-2"
-                                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                                data-item_id="{{ product.id }}">
                                                                 <span class="d-flex justify-content-center align-items-center">
                                                                     <i class="fas fa-plus"></i>
                                                                 </span>
@@ -210,7 +210,7 @@
                                         </div>
                                     </form>
                                     <a class="update-link text-info"><small>Update</small></a>
-                                    <a class="remove-item text-danger" id="remove_{{ item.item_id }}"><small>Remove</small></a>                                
+                                    <a class="remove-item text-danger" id="remove-s_{{ item.item_id }}"><small>Remove</small></a>                                
                                 </td>
                                 <td class="p-3 text-end">
                                     {% if item.product.on_sale %}
@@ -277,7 +277,7 @@
 {% endblock  %}
 
 {% block postloadjs %}
-<script type="text/javascript">
+<script>
     // Update quantity on click
     $('.update-link').click(function(e) {
        var form = $(this).prev('.update-form');
@@ -296,5 +296,18 @@
             location.reload();
         });
    })
+
+   // Remove item and reload on click
+   $('.remove-item').click(function(e) {
+    var csrfToken = "{{ csrf_token }}";
+    var itemId = $(this).attr('id').split('remove-s_')[1];
+    var url = `/cart/remove/${itemId}/`;
+    var data = {'csrfmiddlewaretoken': csrfToken};
+
+    $.post(url, data)
+     .done(function() {
+         location.reload();
+     });
+})
 </script>
 {% endblock %}

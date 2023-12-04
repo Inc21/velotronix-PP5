@@ -31,7 +31,7 @@
                         <tbody>
                             <tr>
                                 <td class="px-3 py-1">
-                                    <form class="pt-2" method="POST" action="">
+                                    <form class="pt-2" method="POST">
                                         {% csrf_token %}{{form|crispy}}
                                         <input type="hidden" name="form_type" value="contact_form">
                                         <div class="row">
@@ -59,7 +59,7 @@
                                 <td class="px-3 py-1"><p>{{ faq|safe }}</p>
                                     <br>
                                     <h4 class="text-center"><i class="fa-solid fa-angles-down text-success"></i> Have a question? <i class="fa-solid fa-angles-down text-success"></i></h4>
-                                    <form class="pt-2" method="POST" action="">
+                                    <form class="pt-2" method="POST">
                                         {% csrf_token %}
                                         {{faq_form|crispy}}
                                         <input type="hidden" name="form_type" value="faq_form">

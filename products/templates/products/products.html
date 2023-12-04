@@ -27,7 +27,7 @@
                                 {% if on_sale %}
                                     <span class="category-badge ms-2 text-decoration-none p-2 mt-2 badge text-black rounded-1 border border-dark"> Sale Items</span>
                                 {% endif %}
-                                <a type="button" class="{% if brands or current_categories or sort or on_sale %}d-flex{% else %}d-none{% endif %} dark-green badge badge-back btn p-2 ms-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
+                                <a role="button" class="{% if brands or current_categories or sort or on_sale %}d-flex{% else %}d-none{% endif %} dark-green badge badge-back btn p-2 ms-2 mt-2 rounded-1" href="javascript:history.go(-1)"><i class="fa-solid fa-angles-left"></i> Back</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="middle">
-                                <a class="btn overlay_btn btn-lg text-nowrap" href="{% url "product_detail" product.id %}">Click for more</a>
+                                <span class="btn overlay_btn btn-lg text-nowrap">Click for more</span>
                             </div>
                         </a>
                     </div>
@@ -154,10 +154,6 @@
 {% block postloadjs %}
 
 {{ block.super }}
-    
-    <script type="text/javascript">
-        
-    </script>
 
 {{ block.super }}
 <script>
