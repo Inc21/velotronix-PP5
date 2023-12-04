@@ -343,7 +343,7 @@ Sans-serif is used as a fallback font in case the font fails to load for any rea
 | lineitem_total | DecimalField | max_digits=6, decimal_places=2, null=False, blank=False, editable=False |
 
 
-### About model - about app
+### About model (custom model 1) - about app 
 
 - The About model is used to store all the about us information.
 
@@ -356,7 +356,7 @@ Sans-serif is used as a fallback font in case the font fails to load for any rea
 | privacy_policy | TextField | null=True, blank=True |
 
 
-### Contact model - about app
+### Contact model (custom model 2) - about app
 
 - The Contact model is used to create contact form and store all the contact information.
 
@@ -370,7 +370,7 @@ Sans-serif is used as a fallback font in case the font fails to load for any rea
 | id | AutoField | primary_key=True |
 
 
-### faq model - about app
+### faq model (custom model 3) - about app
 
 - The faq model is used to store all the frequently asked questions and create faq form for user to submit their questions.
 
