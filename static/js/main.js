@@ -6,7 +6,7 @@ $(document).ready(function() {
     }, 6000); // <-- time in milliseconds, 1000 =  1 sec
 
     // delete message
-    $('.btn-close').live('click',function(){
+    $('.btn-close').on('click',function(){
         $('.btn-close').parent().attr('style', 'display:none;');
     })
 });
