@@ -101,23 +101,77 @@ All pages were tested with [Google Chrome Lighthouse](https://developer.chrome.c
 
 - All Python files were passed through the Code Institute [PEP8](https://pep8ci.herokuapp.com/) validator.
 
-#### Techmeme project app
+#### Velotronix project app
 
 | File | Result |
 | --- | --- |
-| settings.py | ![PEP8 Linter](/static/images/readme_images/pep8_clear.png) |
-| urls.py | All clear, no errors found |
+| settings.py | ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
 
 
 
-#### Techmeme project app
+#### Profiles app
 
-#### memes app
+| File | Result |
+| --- | --- |
+| admin.py | ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| apps.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| forms.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| models.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
 
+#### Products app
 
+| File | Result |
+| --- | --- |
+| admin.py | ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| apps.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| forms.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| models.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
 
-#### users app
+#### Payment app
 
+| File | Result |
+| --- | --- |
+| admin.py | ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| apps.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| forms.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| models.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| signals.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| webhooks.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| webhook_handler.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+
+#### Home app
+
+| File | Result |
+| --- | --- |
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+
+#### Cart app
+
+| File | Result |
+| --- | --- |
+| context.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+
+#### About app
+
+| File | Result |
+| --- | --- |
+| admin.py | ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| apps.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| forms.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| models.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| urls.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
+| views.py |  ![PEP8 Linter]( /static/images/readme_images/validators/ci_linter_clear.png)
 
 
  # Manual Testing
