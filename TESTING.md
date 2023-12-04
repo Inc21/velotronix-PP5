@@ -90,8 +90,23 @@ All pages were tested with [Google Chrome Lighthouse](https://developer.chrome.c
 
 ### JavaScript Validation
 
+- All JavaScript files were passed through the official [JSHint](https://jshint.com/) validator.
+
+| File | Image |
+| --- | --- |
+| main.js | ![main.js](/static/images/readme_images/validators/js.png) |
+
 
 ### PEP8 Code Institute Python Linter Validation
+
+- All Python files were passed through the Code Institute [PEP8](https://pep8ci.herokuapp.com/) validator.
+
+#### Techmeme project app
+
+| File | Result |
+| --- | --- |
+| settings.py | ![PEP8 Linter](/static/images/readme_images/pep8_clear.png) |
+| urls.py | All clear, no errors found |
 
 
 

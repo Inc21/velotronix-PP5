@@ -280,12 +280,14 @@
 <script>
     // Update quantity on click
     $('.update-link').click(function(e) {
+        "use strict";
        var form = $(this).prev('.update-form');
        form.submit();
-   })
+   });
 
    // Remove item and reload on click
    $('.remove-item').click(function(e) {
+    "use strict";
        var csrfToken = "{{ csrf_token }}";
        var itemId = $(this).attr('id').split('remove_')[1];
        var url = `/cart/remove/${itemId}/`;
@@ -295,10 +297,11 @@
         .done(function() {
             location.reload();
         });
-   })
+   });
 
    // Remove item and reload on click
    $('.remove-item').click(function(e) {
+    "use strict";
     var csrfToken = "{{ csrf_token }}";
     var itemId = $(this).attr('id').split('remove-s_')[1];
     var url = `/cart/remove/${itemId}/`;
@@ -308,6 +311,6 @@
      .done(function() {
          location.reload();
      });
-})
+});
 </script>
 {% endblock %}
