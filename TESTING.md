@@ -6,9 +6,29 @@ Go back to [README.md](/README.md)
 
 ### Google lighthouse Validation
 
+All pages were tested with [Google Chrome Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/). Testing was performed in private browsing mode and on the live website on Heroku.
 
+| Page | Image |
+| --- | --- |
+| Home | ![Home](/static/images/readme_images/lighthouse/index.png) |
+| All Products | ![All Products](/static/images/readme_images/lighthouse/all_products.png) |
+| Product Details | ![Product Details](/static/images/readme_images/lighthouse/product_detail.png) |
+| About | ![About](/static/images/readme_images/lighthouse/about.png) |
+| Add Product | ![Add Product](/static/images/readme_images/lighthouse/add_product.png) |
+| Edit Product | ![Edit Product](/static/images/readme_images/lighthouse/edit_products.png) |
+| Cart Empty | ![Cart Empty](/static/images/readme_images/lighthouse/cart_empty.png) |
+| Cart with Products | ![Cart with Products](/static/images/readme_images/lighthouse/cart_with_product.png) |
+| Checkout | ![Checkout](/static/images/readme_images/lighthouse/checkout.png) |
+| Checkout Success | ![Checkout Success](/static/images/readme_images/lighthouse/checkout_success.png) |
+| Profile | ![Profile](/static/images/readme_images/lighthouse/profile.png) |
+| Login | ![Login](/static/images/readme_images/lighthouse/login.png) |
+| logout | ![Logout](/static/images/readme_images/lighthouse/logout.png) |
+| Sign Up | ![Sign Up](/static/images/readme_images/lighthouse/signup.png) |
+| Password Reset | ![Password Reset](/static/images/readme_images/lighthouse/forgot_password.png) |
 
 ### CSS Validation
+- No errors were found when passing through the official [W3C](https://validator.w3.org/) validator.
+![CSS Validator](/static/images/readme_images/validators/css_validator.png)
 
 ### HTML Validation
 

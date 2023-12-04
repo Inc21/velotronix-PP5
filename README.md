@@ -796,17 +796,6 @@ This project was created using the following languages and frameworks:
 ## Features Left to Implement
 
 
-## SEO and Web Marketing.
-
-### Facebook Business Page
-
-### Email Marketing
-
-### Keywords
-
-### Robots.txt
-
-### Sitemap.xml
 
 # Testing
 All Testing documentation can be found [here.](./TESTING.md)

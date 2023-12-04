@@ -54,8 +54,8 @@
                                     {% else %}
                                         <td class="align-middle small d-none d-sm-table-cell"><strong>€{{ favorite.price }}</strong></td>
                                     {% endif %}
-                                    <td class="align-middle text-center"><a class="border border-danger px-2 py-1 rounded-2 bg-danger text-light fa-sm" href="{% url "favorites_add" favorite.id %}"><i class="fa-solid fa-heart-crack"></i></a></td>
-                                    <td class="align-middle text-center"><a class="border border-success px-2 py-1 rounded-2 bg-primary text-light fa-sm" href="{% url "product_detail" favorite.id %}"><i class="fa-solid fa-cart-plus"></i></a></td>
+                                    <td class="align-middle text-center"><a class="border border-danger px-2 py-1 rounded-2 bg-danger text-light fa-sm" aria-label="remove from favorites" href="{% url "favorites_add" favorite.id %}"><i class="fa-solid fa-heart-crack"></i></a></td>
+                                    <td class="align-middle text-center"><a class="border border-success px-2 py-1 rounded-2 bg-primary text-light fa-sm" aria-label="Add to cart" href="{% url "product_detail" favorite.id %}"><i class="fa-solid fa-cart-plus"></i></a></td>
                                 </tr>
                             {% endfor %}
                         </tbody>
