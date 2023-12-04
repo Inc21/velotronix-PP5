@@ -31,6 +31,10 @@ To complete mock payments you can use the following test card details:
 
 # Table of contents
 
+- [SEO and Web Marketing.](#seo-and-web-marketing)
+    - [Business Model](#business-model)
+    - [SEO](#seo)
+    - [Web Marketing](#web-marketing)
 - [User Stories](#user-stories)
     - [Developer](#developer)
     - [User/shopper](#usershopper)
@@ -40,75 +44,43 @@ To complete mock payments you can use the following test card details:
     - [Typography](#typography)
     - [Wireframes](#wireframes)
       - [Home Page desktop Wireframe](#home-page-desktop-wireframe)
-      - [Home Page mobile Wireframe](#home-page-mobile-wireframe)
 - [Database Schemas](#database-schemas)
-    - [User model](#user-model)
-    - [UserProfile model - users app](#userprofile-model---users-app)
-    - [Meme model - memes app](#meme-model---memes-app)
-    - [Comment model - memes app](#comment-model---memes-app)
-    - [Tag model - memes app](#tag-model---memes-app)
-    - [ContactForm model - memes app](#contactform-model---memes-app)
+    - [auth_user / User model](#auth_user--user-model)
+    - [UserProfile model - profiles app](#userprofile-model---profiles-app)
+    - [Product model - product app](#product-model---product-app)
+    - [Category model - Product app](#category-model---product-app)
+    - [Order model - payment app](#order-model---payment-app)
+    - [OrderLineItem model - payment app](#orderlineitem-model---payment-app)
+    - [About model - about app](#about-model---about-app)
+    - [Contact model - about app](#contact-model---about-app)
+    - [faq model - about app](#faq-model---about-app)
 - [Agile Development](#agile-development)
 - [Tools and technologies used](#tools-and-technologies-used)
     - [Languages and Frameworks](#languages-and-frameworks)
-    - [Django Packages](#django-packages)
+    - [Main Django Packages](#main-django-packages)
+      - [Other Django Packages](#other-django-packages)
     - [Other tools and programs.](#other-tools-and-programs)
-- [Features](#features)
+- [Existing Features](#existing-features)
+    - [Header](#header)
+    - [Contact and FAQ Form emails](#contact-and-faq-form-emails)
+    - [Footer](#footer)
     - [Home Page](#home-page)
-    - [Memes Page](#memes-page)
-    - [Delete Meme Confirmation Page](#delete-meme-confirmation-page)
-    - [Single Meme Page](#single-meme-page)
-    - [Report Meme Page](#report-meme-page)
-    - [Users Page](#users-page)
-    - [Single User Page](#single-user-page)
-    - [Edit Profile Page](#edit-profile-page)
-    - [Delete Profile Confirmation Page](#delete-profile-confirmation-page)
-    - [Upload Meme / Edit Meme Page](#upload-meme--edit-meme-page)
+    - [Products Page](#products-page)
+    - [Product Details Page](#product-details-page)
+    - [Product Management Page](#product-management-page)
+    - [About Page](#about-page)
+    - [Shopping Cart Page](#shopping-cart-page)
+    - [Checkout Page](#checkout-page)
+    - [Profile Page](#profile-page)
     - [Login Page](#login-page)
-    - [Password Reset Page](#password-reset-page)
     - [Logout Page](#logout-page)
     - [Sign-up Page](#sign-up-page)
-    - [Contact Developer Page](#contact-developer-page)
+    - [Password Reset Page](#password-reset-page)
     - [Custom Error 404 Page](#custom-error-404-page)
-    - [Custom Error 500 Page](#custom-error-500-page)
   - [Features Left to Implement](#features-left-to-implement)
 - [Testing](#testing)
-  - [Code Validation](#code-validation)
-    - [Google lighthouse Validation](#google-lighthouse-validation)
-    - [CSS Validation](#css-validation)
-    - [HTML Validation](#html-validation)
-    - [JavaScript Validation](#javascript-validation)
-    - [PEP8 Code Institute Python Linter Validation](#pep8-code-institute-python-linter-validation)
-      - [Techmeme project app](#techmeme-project-app)
-      - [memes app](#memes-app)
-      - [users app](#users-app)
-- [Manual Testing](#manual-testing)
-    - [Devices and browsers used for testing](#devices-and-browsers-used-for-testing)
-    - [User Stories Testing](#user-stories-testing)
-    - [Home Page Testing.](#home-page-testing)
-    - [Memes Page Testing.](#memes-page-testing)
-    - [Single Meme Page Testing.](#single-meme-page-testing)
-        - [Authenticated user and owner of the meme.](#authenticated-user-and-owner-of-the-meme)
-        - [Authenticated user and not the owner of the meme.](#authenticated-user-and-not-the-owner-of-the-meme)
-        - [Not authenticated user.](#not-authenticated-user)
-    - [Users Page Testing.](#users-page-testing)
-    - [Single User Page Testing.](#single-user-page-testing)
-        - [Authenticated user and owner of the profile.](#authenticated-user-and-owner-of-the-profile)
-        - [Not authenticated user.](#not-authenticated-user)
-    - [Upload Meme Page Testing.](#upload-meme-page-testing)
-        - [Not authenticated user.](#not-authenticated-user)
-        - [Authenticated user.](#authenticated-user)
-    - [Contact Developer Form Testing.](#contact-developer-form-testing)
-        - [Not authenticated user.](#not-authenticated-user)
-        - [Authenticated user.](#authenticated-user)
-    - [Update Meme Form Page Testing.](#update-meme-form-page-testing)
-    - [Delete Confirmation Page Testing.](#delete-confirmation-page-testing)
-    - [Logout Page Testing.](#logout-page-testing)
-    - [Login Page Testing.](#login-page-testing)
-    - [Home Page Testing.](#home-page-testing)
-    - [Password Reset Page Testing.](#password-reset-page-testing)
-    - [Sign Up Page Testing.](#sign-up-page-testing)
   - [Interesting bugs or problems](#interesting-bugs-or-problems)
+    - [Bug 1](#bug-1)
   - [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
     - [Deploy with Heroku](#deploy-with-heroku)
@@ -795,6 +767,14 @@ This project was created using the following languages and frameworks:
 
 ## Features Left to Implement
 
+My available time to complete this project was very limited this time around. Many late nights and early mornings were spent on this project. I had to cut some features from the project to be able to complete it on time. I will be adding these features in the future.
+
+- Product quantity in stock. When the product is added to the shopping cart, the quantity in stock will be reduced by the quantity added to the shopping cart. If the quantity in stock is 0, the product will be displayed as out of stock.
+- Pagination on the products page. Currently all products are displayed on one page. This will cause performance issues when there are many products on the website. Pagination will be added to the products page to display a limited number of products per page.
+- Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page.
+- Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page.
+- Better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images.
+
  
 
 # Testing
@@ -803,9 +783,14 @@ All Testing documentation can be found [here.](./TESTING.md)
 
 ## Interesting bugs or problems
 
+### Bug 1
+ - About midway through development process I had to make a change to the checkout model. At this stage I was still using only SqLite3 database. For some reason, when I tried to migrate the changes to the database, I was getting an error. I tried to fix the error for a few hours but could not find a solution. Even vent into the database and deleted tables manually but still got the same error. I decided to delete the database and start from scratch. I did have to coll it "Payment" instead of "Checkout" but it worked. I did not have any issues with the database after that. I did not have time to investigate this issue further but I will be looking into it in the future. 
+
 
 ## Unfixed Bugs
 
+- Although I did my best to catch all bugs, there are some bugs that I might have missed. 
+- Django_Summernote causes many errors while validating HTML. No visible errors or performance issues caused by summernote but its definitely something I will be looking out for before I get this far into the project in the future.
 
 # Deployment
 
@@ -860,7 +845,7 @@ NB: You will need to add your Heroku app link to the ALLOWED_HOSTS in the settin
 ### Fork repository
 
 - To fork this repository.
-    - Open my [GitHub repository](https://github.com/Inc21/TechieMeme-PP4).
+    - Open my [GitHub repository](https://github.com/Inc21/velotronix-PP5).
     - Click on the 'Fork' button on the top right of the screen.
     - On the 'Create a new fork' page you are given the option to rename that repository and then click on the green 'Create fork' button at the bottom of the form.
 
@@ -869,7 +854,18 @@ NB: You will need to add your Heroku app link to the ALLOWED_HOSTS in the settin
 - Hero image on the home by Photo by [Marianna Lutkova](https://unsplash.com/@mery_lu_design?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-person-riding-a-bike-in-a-field-at-sunset-4PSLAKVQQ88?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash).
 
 - JavaScript code for the details page image popup was taken from [CodeHim](https://www.codehim.com/lightbox/onclick-image-popup-jquery-lightbox/) and modified to suit my needs. Author of the code is AleMay96.
-  
 
+- [Code Institute](https://codeinstitute.net/ie/) Boutique Ado project was used as a reference for this project.
+
+- All the product images and descriptions were taken from [Wahoofitness.com](https://eu.wahoofitness.com/)
 
 # Credits
+
+It has been another great learning experience. Very tough at times but I am very happy with the result. I have learned a lot and I am looking forward to the next project.
+I would like to thank my mentor Dick Vlaanderen for his help and support during this and projects that came before this.
+
+Also would like to thank my family who, even though I abandon them for a year, have stood beside me and supported me all the way.
+All my Slack cohort, our facilitator Paul Thomas O’Riordan and a good friend and a super motivator Dayana Nashkova.
+
+
+[Back to top ⇧](#table-of-contents)
