@@ -16,8 +16,6 @@
       <div class="auth-card m-4">
           <div class="card-body">
             <h1>{% trans "Login" %}</h1>
-                <hr>
-                {% get_providers as socialaccount_providers %}
 
                 {% if socialaccount_providers %}
                 <p class="text-wrap">{% blocktrans with site.name as site_name %}Please log in with your username and password or with one of the following providers:</p> 

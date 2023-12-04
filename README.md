@@ -774,6 +774,7 @@ My available time to complete this project was very limited this time around. Ma
 - Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page.
 - Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page.
 - Better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images.
+- Social media login. Customers will be able to login to the website using their social media accounts. Although this feature is not essential, it will make the login process easier for the customer. I have used in previous projects but just ran out of time to implement it in this project.
 
  
 
