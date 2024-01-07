@@ -382,6 +382,10 @@ section {
     position: relative;
 }
 
+.card-footer {
+    background-color: #fff;
+}
+
 .cover-image {
     height: 220px;
     object-position: center;
