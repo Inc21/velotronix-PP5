@@ -1,0 +1,637 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sometype Mono', monospace, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    min-width: 300px;
+}
+
+/* ------------------------------------------------------------- Colours */
+
+.dark-green {
+    color: #264653;
+}
+
+/* ------------------------------------------------------------- Hamburger menu animation */
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.toggler-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #E9EDE9;
+    display: block;
+    transition: all 0.2s;
+}
+
+.middle-bar {
+    margin: 5px auto;
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 10%;
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .toggler-icon {
+    background-color: #E9EDE9;
+}
+
+/* ------------------------------------------------------------- Header and navigation */
+
+.navbar-toggler {
+    margin: 19px 0 18px 0;
+}
+
+.active {
+    color: #E9EDE9 !important;
+}
+
+.search {
+    border: 1px solid #264653;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
+    width: 60%;
+}
+
+.search-burger {
+    border: 1px solid #E9EDE9;
+    border-radius: 5px;
+    padding: 5px;
+    height: 1.5rem;
+}
+
+.search-btn {
+    border: 2px solid #264653;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.search-btn-burger {
+    border: 2px solid #E9EDE9;
+    height: 1.5rem;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 0 5px 2px 5px;
+    text-decoration: none;
+}
+
+.cart {
+    border: 2px solid #264653;
+    font-weight: 700;
+    color: #264653;
+    border-radius: 5px;
+    padding: 2px 5px 0 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    height: 1.5rem;
+    width: auto;
+}
+
+.top-icon {
+    font-size: 11px;
+}
+
+.login-link {
+    text-decoration: none;
+    color: #264653;
+    font-weight: 700;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #264653;
+    vertical-align: baseline;
+}
+
+.login-box {
+    margin-top: 3px;
+}
+
+.navbar-lower {
+    background-color: #264653;
+    color: #E9EDE9;
+    height: 4rem;
+    padding-right: 0.5rem;
+}
+
+.navbar-upper {
+    background-color: #E9EDE9;
+    height: 2rem;
+    padding-right: 0.5rem;
+}
+
+.spinning-icon {
+    position: relative;
+    top: 3px;
+}
+
+.nav-link {
+    color: #E9EDE9;
+    background-color: #264653;
+    text-decoration: none;
+}
+
+.nav-link:active {
+    color: #264653;
+    background-color: #E9EDE9;
+}
+
+.nav-link:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.nav-link:focus {
+    background-color: #E9EDE9;
+    color: #264653;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: fit-content;
+}
+
+.navbar-collapse {
+    background-color: #264653;
+}
+
+.dropdown-item:active {
+    background-color: #264653 !important;
+}
+
+.dropdown-item:hover {
+    color: #264653;
+    background-color: #26465323;
+    font-weight: 700;
+}
+
+.delivery-banner {
+    background-color: #264653;
+    color: #E9EDE9;
+    border-top: 1px solid #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    width: 40rem;
+    position: fixed;
+    top: 7.5rem;
+    left: -15.5rem;
+    rotate: -35deg;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 1;
+}
+
+.sale-banner {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: -5px;
+    right: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
+.sale-banner-details {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    font-weight: 700;
+    width: 8rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    z-index: 997;
+}
+
+.sale-banner-admin {
+    background-color: #d9534f;
+    color: #E9EDE9;
+    text-align: center;
+    overflow: hidden;
+    /* font-weight: 700; */
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    letter-spacing: 2px;
+    z-index: 997;  
+}
+
+.header-container {
+    z-index: 2;
+}
+
+.header-container h1 {
+    text-shadow: -2px 0px 2px #E9EDE9,
+    2px 0px 2px #E9EDE9,
+    0px -2px 2px #E9EDE9,
+    0px 2px 2px #E9EDE9;
+}
+
+/* ------------------------------------------------------------- Main Container */
+
+.messages {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    z-index: 999;
+}
+
+.alert {
+    border-radius: 0;
+    height: 1rem;
+}
+
+section {
+    margin-top: 6rem;
+    min-height: calc(100vh - 17.5rem);
+    min-width: 300px;
+    background-color: #E9EDE9;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.index_content {
+    z-index: -1;
+    color: #E9EDE9;
+    min-height: calc(100vh - 17.5rem);
+
+    background-image: url(../images/site/background_lady_on_a_bike.webp);
+    background-position: 17% 75%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.hero-header {
+    font-weight: 700;
+}
+
+.shop_now_btn {
+    background-color: #264653;
+    border: 2px solid #E9EDE9;
+    color: #E9EDE9;
+    width: 300px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.shop_now_btn:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 3px solid #264653;
+}
+
+.product-description {
+    padding: 1rem;
+}
+
+.auth-btn {
+    font-weight: bold;
+    color: #E9EDE9;
+    font-weight: 700;
+    font-size: 1.3em;
+    text-decoration: none;
+    border: 1px solid #264653;
+    letter-spacing: normal;
+}
+
+.auth-btn:hover {
+    background-color: #264653;
+    color: #E9EDE9;
+    border: 1px solid #264653;
+}
+
+.auth-card {
+    /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); */
+    background-color: #E9EDE9;
+    color: #264653;
+    max-width: 450px;
+    min-width: 220px;
+    border: none;
+}
+
+.active-link {
+    color: #264653;
+    text-decoration: underline;
+    list-style: none;
+    font-weight: 700;
+}
+
+.card {
+    width: 280px;
+    height: 425px;
+    color: #264653;
+    position: relative;
+}
+
+.cover-image {
+    height: 220px;
+    object-position: center;
+    object-fit: contain;
+}
+
+.card-lnk {
+    color: #264653;
+    text-decoration: none;
+}
+
+.card-title {
+    height: 2.2rem;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.single-product-detail {
+    max-width: 2000px;
+}
+
+.badge-back {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+.badge-back:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 1px solid #264653;
+}
+
+.form-select {
+    background-color: #fff;
+    color: #264653;
+    width: auto;
+    border: 1px solid #264653;
+}
+
+.product-details-container {
+    background-color: #e9ede9da;
+    color: #264653;
+}
+
+.image-container {
+    color: #264653;
+    background-color: #fff;
+}
+
+.favorites-link {
+    color: #264653;
+    text-decoration: none;
+}
+
+.mobile-cart-container {
+    background-color: #fff;
+    color: #264653;
+}
+
+/* ------------------------------------------------------------- Product Cards overlay*/
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: relative;
+    top: -50%;
+    left: 5px;
+    text-align: center;
+  }
+
+.card-container {
+    position: relative;
+    width: 280px;
+    max-height: 420px;
+    margin: 10px;
+    background-color: #E9EDE9;
+    color: #264653;
+}
+
+.card-container:hover .card {
+    opacity: 0.3;
+
+}
+
+.card-container:hover .middle {
+    opacity: 1;
+}
+
+.overlay_btn {
+    background-color: #264653;
+    color: #E9EDE9;
+    width: 220px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.overlay_btn:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 2px solid #264653;
+}
+
+/* ------------------------------------------------------------- Product Qty */
+
+.qty-input {
+    width: 4rem;
+    height: 2.4rem;
+}
+
+.decrement-qty {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.increment-qty {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.keep-shopping-btn {
+    background-color: #264653;
+    border: 2px solid #E9EDE9;
+    color: #E9EDE9;
+    width: 300px;
+    height: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.keep-shopping-btn:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 2px solid #264653;
+}
+
+.btt-button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: #264653;
+    color: #E9EDE9;
+    border: 1px solid #E9EDE9;
+    z-index: 999;
+}
+
+.btt-button:hover {
+    background-color: #E9EDE9;
+    color: #264653;
+    border: 1px solid #264653;
+}
+
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------- Cart */
+
+.cart-table {
+    border: 1px solid #264653;
+}
+
+.cart-mobile-header {
+    text-align: center;
+    background-color: #264653;
+    color: #E9EDE9;
+    padding: 5px 0 5px 0;
+}
+
+.table thead tr th {
+    background-color: #264653;
+    color: #E9EDE9;
+    text-align: center;
+}
+
+.cart-body tr td {
+    color: #264653 !important;
+}
+
+.cart-totals {
+    text-align: end;
+}
+
+.cart-buttons {
+    text-align: center;
+}
+
+.delivery-delta {
+    background-color: #26465323;
+    color: #264653;
+}
+
+.decrement-qty {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+.increment-qty {
+    background-color: #264653;
+    color: #E9EDE9;
+}
+
+/* ------------------------------------------------------------- Product Admin */
+
+.admin-img {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
+}
+
+/* ------------------------------------------------------------- About page */
+
+/* .about-card {
+    background-color: #fff;
+    color: #264653;
+    border: none;
+    min-height: 300px;
+    border-radius: 5px;
+    margin: 0 2rem 2rem 0;
+    padding: 1rem;
+    
+} */
+
+/* ------------------------------------------------------------- Footer */
+
+.footer {
+    background-color: #264653;
+    color: #E9EDE9;
+    padding: 1rem;
+    min-width: 300px;
+    z-index: 999;
+    min-height: 6rem;
+    z-index: 999;
+}
+
+footer a {
+    color: #E9EDE9;
+    text-decoration: underline;
+}
+
+.fb-icon {
+    color: #1877F2;
+    text-shadow: -1px 0px 1px #E9EDE9,
+    1px 0px 1px #E9EDE9,
+    0px -1px 1px #E9EDE9,
+    0px 1px 1px #E9EDE9;
+}

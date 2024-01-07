@@ -3,7 +3,7 @@
         <div class="col-8">
             <form class="d-none d-lg-flex m-1" role="search" method="GET" action="{% url "products" %}">
                 <input id="q" class="search form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
-                <button class="search-btn" role="button" type="submit">Search</button>
+                <button class="search-btn" type="submit">Search</button>
             </form>
         </div>
         <div class="col-4 login-box">
@@ -87,8 +87,8 @@
                         {% endif %}
                         <li class="nav-item flex-grow-1">
                             <form method="GET" action="{% url "products" %}" class="d-lg-none  m-1" role="search">
-                                <input id="q" class="search-burger form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
-                                <button class="search-btn-burger mt-2 mb-2" role="button" type="submit">Search</button>
+                                <input class="search-burger form-control me-2" type="search" value="{{ search_term }}" placeholder="Search products..." name="q" aria-label="Search">
+                                <button class="search-btn-burger mt-2 mb-2" type="submit">Search</button>
                             </form>
                         </li>                    
                     </ul>

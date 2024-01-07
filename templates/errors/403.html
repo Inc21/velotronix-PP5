@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container error-container">
+    <div class="row d-flex justify-content-center flex-wrap">
+        <div class="col-6 card auth-card m-4">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center"><i class="fa-solid fa-hand"></i> 403</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="text-center">You are not authorized to view this page.</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center">
+                    <a type="button" class="mt-2 p-1 auth-btn btn-sm btn btn-success text-uppercase" href="{% url "home" %}"><i class="fa-solid fa-angles-left"></i> Back to home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

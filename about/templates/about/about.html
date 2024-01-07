@@ -10,7 +10,7 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12 header-container d-flex justify-content-center text-uppercase">
-                    <h2 class="mt-4 m-2">About Us</h2>
+                    <h2 class="{% if messages %}mt-5 {% endif %}mt-3 m-2">About Us</h2>
                 </div>
             </div>
             {% if request.user.is_superuser %}
@@ -31,7 +31,7 @@
                         <tbody>
                             <tr>
                                 <td class="px-3 py-1">
-                                    <form class="pt-2" method="POST" action="">
+                                    <form class="pt-2" method="POST">
                                         {% csrf_token %}{{form|crispy}}
                                         <input type="hidden" name="form_type" value="contact_form">
                                         <div class="row">
@@ -51,12 +51,25 @@
                     <table class="table caption-top table-sm table-responsive">
                         <thead>
                             <tr>
-                                <th class="ps-2 text-uppercase text-start">Delivery Information</th>
+                                <th class="ps-2 text-uppercase text-start">faq</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="px-3 py-1"><p>{{ delivery|safe }}</p></td>
+                                <td class="px-3 py-1"><p>{{ faq|safe }}</p>
+                                    <br>
+                                    <h4 class="text-center"><i class="fa-solid fa-angles-down text-success"></i> Have a question? <i class="fa-solid fa-angles-down text-success"></i></h4>
+                                    <form class="pt-2" method="POST">
+                                        {% csrf_token %}
+                                        {{faq_form|crispy}}
+                                        <input type="hidden" name="form_type" value="faq_form">
+                                        <div class="row">
+                                            <div class="col d-flex justify-content-center">
+                                                <button type="submit" class="btn keep-shopping-btn rounded text-uppercase mb-2">SEND</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -77,28 +90,16 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 dark-green">
                     <table class="table caption-top table-sm table-responsive">
                         <thead>
                             <tr>
-                                <th class="ps-2 text-uppercase text-start">faq</th>
+                                <th class="ps-2 text-uppercase text-start">Delivery Information</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="px-3 py-1"><p>{{ faq|safe }}</p>
-                                    <br>
-                                    <form class="pt-2" method="POST" action="">
-                                        {% csrf_token %}
-                                        {{faq_form|crispy}}
-                                        <input type="hidden" name="form_type" value="faq_form">
-                                        <div class="row">
-                                            <div class="col d-flex justify-content-center">
-                                                <button type="submit" class="btn keep-shopping-btn rounded text-uppercase mb-2">SEND</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </td>
+                                <td class="px-3 py-1"><p>{{ delivery|safe }}</p></td>
                             </tr>
                         </tbody>
                     </table>

@@ -26,8 +26,8 @@
                                 {% endif %}
                             {% endfor %}
                             <div class="text-center mb-3">
-                                <a href="{% url "product_admin" %}?next={{ request.path }}" class="auth-btn btn-sm btn btn-dark">Cancel</a>
-                                <button class="auth-btn btn-sm btn btn-success" type="submit">Update Product</button>
+                                <a href="{% url "product_admin" %}?next={{ request.path }}" class="auth-btn btn-sm btn text-uppercase btn-dark">Cancel</a>
+                                <button class="auth-btn btn-sm btn btn-success text-uppercase" type="submit">Update Product</button>
                             </div>
                         </form>
                     </div>

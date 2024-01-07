@@ -52,7 +52,6 @@ header {
 
 .navbar-toggler .middle-bar {
     opacity: 0;
-    filter: alpha(opacity=0);
 }
 
 .navbar-toggler .bottom-bar {
@@ -66,7 +65,6 @@ header {
 
 .navbar-toggler.collapsed .middle-bar {
     opacity: 1;
-    filter: alpha(opacity=100);
 }
 
 .navbar-toggler.collapsed .bottom-bar {
@@ -189,7 +187,6 @@ header {
     color: #264653;
     font-weight: 700;
     border-radius: 5px;
-    padding: fit-content;
 }
 
 .nav-link:focus {
@@ -197,7 +194,6 @@ header {
     color: #264653;
     font-weight: 700;
     border-radius: 5px;
-    padding: fit-content;
 }
 
 .navbar-collapse {
@@ -224,7 +220,7 @@ header {
     position: fixed;
     top: 7.5rem;
     left: -15.5rem;
-    rotate: -35deg;
+    transform: rotate(-35deg);
     font-size: 15px;
     letter-spacing: 2px;
     z-index: 1;
@@ -265,8 +261,6 @@ header {
     color: #E9EDE9;
     text-align: center;
     overflow: hidden;
-    /* font-weight: 700; */
-
     position: absolute;
     top: 10px;
     left: 10px;
@@ -302,7 +296,7 @@ header {
 
 section {
     margin-top: 6rem;
-    min-height: calc(100vh - 17.5rem);
+    min-height: calc(100vh - 18rem);
     min-width: 300px;
     background-color: #E9EDE9;
     width: 100%;
@@ -312,13 +306,18 @@ section {
 .index_content {
     z-index: -1;
     color: #E9EDE9;
-    min-height: calc(100vh - 17.5rem);
+    min-height: calc(100vh - 17.26rem);
 
     background-image: url(../images/site/background_lady_on_a_bike.webp);
     background-position: 17% 75%;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 1rem;
+}
+
+.error-container {
+    color: #264653;
+    min-height: calc(100vh - 17.26rem);
 }
 
 .hero-header {
@@ -362,7 +361,6 @@ section {
 }
 
 .auth-card {
-    /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75); */
     background-color: #E9EDE9;
     color: #264653;
     max-width: 450px;
@@ -382,6 +380,10 @@ section {
     height: 425px;
     color: #264653;
     position: relative;
+}
+
+.card-footer {
+    background-color: #fff;
 }
 
 .cover-image {
@@ -597,19 +599,6 @@ section {
     width: auto;
     object-fit: contain;
 }
-
-/* ------------------------------------------------------------- About page */
-
-/* .about-card {
-    background-color: #fff;
-    color: #264653;
-    border: none;
-    min-height: 300px;
-    border-radius: 5px;
-    margin: 0 2rem 2rem 0;
-    padding: 1rem;
-    
-} */
 
 /* ------------------------------------------------------------- Footer */
 

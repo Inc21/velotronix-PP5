@@ -10,13 +10,13 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-12 header-container d-flex justify-content-center text-uppercase">
-                    <h2 class="mt-5 m-2 dark-green">Edit About Us</h2>
+                    <h2 class="{% if messages %}mt-5 {% endif %} mt-3 m-2 dark-green">Edit About Us</h2>
                 </div>
             </div>
             <hr>
             <div class="row ">
                 <div class="col-12 d-flex justify-content-center">
-                    <form method="POST" action="" class="form mb-2">
+                    <form method="POST" class="form mb-2">
                         {% csrf_token %}
                         {% for field in form %}
                             {{ field | as_crispy_field }}

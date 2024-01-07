@@ -56,7 +56,7 @@
                                             </td>
                                             <td class="align-middle small d-none d-sm-table-cell">{{ product.sku }}</td>
                                             <td class="align-middle small d-none d-md-table-cell">{{ product.category }}</td>
-                                            <td class="align-middle small d-none d-sm-table-cell"><strong>{{ product.price }}</strong></td>
+                                            <td class="align-middle small d-none d-sm-table-cell"><strong>€{{ product.price }}</strong></td>
                                             <td class="align-middle text-center"><a class="px-2 py-1 rounded-2 bg-success text-light" href="{% url "edit_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-pen fa-sm"></i></a></td>
                                             <td class="align-middle text-center"><a class="px-2 py-1 rounded-2 bg-danger text-light" href="{% url "delete_product" product.id %}?next={{ request.path }}"><i class="fa-solid fa-trash-can fa-sm"></i></a></td>
                                         </tr>

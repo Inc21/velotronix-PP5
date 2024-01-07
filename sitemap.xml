@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/cart/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?sort=popularity&amp;direction=desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?sort=price&amp;direction=desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?sort=price&amp;direction=esc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?sort=brand&amp;direction=asc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?on_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=bike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=power_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=bike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=wearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=sensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?category=heart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/about/about/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/accounts/login/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/accounts/signup/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/cart/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/cart/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fsort%3Dpopularity%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/6/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/11/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/2/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/4/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/3/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/8/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/9/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/7/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/5/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/10/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/1/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fsort%3Dprice%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fsort%3Dprice%26direction%3Desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fsort%3Dbrand%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fsort%3Dcategory%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fon_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dbike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dbike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dsensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fcategory%3Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/about/about/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/about/about/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/login/%253Fnext%253D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Flogin%2F%3Fnext%3D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/accounts/login/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/google/login/%3Fprocess%3Dlogin%26next%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/accounts/google/login/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/password/reset/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/accounts/password/reset/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/signup/%253Fnext%253D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/accounts/signup/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Fsignup%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/cart/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/cart/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fsort%253Dpopularity%2526direction%253Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fsort%3Dpopularity%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fsort%3Dpopularity%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/products/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Fproducts%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/6/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/6/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?brand=WAHOO</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/11/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/11/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?brand=Test</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/2/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/2/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/4/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/4/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/3/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/3/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/8/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/8/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/9/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/9/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/7/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/7/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/5/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/5/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/10/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/10/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/1/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=/products/1/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/products/?brand=Quarq</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fsort%253Dprice%2526direction%253Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fsort%3Dprice%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fsort%3Dprice%26direction%3Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fsort%253Dprice%2526direction%253Desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fsort%3Dprice%26direction%3Desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fsort%3Dprice%26direction%3Desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fsort%253Dbrand%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fsort%3Dbrand%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fsort%3Dbrand%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fsort%253Dcategory%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fsort%3Dcategory%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fsort%3Dcategory%26direction%3Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fon_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fon_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fon_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dbike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dbike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dbike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dbike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dbike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dbike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dsensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dsensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dsensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/%253Fcategory%253Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F%3Fcategory%3Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fcategory%3Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/about/about/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fabout%2Fabout%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fabout%2Fabout%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/about/about/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Fabout%2Fabout%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/login/%253Fnext%253D/accounts/login/%25253Fnext%25253D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Flogin%2F%253Fnext%253D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Flogin%2F%253Fnext%253D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/google/login/%3Fprocess%3Dlogin%26next%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/signup/%253Fnext%253D/accounts/login/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fgoogle%2Flogin%2F%3Fprocess%3Dlogin%26next%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fpassword%2Freset%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/accounts/password/reset/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Fsignup%2F%253Fnext%253D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Faccounts%2Fsignup%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D%252Faccounts%252Fsignup%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dpopularity%2526direction%253Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fproducts%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D%252Fproducts%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Fproducts%2F11%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F2%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F4%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/products/3/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F3%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/google/login/?process=login&amp;next=%2Fproducts%2F9%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F5%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D/products/5/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/products/%3Fbrand%3DQuarq</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dprice%2526direction%253Ddesc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dprice%2526direction%253Desc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dbrand%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dcategory%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Fproducts%252F%253Fsort%253Dcategory%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fon_sale</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/google/login/%3Fprocess%3Dlogin%26next%3D%252Fproducts%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dbike_computers</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Fproducts%252F%253Fcategory%253Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dbike_lights</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dsensors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/google/login/%3Fprocess%3Dlogin%26next%3D%252Fproducts%252F%253Fcategory%253Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fabout%2Fabout%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fabout%2Fabout%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/login/%253Fnext%253D/accounts/login/%25253Fnext%25253D/accounts/login/%2525253Fnext%2525253D/</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Flogin%2F%253Fnext%253D%2Faccounts%2Flogin%2F%25253Fnext%25253D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fgoogle%2Flogin%2F%3Fprocess%3Dlogin%26next%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Fsignup%2F%253Fnext%253D%2Faccounts%2Flogin%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Faccounts%2Fpassword%2Freset%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Faccounts%2Fsignup%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%252Faccounts%252Fsignup%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fcart%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%252Fproducts%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Fproducts%252F4%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F3%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%2Fproducts%2F5%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Fproducts%252F10%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Fproducts%2F%3Fbrand%3DQuarq</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fsort%253Dbrand%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F%253Fsort%253Dcategory%2526direction%253Dasc</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fgoogle%2Flogin%2F%3Fprocess%3Dlogin%26next%3D%252Fproducts%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F%253Fcategory%253Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Fproducts%2F%253Fcategory%253Dwearable_tech</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fgoogle%2Flogin%2F%3Fprocess%3Dlogin%26next%3D%252Fproducts%252F%253Fcategory%253Dheart_rate_monitors</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Flogin%2F%253Fnext%253D%2Faccounts%2Flogin%2F%25253Fnext%25253D%2Faccounts%2Flogin%2F%2525253Fnext%2525253D%2F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252Faccounts%252Fsignup%252F%25253Fnext%25253D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%25252Faccounts%25252Fsignup%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F4%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/login/%3Fnext%3D/accounts/signup/%253Fnext%253D%25252Fproducts%25252F10%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F10%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F%253Fcategory%253Dpower_meters</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%252Faccounts%252Fsignup%252F%25253Fnext%25253D%252Faccounts%252Flogin%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Fsignup%252F%253Fnext%253D%25252Faccounts%25252Flogin%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Flogin%252F%253Fnext%253D%25252Faccounts%25252Fsignup%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Flogin%2F%3Fnext%3D%2Faccounts%2Fsignup%2F%253Fnext%253D%25252Fproducts%25252F10%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Fproducts%252F10%252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Fsignup%252F%253Fnext%253D%25252Faccounts%25252Flogin%25252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/login/?next=/accounts/signup/%3Fnext%3D%252Faccounts%252Fsignup%252F%253Fnext%253D%25252Faccounts%25252Fsignup%25252F%25253Fnext%25253D%2525252Faccounts%2525252Flogin%2525252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.13</priority>
+</url>
+<url>
+  <loc>https://velotronix-2a1fbfe0d0b1.herokuapp.com/accounts/signup/?next=%2Faccounts%2Fsignup%2F%3Fnext%3D%252Faccounts%252Fsignup%252F%253Fnext%253D%25252Faccounts%25252Fsignup%25252F%25253Fnext%25253D%2525252Faccounts%2525252Flogin%2525252F</loc>
+  <lastmod>2023-12-02T22:56:11+00:00</lastmod>
+  <priority>0.11</priority>
+</url>
+
+
+</urlset>
