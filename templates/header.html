@@ -13,7 +13,7 @@
                 {% else %}
                     <a class="login-link" href="{% url "account_login" %}?next={{ request.get_full_path|urlencode }}">Login</a> <span class="ms-2 me-2">|</span> <a class="login-link" href="{% url "account_signup" %}?next={{ request.path }}">Signup</a>
                 {% endif %}
-                <a class="cart ms-2 text-center" href="{% url "cart" %}"><i class="fa-solid fa-cart-plus dark-green"></i> €{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
+                <a class="cart ms-2 text-center" href="{% url "cart" %}"><i class="mt-1 fa-solid fa-cart-plus dark-green"></i> €{% if grand_total %}{{ grand_total|floatformat:2 }}{% else %}0.00{% endif %}</a>
             </div>
         </div>
     </div>
