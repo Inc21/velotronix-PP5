@@ -769,12 +769,12 @@ This project was created using the following languages and frameworks:
 
 My available time to complete this project was very limited this time around. Many late nights and early mornings were spent on this project. I had to cut some features from the project to be able to complete it on time. I will be adding these features in the future.
 
-- Product quantity in stock. When the product is added to the shopping cart, the quantity in stock will be reduced by the quantity added to the shopping cart. If the quantity in stock is 0, the product will be displayed as out of stock.
-- Pagination on the products page. Currently all products are displayed on one page. This will cause performance issues when there are many products on the website. Pagination will be added to the products page to display a limited number of products per page.
-- Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page.
-- Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page.
-- Better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images.
-- Social media login. Customers will be able to login to the website using their social media accounts. Although this feature is not essential, it will make the login process easier for the customer. I have used in previous projects but just ran out of time to implement it in this project.
+- Product quantity in stock. When the product is added to the shopping cart, the quantity in stock will be reduced by the quantity added to the shopping cart. If the quantity in stock is 0, the product will be displayed as out of stock **(Post-course add-on)**
+- Pagination on the products page. Currently, all products are displayed on one page. This will cause performance issues when there are many products on the website. Pagination will be added to the products page to display a limited number of products per page. **(Post-course add-on)**
+- Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page. **(Post-course add-on)**
+- Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page. **(Post-course add-on)**
+- A better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images. **(Post-course add-on)**
+- Social media login. Customers will be able to log in to the website using their social media accounts. Although this feature is not essential, it will make the login process easier for the customer. I have used it in previous projects but just ran out of time to implement it in this project. **(Post-course add-on)**
 
  
 
