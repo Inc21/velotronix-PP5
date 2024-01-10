@@ -1,8 +1,10 @@
 ![VeloTronix Logo](/static/images/readme_images/velotronix_logo.png)
 ![mockup](/static/images/readme_images/mockup.png)
 
+#### **NB:** Some updates to readme done post-course. Submitted project can be forked from the main branch.
+
 # Introduction
-Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
+Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport-related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
 
 
 The live website can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/ "Velotronix")
@@ -16,15 +18,15 @@ To complete mock payments you can use the following test card details:
 ### Project Goals
 
 - To create a full-stack website using Django and PostgreSQL.
-- To create a website that is fully responsive and has a clean and modern design.
+- To create a fully responsive website with a clean and modern design.
 - To create a website that is easy to navigate and use.
 - To create a website that is easy to maintain and update.
 - To create a website that is secure and safe to use.
 - To create a website that is accessible to all users.
-- To create a website that is SEO friendly.
-- To create a website that is user friendly.
-- To create a e-commerce website that allows users to browse and purchase products.
-- To create a e-commerce website that allows users to create an account and save their details for future purchases.
+- To create a website that is SEO-friendly.
+- To create a user-friendly website.
+- To create an e-commerce website that allows users to browse and purchase products.
+- To create an e-commerce website that allows users to create an account and save their details for future purchases.
 
 
 ### Project Goals
