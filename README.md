@@ -1,7 +1,7 @@
 ![VeloTronix Logo](/static/images/readme_images/velotronix_logo.png)
 ![mockup](/static/images/readme_images/mockup.png)
 
-#### **NB:** Some updates to readme done post-course. Submitted project can be forked from the main branch.
+#### **NB:** Some updates to the project and to the readme done post-course. Submitted project can be forked from the main branch.
 
 # Introduction
 Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport-related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
