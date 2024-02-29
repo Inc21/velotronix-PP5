@@ -1,8 +1,10 @@
 ![VeloTronix Logo](/static/images/readme_images/velotronix_logo.png)
 ![mockup](/static/images/readme_images/mockup.png)
 
+#### **NB:** Some updates to the project and to the readme done post-course. Submitted project can be forked from the main branch.
+
 # Introduction
-Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
+Velotronix is a fictional e-commerce website created for my fifth portfolio project for the [Code Institute](https://codeinstitute.net/ie/) Full Stack Software Development course. The main goal of this project is to create a full-stack website using Django and PostgreSQL. The website is a shop where users can browse and purchase bicycle or sport-related accessories. The website is fully responsive and has a clean and modern design. The website is deployed on Heroku and static and media files are stored on Amazon AWS S3.
 
 
 The live website can be found [here.](https://velotronix-2a1fbfe0d0b1.herokuapp.com/ "Velotronix")
@@ -16,15 +18,15 @@ To complete mock payments you can use the following test card details:
 ### Project Goals
 
 - To create a full-stack website using Django and PostgreSQL.
-- To create a website that is fully responsive and has a clean and modern design.
+- To create a fully responsive website with a clean and modern design.
 - To create a website that is easy to navigate and use.
 - To create a website that is easy to maintain and update.
 - To create a website that is secure and safe to use.
 - To create a website that is accessible to all users.
-- To create a website that is SEO friendly.
-- To create a website that is user friendly.
-- To create a e-commerce website that allows users to browse and purchase products.
-- To create a e-commerce website that allows users to create an account and save their details for future purchases.
+- To create a website that is SEO-friendly.
+- To create a user-friendly website.
+- To create an e-commerce website that allows users to browse and purchase products.
+- To create an e-commerce website that allows users to create an account and save their details for future purchases.
 
 
 ### Project Goals
@@ -769,12 +771,12 @@ This project was created using the following languages and frameworks:
 
 My available time to complete this project was very limited this time around. Many late nights and early mornings were spent on this project. I had to cut some features from the project to be able to complete it on time. I will be adding these features in the future.
 
-- Product quantity in stock. When the product is added to the shopping cart, the quantity in stock will be reduced by the quantity added to the shopping cart. If the quantity in stock is 0, the product will be displayed as out of stock.
-- Pagination on the products page. Currently all products are displayed on one page. This will cause performance issues when there are many products on the website. Pagination will be added to the products page to display a limited number of products per page.
-- Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page.
-- Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page.
-- Better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images.
-- Social media login. Customers will be able to login to the website using their social media accounts. Although this feature is not essential, it will make the login process easier for the customer. I have used in previous projects but just ran out of time to implement it in this project.
+- Product quantity in stock. When the product is added to the shopping cart, the quantity in stock will be reduced by the quantity added to the shopping cart. If the quantity in stock is 0, the product will be displayed as out of stock **(Post-course add-on)**
+- Pagination on the products page. Currently, all products are displayed on one page. This will cause performance issues when there are many products on the website. Pagination will be added to the products page to display a limited number of products per page. **(Post-course add-on)**
+- Product reviews. Customers will be able to leave a review for the product. The review will be displayed on the product details page. **(Post-course add-on)**
+- Product rating. Customers will be able to rate the product. The rating will be displayed on the product details page. **(Post-course add-on)**
+- A better way of displaying multiple images on the product details page. Currently, the images are displayed as a plain list. I would like to add a carousel or some other js library to display the images. **(Post-course add-on)**
+- Social media login. Customers will be able to log in to the website using their social media accounts. Although this feature is not essential, it will make the login process easier for the customer. I have used it in previous projects but just ran out of time to implement it in this project. **(Post-course add-on)**
 
  
 
